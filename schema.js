@@ -152,6 +152,12 @@ const queryType = new GraphQLObjectType({
         include: false
       }),
     },
+    surveyRecords: {
+      type: new GraphQLList(SurveyType),
+      resolve: resolver(surveydata, {
+        include: false
+      }),
+    },
   },
 });
 
