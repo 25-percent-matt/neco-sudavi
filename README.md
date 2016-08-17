@@ -7,8 +7,6 @@ Our project uses [survey data](https://github.com/FreeCodeCamp/2016-new-coder-su
 
 Our tech stack includes [D3](https://d3js.org/), [Angular 1.5](https://angularjs.org/), [Express](http://expressjs.com/), [Sass](https://sass-lang.com/), [PostgreSQL](https://www.postgresql.org/), and [GraphQL](http://graphql.org/).
 
-Check out our [wiki](https://github.com/25-percent-matt/neco-sudavi/wiki) for project resources. 
-
 ## How do I clone down your app?
 
 ## How do I start the app in development mode
