@@ -145,7 +145,7 @@ const queryType = new GraphQLObjectType({
       args: {
         id: {
           type: new GraphQLNonNull(GraphQLInt)
-        }
+        },
       },
       // 3rd is context ------v
       resolve: resolver(surveydata, {
@@ -154,6 +154,23 @@ const queryType = new GraphQLObjectType({
     },
     surveyRecords: {
       type: new GraphQLList(SurveyType),
+      args: {
+        Age: {
+          type: GraphQLInt
+        },
+        CountryLive: {
+          type: GraphQLString
+        },
+        CountryCitizen: {
+          type: GraphQLString
+        },
+        SchoolDegree: {
+          type: GraphQLString
+        },
+        SchoolMajor: {
+          type: GraphQLString
+        },
+      },
       resolve: resolver(surveydata, {
         include: false
       }),
