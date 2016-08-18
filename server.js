@@ -41,6 +41,6 @@ app.get('/api/stuff', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  db.sequelize.sync();
+  db.sequelize.sync(); // Sync all models that aren't already in the database
   console.log(`Server running on http://localhost:${PORT}`);
 });
