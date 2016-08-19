@@ -1,25 +1,33 @@
-var chart =
+function fillChartEdu() {
+  var oReq = new XMLHttpRequest();
+  var queryData;
+  var searchParam = "SchoolDegree";
+  oReq.open("GET", "http://localhost:4000/testQuery/" + searchParam);
+  oReq.onload = function (data) {
+    if (oReq.readyState === 4) {
+      if (oReq.status === 200) {
+        chart = c3.generate(makeEduObj(JSON.parse(data.target.response)));
 
-/*setTimeout(function () {*/
-  c3.generate({
-      data: {
-          // iris data from R
-          columns: [
-              ["some college credit, no degree", 2268],
-              ["high school diploma or equivalent (GED)", 1356],
-              ["bachelor's degree", 5644],
-              ["master's degree (non-professional)", 1445],
-              ["professional degree (MBA, MD, JD, etc.)", 692],
-              ["trade, technical, or vocational training", 443],
-              ["associate's degree", 649],
-              ["some high school", 764],
-              ["Ph.D.", 160],
-              ["no high school (secondary school)", 258],
-          ],
-          type : 'pie',
-          onclick:
-            function () {chart.resize({height:700, width:700});},
-          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-      }
-  });
+    }
+  }
+};
+  oReq.send();
+}
+
+function makeEduObj(queryData) {
+  return {
+    data : {
+      columns: queryData,
+      type : 'pie',
+      onclick:
+        function () {chart.resize({height:700, width:700});},
+        onmouseover: function (d, i) {  },
+        onmouseout: function (d, i) { }
+    },
+    legend: {
+      position: 'right'
+    }
+  };
+}
+
+var chart = fillChartEdu();

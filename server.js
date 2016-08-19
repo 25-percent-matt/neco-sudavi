@@ -21,8 +21,34 @@ app.use('/graphql', (req, res) => {
   })(req, res);
 });
 
+app.use('/testQuery/:id', (req, res) => {
+  var Gender = req.params.id;
+  var query = `{ surveyRecords { ${Gender} } }`;
+  graphql(mySchema, query).then(result => {
+    let allb = result
+    let tallies = []
+    allb.data.surveyRecords.forEach(function (elem) {
+        let x = findIndex(elem, tallies, Gender)
+        if (typeof x === 'number') {
+          tallies[x][1] = tallies[x][1] + 1
+        } else {
+          tallies.push([elem[Gender], 1])
+        }
+      })
+    res.send(tallies)
+  });
+});
+
+function findIndex (elem, tallies, Gender) {
+  for (var i = 0; i < tallies.length; i++) {
+    if (elem[Gender] === tallies[i][0]) {
+      return i
+    }
+  }
+  return 'the fail frog';
+}
+
 app.use(function(req, res, next) {
-  console.log('method: ',req.method, ' url: ',req.url);
   next();
  });
 
