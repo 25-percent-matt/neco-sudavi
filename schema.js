@@ -8,11 +8,13 @@ const {
   GraphQLList,
   GraphQLID,
   GraphQLNonNull,
-  GraphQLBoolean
+  GraphQLBoolean,
+  GraphQLFloat
 } = require('graphql');
 
 const {resolver} = require('graphql-sequelize');
 const surveydata = require('./models').surveydata;
+const surveymetadata = require('./models').surveymetadata;
 
 
 const SurveyType = new GraphQLObjectType({
@@ -136,6 +138,36 @@ const SurveyType = new GraphQLObjectType({
   }
 });
 
+const SurveyMetaType = new GraphQLObjectType({
+  name: 'SurveyMeta',
+  fields: {
+    id : {
+      type: GraphQLInt,
+      description : 'record id'
+    },
+    fieldName : {
+      type: GraphQLString,
+      description : 'Name of the field in the database'
+    },
+    fieldLabel : {
+      type: GraphQLString,
+      description : 'Field label - how we want users to see it'
+    },
+    numOfResponses : {
+      type: GraphQLInt,
+      description : 'Total number of responses out of 15,620'
+    },
+    responsePercent : {
+      type: GraphQLFloat,
+      description : 'Percentage of 15,620 respondents who answered the question'
+    },
+    fieldGrouping : {
+      type: GraphQLString,
+      description : `groupings for the 3 multiple-choice questions: InPersonCodingEvents, Podcasts, Resources`
+    }
+  }
+});
+
 const queryType = new GraphQLObjectType({
   name: 'RootQuery',
 
@@ -171,6 +203,26 @@ const queryType = new GraphQLObjectType({
         },
       },
       resolve: resolver(surveydata, {
+        include: false
+      }),
+    },
+    surveyMetaData: {
+      type: new GraphQLList(SurveyMetaType), // this returns a list defined by its args
+      args: { //ex. "responses for InPersonCodingEvents"
+        fieldName : {
+        type: GraphQLString,
+        description : 'Name of the field in the database'
+        },
+        fieldLabel : {
+          type: GraphQLString,
+          description : 'Field label - how we want users to see it'
+        },
+        fieldGrouping : {
+          type: GraphQLString,
+          description : `groupings for the 3 multiple-choice questions: InPersonCodingEvents, Podcasts, Resources`
+        },
+      },
+      resolve: resolver(surveymetadata, {
         include: false
       }),
     },
