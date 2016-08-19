@@ -21,8 +21,10 @@ app.use('/graphql', (req, res) => {
   })(req, res);
 });
 
-app.use('/testQuery', (req, res) => {
-  var query = '{ surveyRecords {Gender} }';
+app.use('/testQuery/:id', (req, res) => {
+  console.log(req.params.id)
+  var Gender = req.params.id;
+  var query = `{ surveyRecords {${Gender} }}`;
 
   graphql(mySchema, query).then(result => {
     let allb = result
@@ -32,7 +34,7 @@ app.use('/testQuery', (req, res) => {
         if (typeof x === 'number') {
           tallies[x][1] = tallies[x][1] + 1
         } else {
-          tallies.push([elem.Gender, 1])
+          tallies.push([elem[Gender], 1])
         }
       })
     res.send(tallies)

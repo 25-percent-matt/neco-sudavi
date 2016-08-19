@@ -1,7 +1,8 @@
 function fillChartEdu() {
   var oReq = new XMLHttpRequest();
   var queryData;
-  oReq.open("GET", "http://localhost:4000/testQuery");
+  var searchParam = "SchoolDegree";
+  oReq.open("GET", "http://localhost:4000/testQuery/" + searchParam);
   oReq.onload = function (data) {
     if (oReq.readyState === 4) {
       if (oReq.status === 200) {
