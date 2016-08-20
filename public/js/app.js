@@ -19,6 +19,10 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope.pageNumber++;
       console.log($scope.pageNumber);
     };
+    $scope.gotoPrevPage = function() {
+      $scope.pageNumber--;
+      console.log($scope.pageNumber);
+    };
     $scope.testFrog = true;
 }]);
 

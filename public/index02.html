@@ -16,12 +16,15 @@
 
   <script src="/js/app.js"></script>
 </head>
+
+
+
 <body ng-app="dataApp" ng-controller="divHideController">
   <div class="leftArrow">
     <a href="index.html"><img src="/img/left-arrow-key.png"></a>
   </div>
 
-  <h1 id="headerText">NeCo_SuDaVi - Page Deux</h1>
+  <h1 id="headerText">NeCo_SuDaVi</h1>
 <!--    <div id="degreeChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Degree</h4></div>
    <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div> -->
 
@@ -36,27 +39,28 @@
     <span class="categoryTitle" ng-show="!showHide" ng-click="loadBigFunction()">STATUS</span><br>
        <div id="statusFreelancer" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"></div>
        <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
-       <div id="statusEmployee" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"></div>
-       <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
-       <div id="statusSandwichArtist" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"></div>
-       <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+
+     <div class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>FT Work After?</h4>
+  <h1 id="FTWorkPercent">58%</h1></div>
+
+
+
   </div>
 
-  <div class="category">
-    <span class="categoryTitle" ng-show="!showHide" ng-click="loadBigFunction()">FIELD</span><br>
-       <div id="workFieldChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Salary</h4></div>
-       <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
-  </div>
+<!--   <div class="category">
+  <span class="categoryTitle" ng-show="!showHide" ng-click="loadBigFunction()">FIELD</span><br>
+     <div id="workFieldChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Salary</h4></div>
+     <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+</div> -->
   </div>
 
 
   <div class="category">
     <span class="categoryTitle" ng-show="!showHide" ng-click="loadBigFunction()">EMPLOYMENT</span><br>
-     <div class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>FT Work After?</h4>
-  <h1 id="FTWorkPercent">56%</h1></div>
 
-     <div id="salaryChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Salary</h4></div>
-     <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+
+     <div id="salaryChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Salary</h4><br></div>
+     <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chart"></div>
 
 
    <script type="text/javascript" src="/js/dashboardChart.js"></script>

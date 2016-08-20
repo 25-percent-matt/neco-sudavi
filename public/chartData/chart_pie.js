@@ -1,105 +1,53 @@
-function fillChartDegree() {
-  var oReq = new XMLHttpRequest();
-  var queryData;
-  var searchParam = "SchoolDegree";
-  oReq.open("GET", "http://localhost:4000/chartQuery/" + searchParam);
-  oReq.onload = function (data) {
-    if (oReq.readyState === 4) {
-      if (oReq.status === 200) {
-        chartDegreeBig = c3.generate(makeDegreeObj(JSON.parse(data.target.response)));
-
-    }
-  }
-};
-  oReq.send();
-}
-
-function makeDegreeObj(queryData) {
-  return {
-    bindto: '#chartDegreeBig',
-    data : {
-      columns: queryData,
-      type : 'pie',
-        onmouseover: function (d, i) {  },
-        onmouseout: function (d, i) { }
-    },
-    legend: {
-      position: 'right'
-    },
-    size: {
-      height: 500
+function makeGraphPrimary(searchParam, chartBindTo) {
+  fillChartDegree(searchParam, chartBindTo);
+  function fillChartDegree(searchParam, chartBindTo) {
+    var oReq = new XMLHttpRequest();
+    var queryData;
+    oReq.open("GET", "http://localhost:4000/chartQuery/" + searchParam);
+    oReq.onload = function (data) {
+      if (oReq.readyState === 4) {
+        if (oReq.status === 200) {
+          var dataReduced = dataReducer(data.target.response);
+          chartDegreeBig = c3.generate(makeDegreeObj(dataReduced, chartBindTo));
+          return chartDegreeBig;
+      }
     }
   };
+    oReq.send();
+  }
+
+  function makeDegreeObj(queryData, chartBindTo) {
+    return {
+      bindto: chartBindTo,
+      data : {
+        columns: queryData,
+        type : 'pie',
+          onmouseover: function (d, i) {  },
+          onmouseout: function (d, i) { }
+      },
+      legend: {
+        position: 'right'
+      },
+      size: {
+        height: 500
+      }
+    };
+  }
 }
 
-function fillChartMajor() {
-  var oReq = new XMLHttpRequest();
-  var queryData;
-  var searchParam = "SchoolMajor";
-  oReq.open("GET", "http://localhost:4000/chartQuery/" + searchParam);
-  oReq.onload = function (data) {
-    if (oReq.readyState === 4) {
-      if (oReq.status === 200) {
-        chartDegreeBig = c3.generate(makeMajorObj(JSON.parse(data.target.response)));
-
+function dataReducer(dataToBeReduced) {
+  var x = JSON.parse(dataToBeReduced);
+  var y = [];
+  if (dataToBeReduced.length > 21) {
+    for (var i = 0; i < 36; i++) {
+      if (x[i] !== undefined) {
+        y.push(x[i]);
+      }
     }
   }
-};
-  oReq.send();
+  return y;
 }
 
-function makeMajorObj(queryData) {
-  return {
-    bindto: '#chartMajorBig',
-    data : {
-      columns: queryData,
-      type : 'pie',
-        onmouseover: function (d, i) {  },
-        onmouseout: function (d, i) { }
-    },
-    legend: {
-      position: 'right'
-    },
-    size: {
-      height: 500
-    }
-  };
-}
-
-function fillChartHasDebt() {
-  var oReq = new XMLHttpRequest();
-  var queryData;
-  var searchParam = "HasDebt";
-  oReq.open("GET", "http://localhost:4000/chartQuery/" + searchParam);
-  oReq.onload = function (data) {
-    if (oReq.readyState === 4) {
-      if (oReq.status === 200) {
-        chartDegreeBig = c3.generate(makeHasDebtObj(JSON.parse(data.target.response)));
-
-    }
-  }
-};
-  oReq.send();
-}
-
-function makeHasDebtObj(queryData) {
-  return {
-    bindto: '#chartHasDebtBig',
-    data : {
-      columns: queryData,
-      type : 'pie',
-        onmouseover: function (d, i) {  },
-        onmouseout: function (d, i) { }
-    },
-    legend: {
-      position: 'right'
-    },
-    size: {
-      height: 500
-    }
-  };
-}
-
-var chartDegreeBig = fillChartDegree();
-var chartMajorBig = fillChartMajor();
-var chartHasDebtBig = fillChartHasDebt();
+var chartDegreeBig = makeGraphPrimary('SchoolDegree', '#chartDegreeBig');
+var chartMajorBig = makeGraphPrimary('SchoolMajor', '#chartMajorBig');
+var chartHasDebtBig = makeGraphPrimary('HasDebt', '#chartHasDebtBig');

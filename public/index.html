@@ -17,9 +17,14 @@
     <h1 id="headerText" ng-click="loadBigFunction()">NeCo_SuDaVi</h1>
     
     <div class="category" ng-controller="divHideController">
+    <div class="leftArrow">
+      <img ng-click="gotoPrevPage()" ng-show="pageNumber > 1" src="/img/left-arrow-key.png">
+    </div>
+
     <div class="rightArrow">
       <img ng-click="gotoNextPage()" ng-show="pageNumber < 3" src="/img/keyboard-right-arrow-button.png">
     </div>
+
       <div>
         <button ng-show="showHide" ng-click="loadBigFunction()">Return Home</button>
       </div>
@@ -30,40 +35,78 @@
       <div id="degreeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">
         <h4>Degree</h4>
       </div>
-      <div ng-show="showHide" ng-click="loadBigFunction()" id="chartDegreeBig"></div>
+      <div ng-show="chartDegreeBigShow" ng-click="loadBigFunction()" id="chartDegreeBig"></div>
 
-      <div id="majorChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">
+      <div id="majorChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">
         <h4>Major</h4>
       </div>
       <div ng-show="showHide" ng-click="loadBigFunction()" id="chartMajorBig"></div>
 
-      <div id="hasStudentDebtChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">
+      <div id="hasStudentDebtChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">
         <h4>Has Student Debt</h4>
       </div>
       <div ng-show="showHide" ng-click="loadBigFunction()" id="chartHasDebtBig"></div>
 
       <div class="category">
-        <span class="categoryTitle" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">EMPLOYMENT</span><br>
-        <div id="employmentFieldChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">
+        <span class="categoryTitle" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">EMPLOYMENT</span><br>
+        <div id="employmentFieldChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">
           <h4>Employment Field</h4>
         </div>
         <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
 
-        <div id="currentIncomeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">
+        <div id="currentIncomeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">
           <h4>Current Income</h4>
         </div>
         <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
 
-        <div id="numOfChildrenChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">
+        <div id="numOfChildrenChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">
           <h4># of Children</h4>
         </div>
         <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
 
-        <div id="jobPreferenceChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">
+        <div id="jobPreferenceChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">
           <h4>Job Preference</h4>
         </div>
         <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
       </div>
+
+      <div id="pageTwoContainer">
+        <div class="pageTwoPicContainer" ng-show="pageNumber === 2">
+
+          <div id="page2Header" class="category" ng-show="pageNumber === 2">
+
+          <div class="category" ng-show="pageNumber === 2">
+            <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">STATUS</span><br>
+               <div id="statusFreelancer" class="individualCharts" ng-show="pageNumber === 2" ng-click="loadBigFunction()"></div>
+               <div  ng-show="pageNumber === 2"ng-click="loadBigFunction()" id="chart"></div>
+
+             <div class="individualCharts" ng-show="pageNumber === 2" ng-click="loadBigFunction()"><h4>FT Work After?</h4>
+          <h1 id="FTWorkPercent">58%</h1></div>
+
+          </div>
+
+
+
+
+          <div class="category">
+            <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">EMPLOYMENT</span><br>
+
+
+             <div id="salaryChart" class="individualCharts" ng-show="pageNumber === 2" ng-click="loadBigFunction()"><h4>Salary</h4><br></div>
+             <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chart"></div>
+
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
       <div id="pageThreeContainer">
         <div class="pageThreePicContainer" ng-show="pageNumber === 3">
           <span class="pageThreePersonArea" ng-show="pageNumber === 3">
@@ -95,8 +138,11 @@
 
   </div>
 
-  <script type="text/javascript" src="/js/dashboardChart.js"></script>
-  <script type="text/javascript" src="/chartData/chart_combination.js"></script>
-  <script type="text/javascript" src="/chartData/chart_pie.js"></script>
+ <script type="text/javascript" src="/js/dashboardChart.js"></script>
+ <script type="text/javascript" src="/chartData/chart_combination.js"></script>
+ <script type="text/javascript" src="/chartData/chart_pie.js"></script>
+ <script type="text/javascript" src="/chartData/chart_bar.js"></script>
+ <script type="text/javascript" src="/chartData/chart_donut.js"></script>
+ <script type="text/javascript" src="/chartData/chart_horizontalbar.js"></script>
 </body>
 </html>
