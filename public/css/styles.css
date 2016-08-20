@@ -84,3 +84,33 @@ body {
 
 .arc path {
   stroke: #fff; }
+
+.pageThreeArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.pageThreePicContainer {
+  border-width: 2px;
+  border-style: solid;
+  border-color: blue;
+  height: 300px;
+  width: 250px;
+}
+
+.pageThreePic {
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  height: 200px;
+  width: 200px;
+}
+
+.pageThreeBio {
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  height: 200px;
+  width: 450px;
+}
