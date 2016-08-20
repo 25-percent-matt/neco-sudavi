@@ -1,7 +1,4 @@
 node_modules
-<<<<<<< HEAD
 config/config.json
 config.json
-.DS_Store
-=======
->>>>>>> 3df446d061fb788ec97f88c50238c9555c4afd7f
+config
