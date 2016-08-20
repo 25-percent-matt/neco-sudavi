@@ -1,9 +1,8 @@
-var chart =
+var chartDegreeBig =
 
-/*setTimeout(function () {*/
   c3.generate({
+      bindto: '#chartDegreeBig',
       data: {
-          // iris data from R
           columns: [
               ["some college credit, no degree", 2268],
               ["high school diploma or equivalent (GED)", 1356],
@@ -17,9 +16,13 @@ var chart =
               ["no high school (secondary school)", 258],
           ],
           type : 'pie',
-          onclick:
-            function () {chart.resize({height:700, width:700});},
           onmouseover: function (d, i) { console.log("onmouseover", d, i); },
           onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+      },
+      legend: {
+        position: 'right'
+      },
+      size: {
+        height: 550
       }
   });

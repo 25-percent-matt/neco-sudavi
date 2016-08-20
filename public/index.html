@@ -2,7 +2,7 @@
 <head>
   <link href="/css/styles.css" rel="stylesheet" type="text/css">
   <link href="/chartData/c3-0.4.11/c3.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 
  <script src="/chartData/d3-3.5.17/d3.min.js"></script>
  <script src="/chartData/c3-0.4.11/c3.min.js"></script>
@@ -12,46 +12,56 @@
 </head>
 <body ng-app="dataApp">
   <div class="rightArrow">
-    <img src="/img/keyboard-right-arrow-button.png">
+    <a href="index02.html"><img src="/img/keyboard-right-arrow-button.png"></a>
   </div>
 
   <h1 id="headerText">NeCo_SuDaVi</h1>
-  <div id="chartCombo"></div>
+<!--    <div id="degreeChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Degree</h4></div>
+   <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div> -->
+<!--
+  <div id="chartCombo" ng-show="!showHide" ng-controller="divHideController" ng-click="loadBigFunction()"></div> -->
 
-  <div ng-controller="divHideController">
-    <button ng-click="clickToLoad()">One record from survey</button>
-  </div>
+
+
+
+
   <div class="category" ng-controller="divHideController">
+    <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+       <div id="chartCombo" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"></div><br>
+
     <span class="categoryTitle" ng-show="!showHide" ng-click="loadBigFunction()">EDUCATION</span><br>
+
     <div id="degreeChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Degree</h4></div>
-    <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+    <div ng-show="showHide" ng-click="loadBigFunction()" id="chartDegreeBig"></div>
+
     <div id="majorChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Major</h4></div>
-    <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+    <div ng-show="showHide" ng-click="loadBigFunction()" id="chartDegreeMajor"></div>
+
     <div id="hasStudentDebtChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Has Student Debt</h4></div>
-    <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+    <div ng-show="showHide" ng-click="loadBigFunction()" id="chartDegreeHasDebt"></div>
 
   <div class="category">
     <span class="categoryTitle" ng-show="!showHide" ng-click="loadBigFunction()">EMPLOYMENT</span><br>
+<!--      <div id="employmentFieldChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Employment Field</h4></div>
+<div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+
+<div id="currentIncomeChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Current Income</h4></div>
+<div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div> -->
+
      <div id="employmentFieldChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Employment Field</h4></div>
      <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
 
-     <div id="currentIncomeChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Current Income</h4></div>
-     <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
-
-     <div id="hasChildrenChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Has Children</h4></div>
-     <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
+  <div id="currentIncomeChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Current Income</h4></div>
+  <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
 
      <div id="numOfChildrenChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4># of Children</h4></div>
-     <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
-
-     <div id="hasMortgageChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Has Mortgage</h4></div>
      <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
 
      <div id="jobPreferenceChart" class="individualCharts" ng-show="!showHide" ng-click="loadBigFunction()"><h4>Job Preference</h4></div>
      <div ng-show="showHide" ng-click="loadBigFunction()" id="chart"></div>
   </div>
    <script type="text/javascript" src="/js/dashboardChart.js"></script>
-
+   <script type="text/javascript" src="/chartData/chart_combination.js"></script>
    <script type="text/javascript" src="/chartData/chart_pie.js"></script>
 </body>
 </html>
