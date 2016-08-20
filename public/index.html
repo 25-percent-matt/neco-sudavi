@@ -71,12 +71,12 @@
       </div>
       <div id="megaContainer" ng-show="pageNumber === 3">
         <div id="pageThreeContainer" ng-show="pageNumber === 3">
-          <div class="pageThreePicContainer" ng-show="pageNumber === 3">
+          <div class="pageThreePicContainer" ng-click="mattsInfo()" ng-show="pageNumber === 3">
             <span class="pageThreePersonArea" ng-show="pageNumber === 3">
               <div class="pageThreePic"> </div>
             </span>
           </div>
-          <div class="pageThreePicContainer" ng-show="pageNumber === 3">
+          <div class="pageThreePicContainer" ng-click="andysInfo()" ng-show="pageNumber === 3">
             <span class="pageThreePersonArea" ng-show="pageNumber === 3">
               <div class="pageThreePic"> </div>
             </span>
@@ -94,21 +94,30 @@
         </div>
         <div id="aboutMeDiv" ng-show="pageNumber === 3">
           <div class="pageThreeAboutMe" ng-show="pageNumber === 3">
-            <div class="ourSummary">
+            <div class="ourSummary" ng-show="showHide">
               <div><h3>About Me</h3></div>
               <div class="aboutMeList">
                 <ul><li ng-repeat="n in aboutMe">{{n}}</li></ul>
               </div>
             </div>
-            <div class="favoriteTech">
+            <div class="favoriteTech" ng-show="showHide">
               <div><h3>Favorite Tech</h3></div>
               <div class="myFavTechList">
                 <ul><li ng-repeat="n in favTech">{{n}}</li></ul>
               </div>
             </div>
-            <div class="preBootcampQuestions"></div>
-            <div class="myRecommendations"></div>
-            <div class="favResources"></div>
+            <div class="preBootcampQuestions" ng-show="showHide">
+              <div><h3>Pre-Bootcamp Questions</h3></div>
+              <ul><li ng-repeat="n in questions">{{n}}</li></ul>
+            </div>
+            <div class="myRecommendations" ng-show="showHide">
+              <div><h3>Recommendations</h3></div>
+              <ul><li ng-repeat="n in recommendations">{{n}}</li></ul>
+            </div>
+            <div class="favResources" ng-show="showHide">
+              <div><h3>Favorite Resources</h3></div>
+              <ul><li ng-repeat="n in recommendations">{{n}}</li></ul>
+            </div>
           </div>
           <div class="pageThreeAboutMe" ng-show="pageNumber === 3">
             <div class="ourSummary"></div>
