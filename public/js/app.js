@@ -20,6 +20,8 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       console.log($scope.pageNumber);
     };
     $scope.testFrog = true;
+    $scope.aboutMatt = ["Hometown: Orange County, California","Currently Reside In: Honolulu, Hawaii"];
+    $scope.favTech = ["Angular","GraphQL"];
 }]);
 
 // app , controller, scope, directives
