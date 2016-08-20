@@ -1,0 +1,62 @@
+"10-19", "agender", 6
+"10-19", "female", 160
+"10-19", "genderqueer", 7
+"10-19", "male", 1088
+"10-19", "trans", 3
+"20-29", "agender", 22
+"20-29", "female", 1369
+"20-29", "genderqueer", 33
+"20-29", "male", 5509
+"20-29", "trans", 19
+"30-39", "agender", 7
+"30-39", "female", 788
+"30-39", "genderqueer", 19
+"30-39", "male", 2812
+"30-39", "trans", 7
+"40-49", "agender", 1
+"40-49", "female", 306
+"40-49", "genderqueer", 5
+"40-49", "male", 884
+"40-49", "trans", 5
+"50-59", "female", 130
+"50-59", "genderqueer", 1
+"50-59", "male", 297
+"60-69", "female", 21
+"60-69", "male", 62
+"60-69", "trans", 2
+"70-79", "female", 3
+"70-79", "male", 10
+"80-89", "male", 2
+
+10-19
+	M 1088
+	F 160
+	Other 16
+20-29
+	M 5509
+	F 1369
+	Other 74
+30-39
+	M 2812
+	F 788
+	Other 33
+40-49
+	M 884
+	F 306
+	Other 11
+50-59
+	M 297
+	F 130
+	Other 1
+60-69
+	M
+	F
+	Other
+70-79
+	M
+	F
+	Other
+80-89
+	M
+	F
+	Other

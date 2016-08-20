@@ -1,6 +1,6 @@
 /* @import 'partials/reset'; */
 * {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Arvo', sans-serif;
   text-align: center;
   letter-spacing: 1px; }
 
@@ -11,7 +11,7 @@ body {
   /*   display:flex;
   flex-flow: row wrap; */
   align-items: center;
-  padding: 2em; }
+  margin: 0px; }
   @media only screen and (min-width: 600px) {
     body .leftArrow {
       position: absolute;
@@ -46,6 +46,7 @@ body {
     font-weight: 700;
     font-size: 1.5em; }
   .category .individualCharts {
+    vertical-align: top;
     display: inline-block;
     margin: 0px; }
     .category .individualCharts h4 {
@@ -78,9 +79,60 @@ body {
 .rightArrow:hover {
   opacity: 0.7; }
 
+#page2Header {
+  display: flex;
+  flex-flow: row wrap; }
+
+.page2Divs {
+  flex: 1 1 auto; }
+
+#FTworkPercent {
+  font-size: 5em;
+  vertical-align: top; }
+
 .arc text {
   font: 10px sans-serif;
   text-anchor: middle; }
 
 .arc path {
   stroke: #fff; }
+
+.bar {
+  fill: steelblue;
+}
+
+.axis path {
+  display: none;
+}
+
+.pageThreePersonArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.pageThreePicContainer {
+  border-width: 2px;
+  border-style: solid;
+  border-color: blue;
+  height: 270px;
+  width: 750px;
+}
+
+.pageThreePic {
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  height: 200px;
+  width: 200px;
+}
+
+.pageThreeBio {
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  height: 200px;
+  width: 450px;
+}
