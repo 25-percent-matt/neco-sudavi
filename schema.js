@@ -8,11 +8,13 @@ const {
   GraphQLList,
   GraphQLID,
   GraphQLNonNull,
-  GraphQLBoolean
+  GraphQLBoolean,
+  GraphQLFloat
 } = require('graphql');
 
 const {resolver} = require('graphql-sequelize');
 const surveydata = require('./models').surveydata;
+const surveymetadata = require('./models').surveymetadata;
 
 
 const SurveyType = new GraphQLObjectType({
@@ -136,25 +138,91 @@ const SurveyType = new GraphQLObjectType({
   }
 });
 
+const SurveyMetaType = new GraphQLObjectType({
+  name: 'SurveyMeta',
+  fields: {
+    id : {
+      type: GraphQLInt,
+      description : 'record id'
+    },
+    fieldName : {
+      type: GraphQLString,
+      description : 'Name of the field in the database'
+    },
+    fieldLabel : {
+      type: GraphQLString,
+      description : 'Field label - how we want users to see it'
+    },
+    numOfResponses : {
+      type: GraphQLInt,
+      description : 'Total number of responses out of 15,620'
+    },
+    responsePercent : {
+      type: GraphQLFloat,
+      description : 'Percentage of 15,620 respondents who answered the question'
+    },
+    fieldGrouping : {
+      type: GraphQLString,
+      description : `groupings for the 3 multiple-choice questions: InPersonCodingEvents, Podcasts, Resources`
+    }
+  }
+});
+
 const queryType = new GraphQLObjectType({
   name: 'RootQuery',
 
   fields: {
-    surveyRecord: {
-      type: SurveyType,
-      args: {
+    surveyRecord: { //searching for a specific id that will return only one survey record
+      type: SurveyType, // the graphql object type we defined above
+      args: { //list what how you can search through records
         id: {
-          type: new GraphQLNonNull(GraphQLInt)
-        }
+          type: new GraphQLNonNull(GraphQLInt) // GraphQLNonNull means that this field is required when making queries
+        },
       },
-      // 3rd is context ------v
+      resolve: resolver(surveydata, { //A helper for resolving graphql queries targeted at Sequelize models or associations.
+        include: false // disable auto including of associations based on AST - default: true
+      }),
+    },
+    surveyRecords: {
+      type: new GraphQLList(SurveyType), // this returns a list defined by its args
+      args: { //ex. "I only want to see data from someone who is 25 years old", lists all records where age: 25 and your fields can be described after and will only return "commute time" from people age:25
+        Age: {
+          type: GraphQLInt
+        },
+        CountryLive: {
+          type: GraphQLString
+        },
+        CountryCitizen: {
+          type: GraphQLString
+        },
+        SchoolDegree: {
+          type: GraphQLString
+        },
+        SchoolMajor: {
+          type: GraphQLString
+        },
+      },
       resolve: resolver(surveydata, {
         include: false
       }),
     },
-    surveyRecords: {
-      type: new GraphQLList(SurveyType),
-      resolve: resolver(surveydata, {
+    surveyMetaData: {
+      type: new GraphQLList(SurveyMetaType), // this returns a list defined by its args
+      args: { //ex. "responses for InPersonCodingEvents"
+        fieldName : {
+        type: GraphQLString,
+        description : 'Name of the field in the database'
+        },
+        fieldLabel : {
+          type: GraphQLString,
+          description : 'Field label - how we want users to see it'
+        },
+        fieldGrouping : {
+          type: GraphQLString,
+          description : `groupings for the 3 multiple-choice questions: InPersonCodingEvents, Podcasts, Resources`
+        },
+      },
+      resolve: resolver(surveymetadata, {
         include: false
       }),
     },

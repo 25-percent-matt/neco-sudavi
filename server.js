@@ -21,8 +21,34 @@ app.use('/graphql', (req, res) => {
   })(req, res);
 });
 
+app.use('/chartQuery/:id', (req, res) => {
+  var querySelector = req.params.id;
+  var query = `{ surveyRecords { ${querySelector} } }`;
+  graphql(mySchema, query).then(result => {
+    let allb = result
+    let tallies = []
+    allb.data.surveyRecords.forEach(function (elem) {
+        let x = findIndex(elem, tallies, querySelector)
+        if (typeof x === 'number') {
+          tallies[x][1] = tallies[x][1] + 1
+        } else {
+          tallies.push([elem[querySelector], 1])
+        }
+      })
+    res.send(tallies)
+  });
+});
+
+function findIndex (elem, tallies, querySelector) {
+  for (var i = 0; i < tallies.length; i++) {
+    if (elem[querySelector] === tallies[i][0]) {
+      return i
+    }
+  }
+  return 'the fail frog';
+}
+
 app.use(function(req, res, next) {
-  console.log('method: ',req.method, ' url: ',req.url);
   next();
  });
 
@@ -41,6 +67,6 @@ app.get('/api/stuff', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  db.sequelize.sync();
+  db.sequelize.sync(); // Sync all models that aren't already in the database
   console.log(`Server running on http://localhost:${PORT}`);
 });
