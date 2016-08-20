@@ -21,26 +21,27 @@
       <img ng-click="gotoNextPage()" ng-show="pageNumber < 3" src="/img/keyboard-right-arrow-button.png">
     </div>
       <div>
-        <button ng-show="showHide" ng-click="loadBigFunction()">Return Home</button>
+        <button ng-show="showHide" ng-click="returnHome()">Return Home</button>
       </div>
 
     <div id="chartCombo" ng-show="!showHide && pageNumber === 1" ></div>
 
       <span class="categoryTitle" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">EDUCATION</span><br>
-      <div id="degreeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">
+
+      <div id="degreeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartDegreeBigShow')">
         <h4>Degree</h4>
       </div>
-      <div ng-show="showHide" ng-click="loadBigFunction()" id="chartDegreeBig"></div>
+      <div ng-show="chartDegreeBigShow" ng-click="returnHome()" id="chartDegreeBig"></div>
 
-      <div id="majorChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">
+      <div id="majorChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction('chartMajorBigShow')">
         <h4>Major</h4>
       </div>
-      <div ng-show="showHide" ng-click="loadBigFunction()" id="chartMajorBig"></div>
+      <div ng-show="chartMajorBigShow" ng-click="returnHome()" id="chartMajorBig"></div>
 
-      <div id="hasStudentDebtChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">
+      <div id="hasStudentDebtChart" class="individualCharts" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction('chartHasDebtBigShow')">
         <h4>Has Student Debt</h4>
       </div>
-      <div ng-show="showHide" ng-click="loadBigFunction()" id="chartHasDebtBig"></div>
+      <div ng-show="chartHasDebtBigShow" ng-click="returnHome()" id="chartHasDebtBig"></div>
 
       <div class="category">
         <span class="categoryTitle" ng-show="!showHide && pageNumber === 1"" ng-click="loadBigFunction()">EMPLOYMENT</span><br>
