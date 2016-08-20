@@ -85,18 +85,20 @@ body {
 .arc path {
   stroke: #fff; }
 
-.pageThreeArea {
+.pageThreePersonArea {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
 .pageThreePicContainer {
   border-width: 2px;
   border-style: solid;
   border-color: blue;
-  height: 300px;
-  width: 250px;
+  height: 270px;
+  width: 750px;
 }
 
 .pageThreePic {
