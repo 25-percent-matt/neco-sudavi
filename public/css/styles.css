@@ -106,9 +106,9 @@ body {
 }
 
 #megaContainer{
-  border-width: 2px;
+/*  border-width: 2px;
   border-style: solid;
-  border-color: yellow;
+  border-color: yellow;*/
   display: flex;
   flex-direction: row;
   margin-left: 10%;
@@ -117,9 +117,9 @@ body {
 }
 
 #pageThreeContainer{
-  border-width: 2px;
-  border-style: solid;
-  border-color: blue;
+/*  border-width: 2px;
+  border-style: solid;*/
+  /*border-color: blue;*/
   width: 280px;
   display: flex;
   flex-direction: column;
@@ -133,10 +133,10 @@ body {
 
 .pageThreePicContainer {
   display: flex;
-  border-width: 2px;
-  border-style: solid;
-  border-color: blue;
-  height: 272px;
+/*  border-width: 2px;
+  border-style: solid;*/
+  /*border-color: blue;*/
+  height: 274px;
   width: 270px;
   justify-content: center;
 }
@@ -152,17 +152,17 @@ body {
 }
 
 #aboutMeDiv{
-  border-width: 2px;
-  border-style: solid;
-  border-color: purple;
+/*  border-width: 2px;
+  border-style: solid;*/
+  /*border-color: purple;*/
   width: 100%;
   height: 1103px;
 }
 
 .pageThreeAboutMe{
-  border-width: 2px;
-  border-style: solid;
-  border-color: green;
+/*  border-width: 2px;
+  border-style: solid;*/
+  /*border-color: green;*/
   width: 99.5%;
   height: 548px;
   display: flex;
@@ -270,3 +270,14 @@ body {
   margin-right: auto;
 }
 
+.selectedSummaryStyle{
+  background-color: gray;
+}
+
+.innerDivStyle{
+  background-color: white;
+}
+
+#mattsPic{
+  background-image: url(http://www.vectorportal.com/img_novi/surfer-silhouette.jpg);
+}
