@@ -51,3 +51,7 @@ function dataReducer(dataToBeReduced) {
 var chartDegreeBig = makeGraphPrimary('SchoolDegree', '#chartDegreeBig');
 var chartMajorBig = makeGraphPrimary('SchoolMajor', '#chartMajorBig');
 var chartHasDebtBig = makeGraphPrimary('HasDebt', '#chartHasDebtBig');
+var chartEmploymentFieldBig = makeGraphPrimary('EmploymentField', '#chartEmploymentFieldBig');
+var chartCurrentIncomeBig = makeGraphPrimary('Income', '#chartCurrentIncomeBig');
+var chartNumChildrenBig = makeGraphPrimary('ChildrenNumber', '#chartNumChildrenBig');
+var chartJobPrefBig = makeGraphPrimary('JobPref', '#chartJobPrefBig');

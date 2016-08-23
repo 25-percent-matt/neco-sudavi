@@ -2,8 +2,8 @@ var chartFreelancer = c3.generate({
     bindto: '#statusFreelancer',
     data: {
         columns: [
-            ['data1', 30],
-            ['data2', 120],
+            ['Yes', 736],
+            ['No', 201],
         ],
         type : 'donut',
         onclick: function (d, i) { console.log("onclick", d, i); },
@@ -11,7 +11,7 @@ var chartFreelancer = c3.generate({
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     donut: {
-        title: "Freelancer"
+        title: "Recommended?"
     },
     size: {
       width: 300,
