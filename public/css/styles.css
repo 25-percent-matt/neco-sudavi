@@ -38,10 +38,7 @@ body {
 #headerText {
   text-align: center;
   font-size: 3em;
-  margin: 0px;
-  color: rgb(253,198,79);
-  -webkit-text-stroke: 0.1px black;
-}
+  margin: 0px; }
 
 .category {
   display: block; }
@@ -100,71 +97,57 @@ body {
 .arc path {
   stroke: #fff; }
 
-.bar {
-  fill: steelblue;
-}
-
-.axis path {
-  display: none;
-}
-
-#megaContainer{
-/*  border-width: 2px;
+#megaContainer {
+  /*  border-width: 2px;
   border-style: solid;
   border-color: yellow;*/
   display: flex;
   flex-direction: row;
   margin-left: 10%;
   margin-right: 10%;
-  margin-bottom: 10%;
-}
+  margin-bottom: 10%; }
 
-#pageThreeContainer{
-/*  border-width: 2px;
+#pageThreeContainer {
+  /*  border-width: 2px;
   border-style: solid;*/
   /*border-color: blue;*/
   width: 280px;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 /*.pageThreePersonArea {
   display: flex;
   margin-top: 5%;
   margin-left: 5%;
 }*/
-
 .pageThreePicContainer {
   display: flex;
-/*  border-width: 2px;
+  /*  border-width: 2px;
   border-style: solid;*/
   /*border-color: blue;*/
   border-radius: 5px 0px 0px 5px;
   height: 274px;
   width: 270px;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .pageThreePic {
   border-width: 2px;
   border-style: solid;
-  border-color: rgb(253,198,79);
+  border-color: #fdc64f;
   border-radius: 5px;
   margin-top: 3%;
   height: 250px;
-  width: 250px;
-}
+  width: 250px; }
 
-#aboutMeDiv{
-/*  border-width: 2px;
+#aboutMeDiv {
+  /*  border-width: 2px;
   border-style: solid;*/
   /*border-color: purple;*/
   width: 100%;
-  height: 1103px;
-}
+  height: 1103px; }
 
-.pageThreeAboutMe{
-/*  border-width: 2px;
+.pageThreeAboutMe {
+  /*  border-width: 2px;
   border-style: solid;*/
   /*border-color: green;*/
   border-radius: 0px 5px 5px 0px;
@@ -173,28 +156,23 @@ body {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; }
 
+.innerDivStyle {
+  background-color: #4d4d4d;
+  color: #dfdfdf;
+  padding: 1%; }
 
-.innerDivStyle{
-  background-color: rgb(77,77,77);
-  color: rgb(223,223,223);
-  padding: 1%;
-}
+.innerDivStyle h4 {
+  color: #6ac8fc;
+  margin-bottom: -1px; }
 
-.innerDivStyle h4{
-  color: rgb(106,200,252);
-  margin-bottom: -1px;
-}
+.innerDivStyle ul {
+  margin-left: -20px; }
 
-.innerDivStyle ul{
-  margin-left: -20px;
-}
-
-.ourSummary{
+.ourSummary {
   display: flex;
-/*  border-width: 2px;
+  /*  border-width: 2px;
   border-style: solid;
   border-color: magenta;*/
   border-radius: 5px;
@@ -203,12 +181,11 @@ body {
   margin-left: auto;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
-.favoriteTech{
+.favoriteTech {
   display: flex;
-/*  border-width: 2px;
+  /*  border-width: 2px;
   border-style: solid;
   border-color: orange;*/
   border-radius: 5px;
@@ -218,12 +195,11 @@ body {
   margin-right: auto;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
-.preBootcampQuestions{
+.preBootcampQuestions {
   display: flex;
-/*  border-width: 2px;
+  /*  border-width: 2px;
   border-style: solid;
   border-color: lime;*/
   border-radius: 5px;
@@ -235,12 +211,11 @@ body {
   margin-bottom: auto;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
-.myRecommendations{
+.myRecommendations {
   display: flex;
-/*  border-width: 2px;
+  /*  border-width: 2px;
   border-style: solid;
   border-color: cyan;*/
   border-radius: 5px;
@@ -249,12 +224,11 @@ body {
   margin-bottom: auto;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
-.favResources{
+.favResources {
   display: flex;
-/*  border-width: 2px;
+  /*  border-width: 2px;
   border-style: solid;
   border-color: pink;*/
   border-radius: 5px;
@@ -265,46 +239,37 @@ body {
   margin-bottom: auto;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
-.aboutMeList{
+.aboutMeList {
   display: flex;
   margin-right: auto;
   font-size: 12px;
-  overflow: scroll;
-}
+  overflow: scroll; }
 
-.myFavTechList{
+.myFavTechList {
   display: flex;
-  margin-right: auto;
-}
+  margin-right: auto; }
 
-.preBootcampQuestions{
+.preBootcampQuestions {
   display: flex;
-  margin-right: auto;
-}
+  margin-right: auto; }
 
-.myRecommendations{
+.myRecommendations {
   display: flex;
   margin-right: auto;
   font-size: 14px;
-  overflow: scroll;
-}
+  overflow: scroll; }
 
-.favResources{
+.favResources {
   display: flex;
-  margin-right: auto;
-}
+  margin-right: auto; }
 
-.selectedSummaryStyle{
-  background-color: rgb(54,54,54);
-}
+.selectedSummaryStyle {
+  background-color: #363636; }
 
-#mattsPic{
-  background-image: url(http://www.vectorportal.com/img_novi/surfer-silhouette.jpg);
-}
+#mattsPic {
+  background-image: url(http://www.vectorportal.com/img_novi/surfer-silhouette.jpg); }
 
-body{
-  background-image: url(../img/rockywall.png);
-}
+body {
+  background-image: url(../img/rockywall.png); }

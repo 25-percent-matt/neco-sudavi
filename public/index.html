@@ -27,14 +27,14 @@
         <button ng-show="showHide && pageNumber === 2" ng-click="returnHome()">Return Home</button>
       </div>
 
-      <div id="chartCombo" ng-show="!showHide && pageNumber === 1" ></div>
+      <div id="chartCombo" ng-show="!showHide && pageNumber === 1"> </div>
 
       <span class="categoryTitle" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">EDUCATION</span><br>
 
       <div id="degreeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartDegreeBigShow')">
         <h4>Degree</h4>1"
       </div>
-      <div ng-show="chartDegreeBigShow" ng-click="returnHome()" id="chartDegreeBig"></div>
+      <div ng-show="chartDegreeBigShow" ng-click="returnHome()" id="chartDegreeBig"> </div>
 
       <div id="majorChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartMajorBigShow')">
         <h4>Major</h4>
@@ -92,7 +92,7 @@
             </span>
           </div>
         </div>
-        <div id="aboutMeDiv" ng-show="pageNumber === 3">
+        <div  ng-app="ngAnimate" id="aboutMeDiv" ng-show="pageNumber === 3">
 
           <div class="pageThreeAboutMe" ng-class="myVar" ng-show="pageNumber === 3">
             <div class="ourSummary innerDivStyle" ng-show="toggleShow">
@@ -154,6 +154,7 @@
       <!-- .category end -->
     </div>
   </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
   <script type="text/javascript" src="/js/dashboardChart.js"></script>
   <script type="text/javascript" src="/chartData/chart_combination.js"></script>
   <script type="text/javascript" src="/chartData/chart_pie.js"></script>
