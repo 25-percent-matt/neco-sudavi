@@ -7,6 +7,9 @@
 body {
   color: #E8DDCB;
   background-color: #031634;
+/*   color: #000000;
+background-color: #f5f5f5; */
+  /* background-image: url(../img/rockywall.png); */
   text-align: center;
   /*   display:flex;
   flex-flow: row wrap; */
@@ -151,3 +154,177 @@ body {
 /* .c3 path, .c3 line, .tick text {
   stroke: white;
 } */
+
+#megaContainer {
+  /*  border-width: 2px;
+  border-style: solid;
+  border-color: yellow;*/
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%; }
+
+#pageThreeContainer {
+  /*  border-width: 2px;
+  border-style: solid;*/
+  /*border-color: blue;*/
+  width: 280px;
+  display: flex;
+  flex-direction: column; }
+
+/*.pageThreePersonArea {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+}*/
+.pageThreePicContainer {
+  display: flex;
+  /*  border-width: 2px;
+  border-style: solid;*/
+  /*border-color: blue;*/
+  border-radius: 5px 0px 0px 5px;
+  height: 274px;
+  width: 270px;
+  justify-content: center; }
+
+.pageThreePic {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fdc64f;
+  border-radius: 5px;
+  margin-top: 3%;
+  height: 250px;
+  width: 250px; }
+
+#aboutMeDiv {
+  /*  border-width: 2px;
+  border-style: solid;*/
+  /*border-color: purple;*/
+  width: 100%;
+  height: 1103px; }
+
+.pageThreeAboutMe {
+  /*  border-width: 2px;
+  border-style: solid;*/
+  /*border-color: green;*/
+  border-radius: 0px 5px 5px 0px;
+  width: 99.5%;
+  height: 548px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center; }
+
+.innerDivStyle {
+  background-color: #4d4d4d;
+  color: #dfdfdf;
+  padding: 1%; }
+
+.innerDivStyle h4 {
+  color: #6ac8fc;
+  margin-bottom: -1px; }
+
+.innerDivStyle ul {
+  margin-left: -20px; }
+
+.ourSummary {
+  display: flex;
+  /*  border-width: 2px;
+  border-style: solid;
+  border-color: magenta;*/
+  border-radius: 5px;
+  height: 250px;
+  width: 60%;
+  margin-left: auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+
+.favoriteTech {
+  display: flex;
+  /*  border-width: 2px;
+  border-style: solid;
+  border-color: orange;*/
+  border-radius: 5px;
+  height: 250px;
+  width: 33%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+
+.preBootcampQuestions {
+  display: flex;
+  /*  border-width: 2px;
+  border-style: solid;
+  border-color: lime;*/
+  border-radius: 5px;
+  font-size: 10px;
+  overflow: scroll;
+  height: 250px;
+  width: 30%;
+  margin-left: auto;
+  margin-bottom: auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+
+.myRecommendations {
+  display: flex;
+  /*  border-width: 2px;
+  border-style: solid;
+  border-color: cyan;*/
+  border-radius: 5px;
+  height: 250px;
+  width: 30%;
+  margin-bottom: auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+
+.favResources {
+  display: flex;
+  /*  border-width: 2px;
+  border-style: solid;
+  border-color: pink;*/
+  border-radius: 5px;
+  font-size: 14px;
+  height: 250px;
+  width: 30%;
+  margin-right: auto;
+  margin-bottom: auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; }
+
+.aboutMeList {
+  display: flex;
+  margin-right: auto;
+  font-size: 12px;
+  overflow: scroll; }
+
+.myFavTechList {
+  display: flex;
+  margin-right: auto; }
+
+.preBootcampQuestions {
+  display: flex;
+  margin-right: auto; }
+
+.myRecommendations {
+  display: flex;
+  margin-right: auto;
+  font-size: 14px;
+  overflow: scroll; }
+
+.favResources {
+  display: flex;
+  margin-right: auto; }
+
+.selectedSummaryStyle {
+  background-color: #363636; }
+
+#mattsPic {
+  background-image: url(http://www.vectorportal.com/img_novi/surfer-silhouette.jpg); }
