@@ -38,7 +38,10 @@ body {
 #headerText {
   text-align: center;
   font-size: 3em;
-  margin: 0px; }
+  margin: 0px;
+  color: rgb(253,198,79);
+  -webkit-text-stroke: 0.1px black;
+}
 
 .category {
   display: block; }
@@ -136,6 +139,7 @@ body {
 /*  border-width: 2px;
   border-style: solid;*/
   /*border-color: blue;*/
+  border-radius: 5px 0px 0px 5px;
   height: 274px;
   width: 270px;
   justify-content: center;
@@ -144,7 +148,7 @@ body {
 .pageThreePic {
   border-width: 2px;
   border-style: solid;
-  border-color: red;
+  border-color: rgb(253,198,79);
   border-radius: 5px;
   margin-top: 3%;
   height: 250px;
@@ -163,6 +167,7 @@ body {
 /*  border-width: 2px;
   border-style: solid;*/
   /*border-color: green;*/
+  border-radius: 0px 5px 5px 0px;
   width: 99.5%;
   height: 548px;
   display: flex;
@@ -171,11 +176,27 @@ body {
   justify-content: center;
 }
 
+
+.innerDivStyle{
+  background-color: rgb(77,77,77);
+  color: rgb(223,223,223);
+  padding: 1%;
+}
+
+.innerDivStyle h4{
+  color: rgb(106,200,252);
+  margin-bottom: -1px;
+}
+
+.innerDivStyle ul{
+  margin-left: -20px;
+}
+
 .ourSummary{
   display: flex;
-  border-width: 2px;
+/*  border-width: 2px;
   border-style: solid;
-  border-color: magenta;
+  border-color: magenta;*/
   border-radius: 5px;
   height: 250px;
   width: 60%;
@@ -187,9 +208,9 @@ body {
 
 .favoriteTech{
   display: flex;
-  border-width: 2px;
+/*  border-width: 2px;
   border-style: solid;
-  border-color: orange;
+  border-color: orange;*/
   border-radius: 5px;
   height: 250px;
   width: 33%;
@@ -202,10 +223,12 @@ body {
 
 .preBootcampQuestions{
   display: flex;
-  border-width: 2px;
+/*  border-width: 2px;
   border-style: solid;
-  border-color: lime;
+  border-color: lime;*/
   border-radius: 5px;
+  font-size: 10px;
+  overflow: scroll;
   height: 250px;
   width: 30%;
   margin-left: auto;
@@ -217,9 +240,9 @@ body {
 
 .myRecommendations{
   display: flex;
-  border-width: 2px;
+/*  border-width: 2px;
   border-style: solid;
-  border-color: cyan;
+  border-color: cyan;*/
   border-radius: 5px;
   height: 250px;
   width: 30%;
@@ -231,10 +254,11 @@ body {
 
 .favResources{
   display: flex;
-  border-width: 2px;
+/*  border-width: 2px;
   border-style: solid;
-  border-color: pink;
+  border-color: pink;*/
   border-radius: 5px;
+  font-size: 14px;
   height: 250px;
   width: 30%;
   margin-right: auto;
@@ -248,6 +272,7 @@ body {
   display: flex;
   margin-right: auto;
   font-size: 12px;
+  overflow: scroll;
 }
 
 .myFavTechList{
@@ -263,6 +288,8 @@ body {
 .myRecommendations{
   display: flex;
   margin-right: auto;
+  font-size: 14px;
+  overflow: scroll;
 }
 
 .favResources{
@@ -271,13 +298,13 @@ body {
 }
 
 .selectedSummaryStyle{
-  background-color: gray;
-}
-
-.innerDivStyle{
-  background-color: white;
+  background-color: rgb(54,54,54);
 }
 
 #mattsPic{
   background-image: url(http://www.vectorportal.com/img_novi/surfer-silhouette.jpg);
+}
+
+body{
+  background-image: url(../img/rockywall.png);
 }

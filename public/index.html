@@ -98,7 +98,7 @@
             <div class="ourSummary innerDivStyle" ng-show="toggleShow">
               <div><h4>About Me</h4></div>
               <div class="aboutMeList">
-                <ul><li ng-repeat="n in aboutMe">{{n}}</li></ul>
+                <p>{{aboutMe}}</p>
               </div>
             </div>
             <div class="favoriteTech innerDivStyle" ng-show="toggleShow">
@@ -108,16 +108,19 @@
               </div>
             </div>
             <div class="preBootcampQuestions innerDivStyle" ng-show="toggleShow">
-              <div><h4>Pre-Bootcamp Questions</h4></div>
-              <ul><li ng-repeat="n in questions">{{n}}</li></ul>
+              <div><h4>Pre-Bootcamp Q & A</h4></div>
+              <!-- <ul><li ng-repeat="n in questions">{{n}}</li></ul> -->
+              <div class="questionsList">
+                <p ng-repeat="n in questions">{{n}}</p>
+              </div>
             </div>
             <div class="myRecommendations innerDivStyle" ng-show="toggleShow">
               <div><h4>Recommendations</h4></div>
-              <ul><li ng-repeat="n in recommendations">{{n}}</li></ul>
+              <p ng-repeat="n in recommendations">{{n}}</p>
             </div>
             <div class="favResources innerDivStyle" ng-show="toggleShow">
               <div><h4>Favorite Resources</h4></div>
-              <ul><li ng-repeat="n in recommendations">{{n}}</li></ul>
+              <ul><li ng-repeat="n in favResources">{{n}}</li></ul>
             </div>
           </div>
 
@@ -125,7 +128,7 @@
             <div class="ourSummary innerDivStyle" ng-show="toggleShow2">
               <div><h4>About Me</h4></div>
               <div class="aboutMeList">
-                <ul><li ng-repeat="n in aboutMe2">{{n}}</li></ul>
+                <p>{{aboutMe2}}</p>
               </div>
             </div>
             <div class="favoriteTech innerDivStyle" ng-show="toggleShow2">
@@ -135,7 +138,7 @@
               </div>
             </div>
             <div class="preBootcampQuestions innerDivStyle" ng-show="toggleShow2">
-              <h4>Pre-Bootcamp Questions</h4>
+              <h4>Pre-Bootcamp Q & A</h4>
             </div>
             <div class="myRecommendations innerDivStyle" ng-show="toggleShow2">
               <h4>Recommendations</h4>
