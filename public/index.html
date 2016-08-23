@@ -2,10 +2,11 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>NeCo SuDaVi</title>
+  <title>Neco Sudavi</title>
   <link href="/css/styles.css" rel="stylesheet" type="text/css">
   <link href="/chartData/c3-0.4.11/c3.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
 
   <script src="/chartData/d3-3.5.17/d3.min.js"></script>
   <script src="/chartData/c3-0.4.11/c3.min.js"></script>
@@ -17,23 +18,35 @@
 
 <body>
   <div ng-app="counterApp" id="appContainer">
-    <h1 id="headerText" ng-click="loadBigFunction()">NeCo_SuDaVi</h1>
+    <div class="headerZero">
+      <div class="headerOne">
+        <h1 id="headerText" ng-click="loadBigFunction()">Neco Sudavi</h1>
+      </div>
+
+      <div class="headerTwo">
+        <strong>An investigation of new coders</strong>: who joins, why, and life as a coder.  (via freeCodeCamp's 2016 Survey)
+      </div>
+    </div>
+
+
+
     <div class="category" ng-controller="divHideController">
 
     <div class="leftArrow">
-      <img ng-click="gotoPrevPage()" ng-show="pageNumber > 1" src="/img/left-arrow-key.png">
+      <img id="leftArrowPic" ng-click="gotoPrevPage()" ng-show="pageNumber > 1" src="/img/arrow-left.png">
     </div>
 
       <div class="rightArrow">
-        <img ng-click="gotoNextPage()" ng-show="pageNumber < 3" src="/img/keyboard-right-arrow-button.png">
+        <img id="rightArrowPic" ng-click="gotoNextPage()" ng-show="pageNumber < 3" src="/img/arrow-right.png">
       </div>
       <div>
         <button ng-show="showHide" ng-click="returnHome()">Return Home</button>
       </div>
 
+      <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">Gender By Age Group</span><br>
       <div id="chartCombo" ng-show="!showHide && pageNumber === 1" ></div>
 
-      <span class="categoryTitle" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">EDUCATION</span><br>
+      <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">EDUCATION</span><br>
 
       <div id="degreeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartDegreeBigShow')">
         <h4>Degree</h4>
@@ -51,7 +64,7 @@
       <div ng-show="chartHasDebtBigShow" ng-click="returnHome()" id="chartHasDebtBig"></div>
 
       <div class="category">
-        <span class="categoryTitle" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction()">EMPLOYMENT</span><br>
+        <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">EMPLOYMENT</span><br>
 
         <div id="employmentFieldChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartEmploymentFieldBigShow')">
           <h4>Employment Field</h4>
