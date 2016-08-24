@@ -3,7 +3,9 @@
 /* @import 'partials/reset'; */
 
 // Variables
-$bgColor: #f5f5f5;
+$bgColor: #031634;
+$darkColor: #031634;
+$lightColor: #E8DDCB;
 
 $purple: purple;
 $blue: #0000ff;
@@ -23,14 +25,14 @@ $medium: "only screen and (min-width: 600px)";
 $large: "only screen and (min-width: 900px)";
 $x-large: "only screen and (min-width: 1350px)";
 
-*{
-  font-family: 'Arvo', sans-serif;
+* {
+  font-family: 'Raleway', sans-serif;
   text-align:center;
   letter-spacing: 1px;
 }
 
 body {
-  color: #000000;
+  color: $lightColor;
   background-color: $bgColor;
   background-image: url(../img/rockywall.png);
   text-align: center;
@@ -62,11 +64,11 @@ body {
   }
 
   a:link {
-    color: #000000;
+    color: $darkColor;
     text-decoration: none;
   }
   a:visited {
-    color: #000000;
+    color: $darkColor;
   }
   a:hover {
     color: #444444;
@@ -76,10 +78,30 @@ body {
   }
 }
 
+.headerZero{
+  flex: 1 1 auto;
+  display:flex;
+  flex-flow: row wrap;
+  padding: 25px 25px 25px 25px;
+}
+
+.headerOne{
+  display: inline-block;
+  flex: 1 1 45%;
+  margin: auto;
+}
+
+.headerTwo{
+  display: inline-block;
+  flex: 1 1 45%;
+  margin: auto;
+}
+
 #headerText {
   text-align: center;
   font-size: 3em;
   margin: 0px;
+  font-family: 'Bungee Shade', cursive;
 }
 
 .category {
@@ -109,9 +131,14 @@ body {
   }
 
   .individualCharts:hover {
-      opacity:0.7;
-      transition: all 0.1s ease-out;
+    opacity:0.7;
+    transition: all 0.1s ease-out;
   }
+}
+
+.individualCharts path{
+  stroke: $darkColor;
+  stroke-width: 0;
 }
 
 .leftArrow {
@@ -124,6 +151,11 @@ body {
   opacity:0.7;
 }
 
+#leftArrowPic {
+  height: 100px;
+  width: 75px;
+}
+
 .rightArrow {
   position: absolute;
   top: 45%;
@@ -132,6 +164,11 @@ body {
 
 .rightArrow:hover {
   opacity:0.7;
+}
+
+#rightArrowPic {
+  height: 100px;
+  width: 75px;
 }
 
 #page2Header {
@@ -156,6 +193,32 @@ body {
 .arc path {
   stroke: #fff;
 }
+
+.c3 .c3-axis-x path, .c3 .c3-axis-x line {
+    color: $lightColor;
+    stroke: $lightColor;
+}
+.c3 .c3-axis-y path, .c3 .c3-axis-y line {
+    color: $lightColor;
+    stroke: $lightColor;
+}
+
+.c3-axis-y text {
+   fill: $lightColor;
+   font-size:12px;
+}
+.c3-axis-x text {
+    fill: $lightColor;
+    font-size:12px;
+}
+
+.c3-legend-item text { stroke: $lightColor; }
+
+.c3-tooltip-item text { color: #000000; }
+
+/* .c3 path, .c3 line, .tick text {
+  stroke: white;
+} */
 
 #megaContainer{
 /*  border-width: 2px;

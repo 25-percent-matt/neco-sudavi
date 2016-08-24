@@ -1,10 +1,13 @@
+/*import colors from "./colors";
+export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");*/
+
  var degreeChart = function(){
    var width = 200,
        height = 200,
        radius = Math.min(width, height) / 2;
 
-   var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       var color = d3.scale.ordinal()
+           .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -64,7 +67,7 @@
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -124,7 +127,7 @@
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -184,7 +187,7 @@
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -244,7 +247,7 @@
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -304,7 +307,7 @@
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -364,7 +367,7 @@
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
