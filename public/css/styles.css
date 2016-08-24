@@ -123,8 +123,11 @@ body {
   font: 10px sans-serif;
   text-anchor: middle; }
 
-.arc path {
-  stroke: #fff; }
+/* .arc path {
+  stroke: #000000;
+} */
+.c3-chart-arc path {
+  stroke: #000; }
 
 .c3 .c3-axis-x path, .c3 .c3-axis-x line {
   color: #E8DDCB;
@@ -148,6 +151,10 @@ body {
 .c3-tooltip-item text {
   color: #000000; }
 
+/* #chartDegreeBig path{
+  stroke: $darkColor;
+  stroke-width: 0;
+} */
 /* .c3 path, .c3 line, .tick text {
   stroke: white;
 } */

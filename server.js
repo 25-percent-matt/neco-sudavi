@@ -10,9 +10,16 @@ const SurveyData = db.surveydata;
 const pool = db.sequelize.connectionManager.pool;
 const mySchema = require('./schema');
 
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    next();
+};
+
 /*  MIDDLEWARE  */
 
 // for dev: logs all requests
+app.use(allowCrossDomain);
+
 app.use('/graphql', (req, res) => {
   return graphqlHTTP({
     schema: mySchema,
