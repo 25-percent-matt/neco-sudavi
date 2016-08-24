@@ -282,6 +282,7 @@ body {
   height: 320px;
   width: 70%;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 #favoriteTech{
@@ -290,6 +291,7 @@ body {
   height: 320px;
   width: 30%;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 #preBootcampQs{
@@ -298,27 +300,44 @@ body {
   height: 274px;
   width: 40%;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 #recommendations{
-  border: 2px dashed cyan;
+  border: 2px dashed lime;
   display: flex;
   height: 274px;
   width: 35%;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 #favResources{
-  border: 2px dashed cyan;
+  border: 2px dashed yellow;
   display: flex;
   height: 274px;
   width: 25%;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
+.personalInfoHeader{
+  border: 2px dashed yellow;
+  display: flex;
+  height: 15%;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: left;
+}
 
-
-
+.personalInfoContent{
+  border: 2px dashed red;
+  display: flex;
+  height: 85%;
+  width: 100%;
+  box-sizing: border-box;
+}
 
 
 
