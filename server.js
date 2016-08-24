@@ -3,12 +3,56 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const { graphql } = require('graphql');
 const db = require('./models');
+const Sequelize = require('sequelize');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 const SurveyData = db.surveydata;
 const pool = db.sequelize.connectionManager.pool;
 const mySchema = require('./schema');
+
+var sequelize = new Sequelize('postgres://htmlint:t@localhost:5432/programmerdata');
+
+var Projections = sequelize.define('projections', {
+  stfips: {
+    type: Sequelize.STRING,
+    primaryKey: true
+  },
+  areaname: {
+    type: Sequelize.STRING
+  },
+  occupationcode: {
+    type: Sequelize.STRING
+  },
+  occupationname: {
+    type: Sequelize.STRING
+  },
+  baseyear: {
+    type: Sequelize.STRING
+  },
+  base: {
+    type: Sequelize.STRING
+  },
+  projyear: {
+    type: Sequelize.STRING
+  },
+  proj: {
+    type: Sequelize.STRING
+  },
+  change: {
+    type: Sequelize.STRING
+  },
+  percentchange: {
+    type: Sequelize.STRING
+  },
+  avgannualopenings: {
+    type: Sequelize.STRING
+  }
+},
+  {
+    timestamps: false
+  }
+);
 
 /*  MIDDLEWARE  */
 
@@ -47,6 +91,19 @@ function findIndex (elem, tallies, querySelector) {
   }
   return 'the fail frog';
 }
+
+app.use('/blsProjections/:state', (req, res) => {
+  Projections.findAll().then(function(Projections) {
+    let convertToc3 = Projections
+    let convertedChart = [];
+    convertToc3.forEach((elem) => {
+      if (elem.areaname === req.params.state) {
+        convertedChart.push(elem.areaname, (elem.base/100), (elem.proj/100), (elem.change/100), elem.percentchange, elem.avgannualopenings)
+      }
+    })
+    res.send(convertedChart)
+  })
+})
 
 app.use(function(req, res, next) {
   next();

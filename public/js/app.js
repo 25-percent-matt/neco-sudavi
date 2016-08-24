@@ -1,14 +1,5 @@
-var counterApp = angular.module('counterApp', []);
-
-/*counterApp.factory('arrowHider', ['$arrowHiderBoolean', function($arrowHiderBoolean) {
-  var showArrow = true;
-  $arrowHiderBoolean.arrowHider = function () {
-    console.log('inside the factory' + showArrow);
-    showArrow = !showArrow;
-  };
-}]);*/
-
-counterApp.controller('divHideController', ['$scope', function($scope) {
+var counterApp = angular.module('counterApp', [])
+  .controller('divHideController', ['$scope', function($scope) {
     $scope.count = 0;
     $scope.loadBigFunction = function (chartSelected) {
       $scope.showHide = !$scope.showHide;
@@ -28,6 +19,11 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
     $scope.testFrog = true;
     $scope.aboutMatt = ["Hometown: Orange County, California","Currently Reside In: Honolulu, Hawaii"];
     $scope.favTech = ["Angular","GraphQL"];
-}]);
-
-// app , controller, scope, directives
+  }])
+  .controller('Ctrl1', ['$scope', function($scope) {
+      $scope.searchDynamic = 'Enter State';
+      $scope.searchDynamic2 = 'Enter State';
+      $scope.updateChart = function () {
+        fillChartDynamic($scope.searchDynamic, $scope.searchDynamic2);
+      };
+  }]);
