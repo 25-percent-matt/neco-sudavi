@@ -245,7 +245,7 @@ body {
 
 #pageThreeContentDiv{
   display: flex;
-  border: 2px dashed lime;
+  border: 2px solid lime;
   width: 90%;
   height: 600px;
   box-sizing: border-box;
@@ -253,7 +253,7 @@ body {
 }
 
 #headshotContainer{
-  border: 2px dashed red;
+  border: 2px solid red;
   height: 596px;
   width: 12%;
   box-sizing: border-box;
@@ -269,7 +269,7 @@ body {
 
 #personalInfoContainer{
   display: flex;
-  border: 2px dashed magenta;
+  border: 2px solid magenta;
   height: 596px;
   width: 88%;
   box-sizing: border-box;
@@ -277,7 +277,7 @@ body {
 }
 
 #aboutMeSummary{
-  border: 2px dashed pink;
+  border: 2px solid pink;
   display: flex;
   height: 320px;
   width: 70%;
@@ -286,7 +286,7 @@ body {
 }
 
 #favoriteTech{
-  border: 2px dashed $light-gray;
+  border: 2px solid $light-gray;
   display: flex;
   height: 320px;
   width: 30%;
@@ -295,7 +295,7 @@ body {
 }
 
 #preBootcampQs{
-  border: 2px dashed cyan;
+  border: 2px solid cyan;
   display: flex;
   height: 274px;
   width: 40%;
@@ -304,7 +304,7 @@ body {
 }
 
 #recommendations{
-  border: 2px dashed lime;
+  border: 2px solid lime;
   display: flex;
   height: 274px;
   width: 35%;
@@ -313,7 +313,7 @@ body {
 }
 
 #favResources{
-  border: 2px dashed yellow;
+  border: 2px solid yellow;
   display: flex;
   height: 274px;
   width: 25%;
@@ -322,24 +322,33 @@ body {
 }
 
 .personalInfoHeader{
-  border: 2px dashed yellow;
+  border: 2px solid yellow;
   display: flex;
   height: 15%;
   width: 100%;
   box-sizing: border-box;
   align-items: center;
   justify-content: left;
+  font-size: 1.5em;
 }
 
 .personalInfoContent{
-  border: 2px dashed red;
+  border: 2px solid red;
   display: flex;
   height: 85%;
   width: 100%;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 }
 
-
+.personalInfoBody{
+  border: 2px solid white;
+  display: flex;
+  height: 90%;
+  width: 90%;
+  box-sizing: border-box;
+}
 
 
 
