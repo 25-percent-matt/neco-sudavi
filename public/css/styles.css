@@ -7,9 +7,6 @@
 body {
   color: #E8DDCB;
   background-color: #031634;
-/*   color: #000000;
-background-color: #f5f5f5; */
-  /* background-image: url(../img/rockywall.png); */
   text-align: center;
   /*   display:flex;
   flex-flow: row wrap; */
@@ -126,8 +123,11 @@ background-color: #f5f5f5; */
   font: 10px sans-serif;
   text-anchor: middle; }
 
-.arc path {
-  stroke: #fff; }
+/* .arc path {
+  stroke: #000000;
+} */
+.c3-chart-arc path {
+  stroke: #000; }
 
 .c3 .c3-axis-x path, .c3 .c3-axis-x line {
   color: #E8DDCB;
@@ -151,10 +151,13 @@ background-color: #f5f5f5; */
 .c3-tooltip-item text {
   color: #000000; }
 
+/* #chartDegreeBig path{
+  stroke: $darkColor;
+  stroke-width: 0;
+} */
 /* .c3 path, .c3 line, .tick text {
   stroke: white;
 } */
-
 #megaContainer {
   /*  border-width: 2px;
   border-style: solid;
