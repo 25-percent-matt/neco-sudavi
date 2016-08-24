@@ -7,9 +7,6 @@
 body {
   color: #E8DDCB;
   background-color: #031634;
-/*   color: #000000;
-background-color: #f5f5f5; */
-  /* background-image: url(../img/rockywall.png); */
   text-align: center;
   /*   display:flex;
   flex-flow: row wrap; */
@@ -154,7 +151,6 @@ background-color: #f5f5f5; */
 /* .c3 path, .c3 line, .tick text {
   stroke: white;
 } */
-
 #megaContainer {
   /*  border-width: 2px;
   border-style: solid;
