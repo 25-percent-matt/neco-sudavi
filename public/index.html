@@ -94,7 +94,7 @@
           <div class="category" ng-show="pageNumber === 2">
             <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">STATUS</span><br>
                <div id="statusFreelancer" class="individualCharts" ng-show="pageNumber === 2"></div>
-               <div  ng-show="pageNumber === 2"ng-click="loadBigFunction()" id="chart"></div>
+               <div  ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chart"></div>
 
              <div class="individualCharts" ng-show="pageNumber === 2"><h4>FT Work After?</h4>
           <h1 id="FTWorkPercent">58%</h1></div>
@@ -105,10 +105,60 @@
 
              <div id="salaryChart" class="individualCharts" ng-show="pageNumber === 2"><br></div>
              <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chart"></div>
+          </div>
         </div>
       </div>
+      <div id="godContainer" ng-show="pageNumber === 3">
+        <div id="pageThreeContentDiv">
 
-      <div id="megaContainer" ng-show="pageNumber === 3">
+          <div id="headshotContainer">
+            <div class="individualImgDiv"></div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv"></div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv"></div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv"></div> <!-- end of a individualImgDiv -->
+          </div> <!-- end of headshotContainer -->
+
+          <div id="personalInfoContainer">
+            <div id="aboutMeSummary"></div> <!-- end of aboutMeSummary -->
+            <div id="favoriteTech"></div> <!-- end of favoriteTech -->
+            <div id="preBootcampQs"></div> <!-- end of preBootcampQs -->
+            <div id="recommendations"></div> <!-- end of recommendations -->
+            <div id="favResources"></div> <!-- end of favResources -->
+          </div> <!-- end of personalInfoContainer -->
+
+        </div> <!-- end of pageThreeContentDiv -->
+      </div> <!-- mega - ultra - god container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--       <div id="megaContainer" ng-show="pageNumber === 3">
         <div id="pageThreeContainer" ng-show="pageNumber === 3">
           <div class="pageThreePicContainer" ng-click="mattsInfo()" ng-class="mattsVar" ng-show="pageNumber === 3">
             <span class="pageThreePersonArea" ng-show="pageNumber === 3">
@@ -132,7 +182,7 @@
           </div>
 
         </div>
-        <div  ng-app="ngAnimate" id="aboutMeDiv" ng-show="pageNumber === 3">
+        <div ng-app="ngAnimate" id="aboutMeDiv" ng-show="pageNumber === 3">
 
           <div class="pageThreeAboutMe" ng-class="myVar" ng-show="pageNumber === 3">
             <div class="ourSummary innerDivStyle" ng-show="toggleShow">
@@ -187,13 +237,14 @@
               <h4>Favorite Resources</h4>
             </div>
           </div>
-
         </div>
-        <!-- #pageThreeContainer end -->
       </div>
+      </div> -->
+
+        <!-- #pageThreeContainer end -->
       <!-- .category end -->
     </div>
-  </div>
+
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
   <script type="text/javascript" src="/js/dashboardChart.js"></script>
   <script type="text/javascript" src="/chartData/chart_combination.js"></script>

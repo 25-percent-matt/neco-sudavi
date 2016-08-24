@@ -1,7 +1,7 @@
 var counterApp = angular.module('counterApp', []);
 
 counterApp
-  .config([/*provider*/, function(provider){
+  .config([/*provider*/ function(provider){
     provider.setEndpoint('http://neco-sudavi.com/graphiql');
   }])
   .run(['$rootScope','APP_VERSION', function($rootScope,APP_VERSION){
