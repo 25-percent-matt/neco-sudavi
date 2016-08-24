@@ -18,182 +18,208 @@
 
 <body>
   <div ng-app="counterApp" id="appContainer">
+
     <div class="headerZero">
       <div class="headerOne">
         <h1 id="headerText" ng-click="loadBigFunction()">Neco Sudavi</h1>
       </div>
 
       <div class="headerTwo">
-        <strong>An investigation of new coders</strong>: who joins, why, and life as a coder.  (via freeCodeCamp's 2016 Survey)
+        <strong>An investigation of new coders</strong>: who joins, why, and life as a coder -- data via freeCodeCamp
       </div>
     </div>
-
-
 
     <div class="category" ng-controller="divHideController">
 
-    <div class="leftArrow">
-      <img id="leftArrowPic" ng-click="gotoPrevPage()" ng-show="pageNumber > 1" src="/img/arrow-left.png">
-    </div>
-
-      <div class="rightArrow">
-        <img id="rightArrowPic" ng-click="gotoNextPage()" ng-show="pageNumber < 3" src="/img/arrow-right.png">
-      </div>
-      <div>
-        <button ng-show="showHide && pageNumber === 2" ng-click="returnHome()">Return Home</button>
-      </div>
-
-      <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">Gender By Age Group</span><br>
-      <div id="chartCombo" ng-show="!showHide && pageNumber === 1" ></div>
-
-      <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">EDUCATION</span><br>
-
-      <div id="degreeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartDegreeBigShow')">
-        <h4>Degree</h4>
-      </div>
-      <div ng-show="chartDegreeBigShow" ng-click="returnHome()" id="chartDegreeBig"> </div>
-
-      <div id="majorChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartMajorBigShow')">
-        <h4>Major</h4>
-      </div>
-      <div ng-show="chartMajorBigShow" ng-click="returnHome()" id="chartMajorBig"></div>
-
-      <div id="hasStudentDebtChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartHasDebtBigShow')">
-        <h4>Has Student Debt</h4>
-      </div>
-      <div ng-show="chartHasDebtBigShow" ng-click="returnHome()" id="chartHasDebtBig"></div>
-
-      <div class="category">
-        <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">EMPLOYMENT</span><br>
-
-        <div id="employmentFieldChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartEmploymentFieldBigShow')">
-          <h4>Employment Field</h4>
+        <div class="leftArrow">
+          <img id="leftArrowPic" ng-click="gotoPrevPage()" ng-show="pageNumber > 1" src="/img/arrow-left.png">
         </div>
-        <div ng-show="chartEmploymentFieldBigShow" ng-click="returnHome()" id="chartEmploymentFieldBig"></div>
-
-        <div id="currentIncomeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartCurrentIncomeBigShow')">
-          <h4>Current Income</h4>
+        <div class="rightArrow">
+          <img id="rightArrowPic" ng-click="gotoNextPage()" ng-show="pageNumber < 3" src="/img/arrow-right.png">
         </div>
-        <div ng-show="chartCurrentIncomeBigShow" ng-click="returnHome()" id="chartCurrentIncomeBig"></div>
 
-        <div id="numOfChildrenChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartNumChildrenBigShow')">
-          <h4># of Children</h4>
+        <div>
+          <button ng-show="showHide && pageNumber === 2" ng-click="returnHome()">Return Home</button>
         </div>
-        <div ng-show="chartNumChildrenBigShow" ng-click="returnHome()" id="chartNumChildrenBig"></div>
 
-        <div id="jobPreferenceChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartJobPrefBigShow')">
-          <h4>Job Preference</h4>
+
+        <div id="p1TopLeft" ng-show="!showHide && pageNumber === 1">
+          <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">GENDER BY AGE GROUP</span><br>
+          <div id="chartCombo" ng-show="!showHide && pageNumber === 1" ></div>
         </div>
-        <div ng-show="chartJobPrefBigShow" ng-click="returnHome()" id="chartJobPrefBig"></div>
-      </div>
 
-      <div id="pageTwoContainer">
-        <div class="pageTwoPicContainer" ng-show="pageNumber === 2">
-          <div id="page2Header" class="category" ng-show="pageNumber === 2">
-          <div class="category" ng-show="pageNumber === 2">
-            <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">STATUS</span><br>
-               <div id="statusFreelancer" class="individualCharts" ng-show="pageNumber === 2"></div>
-               <div  ng-show="pageNumber === 2"ng-click="loadBigFunction()" id="chart"></div>
+        <div id="p1TopRight" ng-show="!showHide && pageNumber === 1">
+          <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">EDUCATION</span><br>
 
-             <div class="individualCharts" ng-show="pageNumber === 2"><h4>FT Work After?</h4>
-          <h1 id="FTWorkPercent">58%</h1></div>
+          <div id="degreeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartDegreeBigShow')">
+            <h4>Degree</h4>
           </div>
 
+
+          <div id="majorChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartMajorBigShow')">
+            <h4>Major</h4>
+          </div>
+
+
+          <div id="hasStudentDebtChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartHasDebtBigShow')">
+            <h4>Has Student Debt</h4>
+          </div>
+          <br>
+
+          <span class="chartDescription">About half of new coders have student debt; most new coders are not comp sci majors</span>
+        </div>
+        <div ng-show="chartDegreeBigShow" ng-click="returnHome()" id="chartDegreeBig"></div>
+        <div ng-show="chartMajorBigShow" ng-click="returnHome()" id="chartMajorBig"></div>
+        <div ng-show="chartHasDebtBigShow" ng-click="returnHome()" id="chartHasDebtBig"></div>
+        <!-- End p1TopLeftAndRight -->
+
+
+
+        <div id="p1Bottom" ng-show="!showHide && pageNumber === 1">
           <div class="category">
-            <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">SALARY</span><br>
+            <span class="categoryTitle" ng-show="!showHide && pageNumber === 1">EMPLOYMENT</span><br>
 
-             <div id="salaryChart" class="individualCharts" ng-show="pageNumber === 2"><br></div>
-             <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chart"></div>
+            <div id="employmentFieldChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartEmploymentFieldBigShow')">
+              <h4>Employment Field</h4>
+            </div>
+
+            <div id="currentIncomeChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartCurrentIncomeBigShow')">
+              <h4>Current Income</h4>
+            </div>
+
+            <div id="numOfChildrenChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartNumChildrenBigShow')">
+              <h4># of Children</h4>
+            </div>
+
+            <div id="jobPreferenceChart" class="individualCharts" ng-show="!showHide && pageNumber === 1" ng-click="loadBigFunction('chartJobPrefBigShow')">
+              <h4>Job Preference</h4>
+            </div>
+
+          </div>
+          <span class="chartDescription">More than a third of new coders come from a field other than IT</span>
+      </div>
+      <div ng-show="chartEmploymentFieldBigShow" ng-click="returnHome()" id="chartEmploymentFieldBig"></div>
+      <div ng-show="chartCurrentIncomeBigShow" ng-click="returnHome()" id="chartCurrentIncomeBig"></div>
+      <div ng-show="chartNumChildrenBigShow" ng-click="returnHome()" id="chartNumChildrenBig"></div>
+      <div ng-show="chartJobPrefBigShow" ng-click="returnHome()" id="chartJobPrefBig"></div>
+      <!-- End p1Bottom -->
+
+
+
+
+
+
+        <div id="pageTwoContainer">
+          <div class="pageTwoPicContainer" ng-show="pageNumber === 2">
+            <div id="page2Header" class="category" ng-show="pageNumber === 2">
+              <div class="category" ng-show="pageNumber === 2">
+                <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">STATUS</span><br>
+                   <div id="statusFreelancer" class="individualCharts" ng-show="pageNumber === 2"></div>
+                   <div  ng-show="pageNumber === 2"ng-click="loadBigFunction()" id="chart"></div>
+                   <div class="individualCharts" ng-show="pageNumber === 2"><h4>FT Work After?</h4>
+                       <h1 id="FTWorkPercent">58%</h1>
+                   </div>
+              </div>
+
+              <div class="category">
+                <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">SALARY</span><br>
+                 <div id="salaryChart" class="individualCharts" ng-show="pageNumber === 2"><br></div>
+                 <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chart"></div>
+              </div>
+            </div>
+          </div>
         </div>
+
+
+
+
+        <div id="megaContainer" ng-show="pageNumber === 3">
+          <div id="pageThreeContainer" ng-show="pageNumber === 3">
+            <div class="pageThreePicContainer" ng-click="mattsInfo()" ng-class="mattsVar" ng-show="pageNumber === 3">
+              <span class="pageThreePersonArea" ng-show="pageNumber === 3">
+                <div class="pageThreePic" id="mattsPic">Matt's pic here</div>
+              </span>
+            </div>
+            <div class="pageThreePicContainer" ng-click="andysInfo()" ng-class="andysVar" ng-show="pageNumber === 3">
+              <span class="pageThreePersonArea" ng-show="pageNumber === 3">
+                <div class="pageThreePic" id="andysPic"> </div>
+              </span>
+            </div>
+            <div class="pageThreePicContainer" ng-click="drewsInfo()" ng-class="drewsVar" ng-show="pageNumber === 3">
+              <span class="pageThreePersonArea" ng-show="pageNumber === 3">
+                <div class="pageThreePic"> </div>
+              </span>
+            </div>
+            <div class="pageThreePicContainer" ng-click="andrewsInfo()" ng-class="andrewsVar" ng-show="pageNumber === 3">
+              <span class="pageThreePersonArea" ng-show="pageNumber === 3">
+                <div class="pageThreePic"> </div>
+              </span>
+            </div>
+
+          </div>
+          <div  ng-app="ngAnimate" id="aboutMeDiv" ng-show="pageNumber === 3">
+
+            <div class="pageThreeAboutMe" ng-class="myVar" ng-show="pageNumber === 3">
+              <div class="ourSummary innerDivStyle" ng-show="toggleShow">
+                <div><h4>About Me</h4></div>
+                <div class="aboutMeList">
+                  <p>{{aboutMe}}</p>
+                </div>
+              </div>
+              <div class="favoriteTech innerDivStyle" ng-show="toggleShow">
+                <div><h4>Favorite Tech</h4></div>
+                <div class="myFavTechList">
+                  <ul><li ng-repeat="n in favTech">{{n}}</li></ul>
+                </div>
+              </div>
+              <div class="preBootcampQuestions innerDivStyle" ng-show="toggleShow">
+                <div><h4>Pre-Bootcamp Q & A</h4></div>
+                <!-- <ul><li ng-repeat="n in questions">{{n}}</li></ul> -->
+                <div class="questionsList">
+                  <p ng-repeat="n in questions">{{n}}</p>
+                </div>
+              </div>
+              <div class="myRecommendations innerDivStyle" ng-show="toggleShow">
+                <div><h4>Recommendations</h4></div>
+                <p ng-repeat="n in recommendations">{{n}}</p>
+              </div>
+              <div class="favResources innerDivStyle" ng-show="toggleShow">
+                <div><h4>Favorite Resources</h4></div>
+                <ul><li ng-repeat="n in favResources">{{n}}</li></ul>
+              </div>
+            </div>
+
+            <div class="pageThreeAboutMe" ng-class="myVar2" ng-show="pageNumber === 3">
+              <div class="ourSummary innerDivStyle" ng-show="toggleShow2">
+                <div><h4>About Me</h4></div>
+                <div class="aboutMeList">
+                  <p>{{aboutMe2}}</p>
+                </div>
+              </div>
+              <div class="favoriteTech innerDivStyle" ng-show="toggleShow2">
+                <div><h4>Favorite Tech</h4></div>
+                <div class="myFavTechList">
+                  <ul><li ng-repeat="n in favTech2">{{n}}</li></ul>
+                </div>
+              </div>
+              <div class="preBootcampQuestions innerDivStyle" ng-show="toggleShow2">
+                <h4>Pre-Bootcamp Q & A</h4>
+              </div>
+              <div class="myRecommendations innerDivStyle" ng-show="toggleShow2">
+                <h4>Recommendations</h4>
+              </div>
+              <div class="favResources innerDivStyle" ng-show="toggleShow2">
+                <h4>Favorite Resources</h4>
+              </div>
+            </div>
+
+          </div>
+          <!-- #pageThreeContainer end -->
+        </div>
+        <!-- .category end -->
       </div>
     </div>
 
-      <div id="megaContainer" ng-show="pageNumber === 3">
-        <div id="pageThreeContainer" ng-show="pageNumber === 3">
-          <div class="pageThreePicContainer" ng-click="mattsInfo()" ng-class="mattsVar" ng-show="pageNumber === 3">
-            <span class="pageThreePersonArea" ng-show="pageNumber === 3">
-              <div class="pageThreePic" id="mattsPic">Matt's pic here</div>
-            </span>
-          </div>
-          <div class="pageThreePicContainer" ng-click="andysInfo()" ng-class="andysVar" ng-show="pageNumber === 3">
-            <span class="pageThreePersonArea" ng-show="pageNumber === 3">
-              <div class="pageThreePic" id="andysPic"> </div>
-            </span>
-          </div>
-          <div class="pageThreePicContainer" ng-click="drewsInfo()" ng-class="drewsVar" ng-show="pageNumber === 3">
-            <span class="pageThreePersonArea" ng-show="pageNumber === 3">
-              <div class="pageThreePic"> </div>
-            </span>
-          </div>
-          <div class="pageThreePicContainer" ng-click="andrewsInfo()" ng-class="andrewsVar" ng-show="pageNumber === 3">
-            <span class="pageThreePersonArea" ng-show="pageNumber === 3">
-              <div class="pageThreePic"> </div>
-            </span>
-          </div>
-
-        </div>
-        <div  ng-app="ngAnimate" id="aboutMeDiv" ng-show="pageNumber === 3">
-
-          <div class="pageThreeAboutMe" ng-class="myVar" ng-show="pageNumber === 3">
-            <div class="ourSummary innerDivStyle" ng-show="toggleShow">
-              <div><h4>About Me</h4></div>
-              <div class="aboutMeList">
-                <p>{{aboutMe}}</p>
-              </div>
-            </div>
-            <div class="favoriteTech innerDivStyle" ng-show="toggleShow">
-              <div><h4>Favorite Tech</h4></div>
-              <div class="myFavTechList">
-                <ul><li ng-repeat="n in favTech">{{n}}</li></ul>
-              </div>
-            </div>
-            <div class="preBootcampQuestions innerDivStyle" ng-show="toggleShow">
-              <div><h4>Pre-Bootcamp Q & A</h4></div>
-              <!-- <ul><li ng-repeat="n in questions">{{n}}</li></ul> -->
-              <div class="questionsList">
-                <p ng-repeat="n in questions">{{n}}</p>
-              </div>
-            </div>
-            <div class="myRecommendations innerDivStyle" ng-show="toggleShow">
-              <div><h4>Recommendations</h4></div>
-              <p ng-repeat="n in recommendations">{{n}}</p>
-            </div>
-            <div class="favResources innerDivStyle" ng-show="toggleShow">
-              <div><h4>Favorite Resources</h4></div>
-              <ul><li ng-repeat="n in favResources">{{n}}</li></ul>
-            </div>
-          </div>
-
-          <div class="pageThreeAboutMe" ng-class="myVar2" ng-show="pageNumber === 3">
-            <div class="ourSummary innerDivStyle" ng-show="toggleShow2">
-              <div><h4>About Me</h4></div>
-              <div class="aboutMeList">
-                <p>{{aboutMe2}}</p>
-              </div>
-            </div>
-            <div class="favoriteTech innerDivStyle" ng-show="toggleShow2">
-              <div><h4>Favorite Tech</h4></div>
-              <div class="myFavTechList">
-                <ul><li ng-repeat="n in favTech2">{{n}}</li></ul>
-              </div>
-            </div>
-            <div class="preBootcampQuestions innerDivStyle" ng-show="toggleShow2">
-              <h4>Pre-Bootcamp Q & A</h4>
-            </div>
-            <div class="myRecommendations innerDivStyle" ng-show="toggleShow2">
-              <h4>Recommendations</h4>
-            </div>
-            <div class="favResources innerDivStyle" ng-show="toggleShow2">
-              <h4>Favorite Resources</h4>
-            </div>
-          </div>
-
-        </div>
-        <!-- #pageThreeContainer end -->
-      </div>
-      <!-- .category end -->
-    </div>
-  </div>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
   <script type="text/javascript" src="/js/dashboardChart.js"></script>
   <script type="text/javascript" src="/chartData/chart_combination.js"></script>
