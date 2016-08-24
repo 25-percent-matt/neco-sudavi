@@ -163,7 +163,7 @@
               <div class="personalInfoContent">
                 <div class="personalInfoBody">
                   <ul>
-                    <li ng-repeat="n in favResources">{{n}}</li>
+                    <li ng-repeat="n in favResources track by $index">{{n}}</li> <!-- track items by the index of each item in the collection allows duplicates in the separate arrays -->
                   </ul> <!-- end of ul tag -->
                 </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
