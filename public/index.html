@@ -113,41 +113,59 @@
         <div id="pageThreeContentDiv">
 
           <div id="headshotContainer">
-            <div class="individualImgDiv"></div> <!-- end of a individualImgDiv -->
-            <div class="individualImgDiv"></div> <!-- end of a individualImgDiv -->
-            <div class="individualImgDiv"></div> <!-- end of a individualImgDiv -->
-            <div class="individualImgDiv"></div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv" ng-click="mattsInfo()"></div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv" ng-click="andysInfo()"></div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv" ng-click="drewsInfo()"></div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv" ng-click="andrewsInfo()"></div> <!-- end of a individualImgDiv -->
           </div> <!-- end of headshotContainer -->
 
-          <div id="personalInfoContainer">
+          <div id="personalInfoContainer" ng-show="toggleShow">
             <div id="aboutMeSummary">
               <div class="personalInfoHeader">About Me</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
-                <div class="personalInfoBody"></div><!-- end of personalInfoBody -->
+                <div class="personalInfoBody">
+                  <p>{{aboutMe}}</p>
+                </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of aboutMeSummary -->
             <div id="favoriteTech">
               <div class="personalInfoHeader">Favorite Tech</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
-                <div class="personalInfoBody"></div><!-- end of personalInfoBody -->
+                <div class="personalInfoBody">
+                  <ul>
+                    <li ng-repeat="n in favTech">{{n}}</li>
+                  </ul> <!-- end of ul tag -->
+                </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of favoriteTech -->
             <div id="preBootcampQs">
               <div class="personalInfoHeader">Pre-Bootcamp Questions</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
-                <div class="personalInfoBody"></div><!-- end of personalInfoBody -->
+                <div class="personalInfoBody">
+                  <ul>
+                    <li ng-repeat="n in questions">{{n}}</li>
+                  </ul> <!-- end of ul tag -->
+                </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of preBootcampQs -->
             <div id="recommendations">
               <div class="personalInfoHeader">Recommendations</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
-                <div class="personalInfoBody"></div><!-- end of personalInfoBody -->
+                <div class="personalInfoBody">
+                  <ul>
+                    <li ng-repeat="n in recommendations">{{n}}</li>
+                  </ul> <!-- end of ul tag -->
+                </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of recommendations -->
             <div id="favResources">
               <div class="personalInfoHeader">Favorite Resources</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
-                <div class="personalInfoBody"></div><!-- end of personalInfoBody -->
+                <div class="personalInfoBody">
+                  <ul>
+                    <li ng-repeat="n in favResources">{{n}}</li>
+                  </ul> <!-- end of ul tag -->
+                </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of favResources -->
           </div> <!-- end of personalInfoContainer -->
