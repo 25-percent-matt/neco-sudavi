@@ -97,4 +97,10 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       console.log($scope.pageNumber);
     };
     $scope.testFrog = true;
-}]);
+}])
+    .controller('Ctrl1', ['$scope', function($scope) {
+      $scope.searchDynamic = 'Enter State';
+      $scope.updateChart = function () {
+        fillChartDynamic($scope.searchDynamic);
+      };
+  }]);

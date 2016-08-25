@@ -1,3 +1,6 @@
+var dynamicChartSave = [['x', 'Current Jobs * 1000', 'Projected Jobs * 1000', 'Amount Changed * 10000', 'Percent Changed', 'Average Annual Openings * 10000']];
+var testDynamicBind;
+
 function makeGraphPrimary(searchParam, chartBindTo) {
   fillChartDegree(searchParam, chartBindTo);
   function fillChartDegree(searchParam, chartBindTo) {
@@ -17,7 +20,6 @@ function makeGraphPrimary(searchParam, chartBindTo) {
   }
 
   function makeDegreeObj(queryData, chartBindTo) {
-    console.log(chartBindTo)
     return {
       bindto: chartBindTo,
       data : {
@@ -30,7 +32,7 @@ function makeGraphPrimary(searchParam, chartBindTo) {
         position: 'right'
       },
       size: {
-        height: 500
+        height: 700
       }
     };
   }
@@ -47,6 +49,56 @@ function dataReducer(dataToBeReduced) {
     }
   }
   return y;
+}
+
+function fillChartDynamic(a) {
+  if (a !== undefined) {
+    fillChartDynamic(a);
+  }
+  function fillChartDynamic(searchDynamic){
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", "http://localhost:4000/blsProjections/" + searchDynamic);
+    oReq.onload = function (data) {
+      if (oReq.readyState === 4) {
+        if (oReq.status === 200) {
+          var requestReceivedData = JSON.parse(data.target.response);
+          c3.generate(makeObjectDynamic(requestReceivedData));
+        }
+      }
+    };
+    oReq.send();
+  }
+}
+//  add a clear button and check if item enetered = stateName, combat flicker
+function makeObjectDynamic(requestReceivedData){
+  if(requestReceivedData[0] !== undefined){
+    dynamicChartSave.push(requestReceivedData);
+    testDynamicBind = dynamicChartSave;
+    console.log(dynamicChartSave);
+    return {
+      bindto: "#testDynamicBind",
+      data: {
+        x : 'x',
+        columns: dynamicChartSave,
+        //put a function here to add , to compared cities
+        type: 'bar',
+      },
+      axis: {
+        x: {
+            type: 'categorized'
+        },
+      },
+      grid: {
+        y: {
+            lines: [{value:0}]
+        }
+      },
+      size: {
+        height: 700,
+        width: 1100
+      }
+    };
+  }
 }
 
 var chartDegreeBig = makeGraphPrimary('SchoolDegree', '#chartDegreeBig');
