@@ -11,7 +11,6 @@ const Projections = db.projections;
 const pool = db.sequelize.connectionManager.pool;
 const mySchema = require('./schema');
 
-
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
     next();
@@ -75,6 +74,10 @@ app.use('/blsProjections/:state', (req, res) => {
 });
 
 app.use(express.static('public'));
+
+function notNull(theVal) {
+  return (['null',null,'NULL',[null], [ null ], ['null']].indexOf(theVal) < 0);
+}
 
 app.listen(PORT, () => {
   db.sequelize.sync(); // Sync all models that aren't already in the database
