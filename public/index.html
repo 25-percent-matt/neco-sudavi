@@ -128,7 +128,7 @@
             <div class="individualImgDiv" ng-click="andrewsInfo()"></div> <!-- end of a individualImgDiv -->
           </div> <!-- end of headshotContainer -->
 
-          <div id="personalInfoContainer" ng-show="toggleShow">
+          <div id="personalInfoContainer" ng-hide="!toggleShow">
             <div id="aboutMeSummary">
               <div class="personalInfoHeader">About Me</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
@@ -178,8 +178,8 @@
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of favResources -->
           </div> <!-- end of personalInfoContainer -->
-
         </div> <!-- end of pageThreeContentDiv -->
+        <div id="exitButton" ng-hide="!toggleShow">X</div> <!-- end of exitButton -->
       </div> <!-- end of mega - ultra - god container -->
 
   <script type="text/javascript" src="/js/dashboardChart.js"></script>

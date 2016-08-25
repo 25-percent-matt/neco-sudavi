@@ -1,4 +1,4 @@
-var counterApp = angular.module('counterApp', []);
+var counterApp = angular.module('counterApp', ['ngAnimate']);
 
 counterApp.controller('divHideController', ['$scope', function($scope) {
     $scope.count = 0;

@@ -311,6 +311,10 @@ body {
   height: 149px;
   width: 100%;
   box-sizing: border-box;
+
+}
+.individualImgDiv:hover{
+  border: 2px solid yellow;
 }
 
 #personalInfoContainer{
@@ -320,7 +324,12 @@ body {
   width: 88%;
   box-sizing: border-box;
   flex-flow: row wrap;
+  transition: ease-out 0.5s;
+  &.ng-hide{
+    width: 0%;
+  } //RIGHT HERE NOT WORKING YET
 }
+
 
 #aboutMeSummary{
   border: 2px solid pink;
@@ -329,6 +338,12 @@ body {
   width: 70%;
   box-sizing: border-box;
   flex-direction: column;
+  transform: 2s;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 #favoriteTech{
@@ -338,6 +353,11 @@ body {
   width: 30%;
   box-sizing: border-box;
   flex-direction: column;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 #preBootcampQs{
@@ -347,6 +367,11 @@ body {
   width: 40%;
   box-sizing: border-box;
   flex-direction: column;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 #recommendations{
@@ -356,6 +381,11 @@ body {
   width: 35%;
   box-sizing: border-box;
   flex-direction: column;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 #favResources{
@@ -365,6 +395,11 @@ body {
   width: 25%;
   box-sizing: border-box;
   flex-direction: column;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 .personalInfoHeader{
@@ -376,7 +411,10 @@ body {
   align-items: center;
   justify-content: left;
   font-size: 1.5em;
+  transition: width 1s;
 }
+
+
 
 .personalInfoContent{
   border: 2px solid red;
@@ -396,6 +434,11 @@ body {
   box-sizing: border-box;
   overflow: scroll;
 }
+
+#exitButton{
+  align-self: flex-start;
+}
+
 
 // #megaContainer{
 // /*  border-width: 2px;
