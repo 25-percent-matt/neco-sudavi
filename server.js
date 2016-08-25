@@ -80,18 +80,6 @@ app.use('/blsProjections/:state', (req, res) => {
 
 app.use(express.static('public'));
 
-app.get('/api/stuff', (req, res) => {
-  surveydata.findOne({
-    where: { NetworkID : '4074a06017' }
-  })
-    .then(function(data, err){
-      // in terminal window
-      console.log('data: ', data.dataValues);
-      if(err) console.log('error: ', err);
-      res.json(data.dataValues);
-    });
-});
-
 function getStatePop(stateName) {
   for (var i = 0; i < populations.length; i++) {
     if (stateName === populations[i][0]) {
