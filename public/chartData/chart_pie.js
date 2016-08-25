@@ -1,6 +1,4 @@
-var dynamicChartSave = [['x', 'Current Jobs', 'Projected Jobs', 'Amount Changed', 'Percent Changed (*100)', 'Average Annual Openings']];
-// var testDynamicBind = makeObjectDynamic(["Texas","48410","51040","2630","540","1910"]);
-
+var dynamicChartSave = [['x', 'Current Jobs * 1000', 'Projected Jobs * 1000', 'Amount Changed * 10000', 'Percent Changed', 'Average Annual Openings * 10000']];
 var testDynamicBind;
 
 function makeGraphPrimary(searchParam, chartBindTo) {
@@ -53,12 +51,9 @@ function dataReducer(dataToBeReduced) {
   return y;
 }
 
-function fillChartDynamic(a, b) {
+function fillChartDynamic(a) {
   if (a !== undefined) {
     fillChartDynamic(a);
-  }
-  if (b !== undefined) {
-    fillChartDynamic(b);
   }
   function fillChartDynamic(searchDynamic){
     var oReq = new XMLHttpRequest();

@@ -4,7 +4,7 @@ const graphqlHTTP = require('express-graphql');
 const { graphql } = require('graphql');
 const db = require('./models');
 const Sequelize = require('sequelize');
-
+const populations = require('./public/chartData/populationNumbers');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const SurveyData = db.surveydata;
@@ -98,7 +98,8 @@ app.use('/blsProjections/:state', (req, res) => {
     let convertedChart = [];
     convertToc3.forEach((elem) => {
       if (elem.areaname === req.params.state) {
-        convertedChart.push(elem.areaname, (elem.base/100), (elem.proj/100), (elem.change/100), elem.percentchange, elem.avgannualopenings)
+        let statePop = getStatePop(req.params.state);
+        convertedChart.push(elem.areaname, ((elem.base/statePop) * 1000), ((elem.proj/statePop) * 1000), ((elem.change/statePop) * 10000), (elem.percentchange), ((elem.avgannualopenings/statePop) * 10000))
       }
     })
     res.send(convertedChart)
@@ -122,6 +123,14 @@ app.get('/api/stuff', (req, res) => {
       res.json(data.dataValues);
     });
 });
+
+function getStatePop(stateName) {
+  for (var i = 0; i < populations.length; i++) {
+    if (stateName === populations[i][0]) {
+      return populations[i][1]
+    }
+  }
+}
 
 app.listen(PORT, () => {
   db.sequelize.sync(); // Sync all models that aren't already in the database

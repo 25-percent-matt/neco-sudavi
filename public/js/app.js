@@ -22,8 +22,7 @@ var counterApp = angular.module('counterApp', [])
   }])
   .controller('Ctrl1', ['$scope', function($scope) {
       $scope.searchDynamic = 'Enter State';
-      $scope.searchDynamic2 = 'Enter State';
       $scope.updateChart = function () {
-        fillChartDynamic($scope.searchDynamic, $scope.searchDynamic2);
+        fillChartDynamic($scope.searchDynamic);
       };
   }]);
