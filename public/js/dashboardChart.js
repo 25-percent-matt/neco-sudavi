@@ -1,10 +1,13 @@
+/*import colors from "./colors";
+export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");*/
+
  var degreeChart = function(){
-   var width = 200,
-       height = 200,
+   var width = 300,
+       height = 300,
        radius = Math.min(width, height) / 2;
 
-   var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       var color = d3.scale.ordinal()
+           .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -59,12 +62,12 @@
 };
 
  var majorChart = function(){
-   var width = 200,
-       height = 200,
+   var width = 300,
+       height = 300,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -119,12 +122,12 @@
 };
 
  var hasStudentDebtChart = function(){
-   var width = 200,
-       height = 200,
+   var width = 300,
+       height = 300,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -179,12 +182,12 @@
 };
 
  var employmentFieldChart = function(){
-   var width = 200,
-       height = 200,
+   var width = 250,
+       height = 250,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -239,12 +242,12 @@
 };
 
  var currentIncomeChart = function(){
-   var width = 200,
-       height = 200,
+   var width = 250,
+       height = 250,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -299,12 +302,12 @@
 };
 
  var numOfChildrenChart = function(){
-   var width = 200,
-       height = 200,
+   var width = 250,
+       height = 250,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -359,12 +362,12 @@
 };
 
  var jobPreferenceChart = function(){
-   var width = 200,
-       height = 200,
+   var width = 250,
+       height = 250,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)

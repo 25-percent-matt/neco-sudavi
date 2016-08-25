@@ -1,22 +1,22 @@
 SchoolMajor,SchoolMajorCount
-"Computer Science/IT",1994
-"Electrical Engineering",384
-"Business Administration",367
-"Economics",252
-"English",204
-"Psychology",187
-"Software Engineering",159
-"Liberal Arts",157
-"Engineering",148
-"Computer Programming",147
-"Mechanical Engineering",141
-"Physics",132
-"Political Science",131
-"Graphic Design",129
-"History",118
-"Biology",115
-"Advertising and Marketing",115
-"Finance",114
-"Mathematics",108
-"Computer Software Engineering",103
+"Comp Sci/IT",1994
+,384
+ ,367
+  ,252
+   ,204
+    ,187
+     ,159
+      ,157
+       ,148
+        ,147
+         ,141
+          ,132
+           ,131
+            ,129
+             ,118
+              ,115
+               ,115
+                ,114
+                 ,108
+                  ,103
 Other,3245

@@ -1,9 +1,11 @@
 // Resets, Clearfix, etc
-//@import 'partials/clearfix';
-/* @import 'partials/reset'; */
+@import 'partials/reset';
+@import 'partials/clearfix';
 
 // Variables
-$bgColor: #f5f5f5;
+$bgColor: #031634;
+$darkColor: #031634;
+$lightColor: #E8DDCB;
 
 $purple: purple;
 $blue: #0000ff;
@@ -11,21 +13,28 @@ $red: #ff0000;
 $gray-90: #b5b5b5;
 $gray-30: #b7b7b7;
 
+//palette from colour lovers
+$dark-gray: rgb(54,54,54);
+$medium-gray: rgb(77,77,77);
+$light-gray: rgb(223,223,223);
+$daBlue: rgb(106,200,252);
+$orange-colour: rgb(253,198,79);
+
 // Media Query Ranges
 $medium: "only screen and (min-width: 600px)";
 $large: "only screen and (min-width: 900px)";
 $x-large: "only screen and (min-width: 1350px)";
 
-*{
-  font-family: 'Arvo', sans-serif;
+* {
+  font-family: 'Raleway', sans-serif;
   text-align:center;
   letter-spacing: 1px;
 }
 
 body {
-  color: #000000;
+  color: $lightColor;
   background-color: $bgColor;
-  //background-image: url("/egbggrey.jpg");
+  // background-image: url(../img/rockywall.png);
   text-align: center;
 /*   display:flex;
   flex-flow: row wrap; */
@@ -55,11 +64,11 @@ body {
   }
 
   a:link {
-    color: #000000;
+    color: $darkColor;
     text-decoration: none;
   }
   a:visited {
-    color: #000000;
+    color: $darkColor;
   }
   a:hover {
     color: #444444;
@@ -69,11 +78,77 @@ body {
   }
 }
 
+.headerZero{
+  flex: 1 1 auto;
+  display:flex;
+  flex-flow: row wrap;
+  vertical-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
+.headerOne{
+  display: inline-block;
+  vertical-align: center;
+  flex: 1 1 45%;
+  margin: 0px;
+}
+
+.headerTwo{
+  display: inline-block;
+  vertical-align: bottom;
+  flex: 1 1 45%;
+  margin: auto;
+}
+
 #headerText {
   text-align: center;
   font-size: 3em;
   margin: 0px;
+  font-family: 'Bungee Shade', cursive;
 }
+
+#p1PrimaryDiv{
+  background-color:#8b8b8b;
+  flex: 1 1 auto;
+  display:flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  vertical-align: top;
+  margin: 0px;
+}
+
+#p1TopLeft{
+  display: inline-block;
+  border: 1px solid $lightColor;
+  flex: 1 1 30%;
+  padding: 20px;
+  margin: 0px 10px 0px 0px;
+  vertical-align: top;
+}
+
+#p1TopRight{
+  display: inline-block;
+  border: 1px solid $lightColor;
+  flex: 1 1 30%;
+  padding: 20px;
+  margin: 0px 0px 0px 10px;
+  vertical-align: bottom;
+}
+
+#p1Bottom{
+  display: inline-block;
+  border: 1px solid $lightColor;
+  //flex: 1 1 45%;
+  padding: 20px;
+  margin: 20px 0px 0px 0px;
+  vertical-align: top;
+}
+
+.chartDescription {
+  font-style: italic;
+}
+
 
 .category {
   display: block;
@@ -85,7 +160,7 @@ body {
     //background-color:#c0c0c0;
     vertical-align: top;
     display: inline-block;
-    margin: 0px;
+    margin: 10px 10px 10px 10px;
     h4 {
       font-weight: 500;
       margin: 5px;
@@ -102,9 +177,14 @@ body {
   }
 
   .individualCharts:hover {
-      opacity:0.7;
-      transition: all 0.1s ease-out;
+    opacity:0.7;
+    transition: all 0.1s ease-out;
   }
+}
+
+.individualCharts path{
+  stroke: $darkColor;
+  stroke-width: 0;
 }
 
 .leftArrow {
@@ -117,6 +197,11 @@ body {
   opacity:0.7;
 }
 
+#leftArrowPic {
+  height: 100px;
+  width: 75px;
+}
+
 .rightArrow {
   position: absolute;
   top: 45%;
@@ -125,6 +210,11 @@ body {
 
 .rightArrow:hover {
   opacity:0.7;
+}
+
+#rightArrowPic {
+  height: 100px;
+  width: 75px;
 }
 
 #page2Header {
@@ -148,7 +238,358 @@ body {
   text-anchor: middle;
 }
 
-.arc path {
-  stroke: #fff;
+/* .arc path {
+  stroke: #000000;
+} */
+
+.c3-chart-arc path {
+    stroke: #000;
 }
 
+.c3 .c3-axis-x path, .c3 .c3-axis-x line {
+    color: $lightColor;
+    stroke: $lightColor;
+}
+.c3 .c3-axis-y path, .c3 .c3-axis-y line {
+    color: $lightColor;
+    stroke: $lightColor;
+}
+
+.c3-axis-y text {
+   fill: $lightColor;
+   font-size:12px;
+}
+.c3-axis-x text {
+    fill: $lightColor;
+    font-size:12px;
+}
+
+.c3-legend-item text { stroke: $lightColor; }
+
+.c3-tooltip-item text { color: #000000; }
+
+/* #chartDegreeBig path{
+  stroke: $darkColor;
+  stroke-width: 0;
+} */
+
+
+
+/* .c3 path, .c3 line, .tick text {
+  stroke: white;
+} */
+
+#godContainer{
+  display: flex;
+  border: 2px solid white;
+  height: 600px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#pageThreeContentDiv{
+  display: flex;
+  border: 2px solid lime;
+  width: 90%;
+  height: 600px;
+  box-sizing: border-box;
+  flex-flow: row wrap;
+}
+
+#headshotContainer{
+  border: 2px solid red;
+  height: 596px;
+  width: 12%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.individualImgDiv{
+  border: 2px dashed yellow;
+  height: 149px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#personalInfoContainer{
+  display: flex;
+  border: 2px solid magenta;
+  height: 596px;
+  width: 88%;
+  box-sizing: border-box;
+  flex-flow: row wrap;
+}
+
+#aboutMeSummary{
+  border: 2px solid pink;
+  display: flex;
+  height: 320px;
+  width: 70%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+#favoriteTech{
+  border: 2px solid $light-gray;
+  display: flex;
+  height: 320px;
+  width: 30%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+#preBootcampQs{
+  border: 2px solid cyan;
+  display: flex;
+  height: 274px;
+  width: 40%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+#recommendations{
+  border: 2px solid lime;
+  display: flex;
+  height: 274px;
+  width: 35%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+#favResources{
+  border: 2px solid yellow;
+  display: flex;
+  height: 274px;
+  width: 25%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.personalInfoHeader{
+  border: 2px solid yellow;
+  display: flex;
+  height: 15%;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5em;
+}
+
+.personalInfoContent{
+  border: 2px solid red;
+  display: flex;
+  height: 85%;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.personalInfoBody{
+  border: 2px solid white;
+  display: flex;
+  height: 90%;
+  width: 90%;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+// #megaContainer{
+// /*  border-width: 2px;
+//   border-style: solid;
+//   border-color: yellow;*/
+//   display: flex;
+//   flex-direction: row;
+//   margin-left: 10%;
+//   margin-right: 10%;
+//   margin-bottom: 10%;
+// }
+
+// #pageThreeContainer{
+// /*  border-width: 2px;
+//   border-style: solid;*/
+//   /*border-color: blue;*/
+//   width: 280px;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// /*.pageThreePersonArea {
+//   display: flex;
+//   margin-top: 5%;
+//   margin-left: 5%;
+// }*/
+
+// .pageThreePicContainer {
+//   display: flex;
+// /*  border-width: 2px;
+//   border-style: solid;*/
+//   /*border-color: blue;*/
+//   border-radius: 5px 0px 0px 5px;
+//   height: 274px;
+//   width: 270px;
+//   justify-content: center;
+// }
+
+// .pageThreePic {
+//   border-width: 2px;
+//   border-style: solid;
+//   border-color: $orange-colour;
+//   border-radius: 5px;
+//   margin-top: 3%;
+//   height: 250px;
+//   width: 250px;
+// }
+
+// #aboutMeDiv{
+// /*  border-width: 2px;
+//   border-style: solid;*/
+//   /*border-color: purple;*/
+//   width: 100%;
+//   height: 1103px;
+// }
+
+// .pageThreeAboutMe{
+// /*  border-width: 2px;
+//   border-style: solid;*/
+//   /*border-color: green;*/
+//   border-radius: 0px 5px 5px 0px;
+//   width: 99.5%;
+//   height: 548px;
+//   display: flex;
+//   flex-flow: row wrap;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+
+// .innerDivStyle{
+//   background-color: $medium-gray;
+//   color: $light-gray;
+//   padding: 1%;
+// }
+
+// .innerDivStyle h4{
+//   color: $daBlue;
+//   margin-bottom: -1px;
+// }
+
+// .innerDivStyle ul{
+//   margin-left: -20px;
+// }
+
+// .ourSummary{
+//   display: flex;
+// /*  border-width: 2px;
+//   border-style: solid;
+//   border-color: magenta;*/
+//   border-radius: 5px;
+//   height: 250px;
+//   width: 60%;
+//   margin-left: auto;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+// }
+
+// .favoriteTech{
+//   display: flex;
+// /*  border-width: 2px;
+//   border-style: solid;
+//   border-color: orange;*/
+//   border-radius: 5px;
+//   height: 250px;
+//   width: 33%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+// }
+
+// .preBootcampQuestions{
+//   display: flex;
+// /*  border-width: 2px;
+//   border-style: solid;
+//   border-color: lime;*/
+//   border-radius: 5px;
+//   font-size: 10px;
+//   overflow: scroll;
+//   height: 250px;
+//   width: 30%;
+//   margin-left: auto;
+//   margin-bottom: auto;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+// }
+
+// .myRecommendations{
+//   display: flex;
+// /*  border-width: 2px;
+//   border-style: solid;
+//   border-color: cyan;*/
+//   border-radius: 5px;
+//   height: 250px;
+//   width: 30%;
+//   margin-bottom: auto;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+// }
+
+// .favResources{
+//   display: flex;
+// /*  border-width: 2px;
+//   border-style: solid;
+//   border-color: pink;*/
+//   border-radius: 5px;
+//   font-size: 14px;
+//   height: 250px;
+//   width: 30%;
+//   margin-right: auto;
+//   margin-bottom: auto;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+// }
+
+// .aboutMeList{
+//   display: flex;
+//   margin-right: auto;
+//   font-size: 12px;
+//   overflow: scroll;
+// }
+
+// .myFavTechList{
+//   display: flex;
+//   margin-right: auto;
+// }
+
+// .preBootcampQuestions{
+//   display: flex;
+//   margin-right: auto;
+// }
+
+// .myRecommendations{
+//   display: flex;
+//   margin-right: auto;
+//   font-size: 14px;
+//   overflow: scroll;
+// }
+
+// .favResources{
+//   display: flex;
+//   margin-right: auto;
+// }
+
+// .selectedSummaryStyle{
+//   background-color: rgb(54,54,54);
+// }
+
+// #mattsPic{
+//   background-image: url(http://www.vectorportal.com/img_novi/surfer-silhouette.jpg);
+// }
