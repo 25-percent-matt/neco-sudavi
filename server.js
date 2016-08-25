@@ -3,56 +3,15 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const { graphql } = require('graphql');
 const db = require('./models');
-const Sequelize = require('sequelize');
+// const Sequelize = require('sequelize');
 const populations = require('./public/chartData/populationNumbers');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const SurveyData = db.surveydata;
+const Projections = db.Projections;
 const pool = db.sequelize.connectionManager.pool;
 const mySchema = require('./schema');
 
-var sequelize = new Sequelize('postgres://htmlint:t@localhost:5432/programmerdata');
-
-var Projections = sequelize.define('projections', {
-  stfips: {
-    type: Sequelize.STRING,
-    primaryKey: true
-  },
-  areaname: {
-    type: Sequelize.STRING
-  },
-  occupationcode: {
-    type: Sequelize.STRING
-  },
-  occupationname: {
-    type: Sequelize.STRING
-  },
-  baseyear: {
-    type: Sequelize.STRING
-  },
-  base: {
-    type: Sequelize.STRING
-  },
-  projyear: {
-    type: Sequelize.STRING
-  },
-  proj: {
-    type: Sequelize.STRING
-  },
-  change: {
-    type: Sequelize.STRING
-  },
-  percentchange: {
-    type: Sequelize.STRING
-  },
-  avgannualopenings: {
-    type: Sequelize.STRING
-  }
-},
-  {
-    timestamps: false
-  }
-);
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
@@ -62,6 +21,11 @@ var allowCrossDomain = function(req, res, next) {
 /*  MIDDLEWARE  */
 
 // for dev: logs all requests
+app.use(function(req, res, next) {
+  console.log('method: ',req.method, ' url: ',req.url);
+  next();
+ });
+
 app.use(allowCrossDomain);
 
 app.use('/graphql', (req, res) => {
@@ -113,9 +77,6 @@ app.use('/blsProjections/:state', (req, res) => {
   })
 })
 
-app.use(function(req, res, next) {
-  next();
- });
 
 app.use(express.static('public'));
 
