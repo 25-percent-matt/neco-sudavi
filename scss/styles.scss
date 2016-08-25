@@ -359,7 +359,7 @@ body {
   transition-timing-function: ease-out;
   &.ng-hide{
     width: 0%;
-  } //RIGHT HERE NOT WORKING YET
+  }
 }
 
 
@@ -472,6 +472,50 @@ body {
   }
   li{
     text-align: left;
+  }
+}
+
+
+
+#textBubble{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7%;
+  margin-left: 1%;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  color: #E8DDCD;
+  background-color: $dashboardColor;
+  border: 8px solid #E8DDCD;
+  font-size: 18px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+  &:before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 100px;
+    border: 25px solid;
+    border-color: #E8DDCD transparent transparent #E8DDCD;
+  }
+  &:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    top: 100px;
+    border: 15px solid;
+    border-color: $dashboardColor transparent transparent $dashboardColor;
   }
 }
 
