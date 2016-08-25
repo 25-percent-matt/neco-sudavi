@@ -40,8 +40,8 @@ body {
   text-align: center;
 /*   display:flex;
   flex-flow: row wrap; */
-  align-items: center;
-  margin: 0px;
+  //align-items: center;
+  //margin: 0px;
 
   @media #{$medium}{
     .leftArrow {
@@ -80,32 +80,49 @@ body {
   }
 }
 
+
+
 .headerZero{
-  flex: 1 1 auto;
-  display:flex;
-  flex-flow: row wrap;
+
+  //flex: 1 1 auto;
+/*   display:flex;
+  flex-flow: row wrap; */
+/*   display: block;
+  text-align:center;
   vertical-align: center;
   padding: 10px;
   margin: 0px;
+  width: 1445px; */
+
+  display: inline-block;
+  width: 1445px;
+  border: 0px solid $lightColor;
+  //flex: 1 1 45%;
+  padding: 0px 0px 20px 0px;
+  margin: 20px 0px 0px 0px;
+  vertical-align: top;
+  text-align:left;
 }
 
 .headerOne{
+
   display: inline-block;
   vertical-align: center;
-  flex: 1 1 45%;
-  margin: 0px;
+  //flex: 1 1 45%;
+  margin: auto;
+  text-align:left;
 }
 
 .headerTwo{
   display: inline-block;
   vertical-align: bottom;
-  flex: 1 1 45%;
+  //flex: 1 1 45%;
   margin: auto;
 }
 
 #headerText {
   //font-family: 'Bungee Shade', cursive;
-  text-align: center;
+  //text-align: center;
   color: #CDB380;
   font-size: 3em;
   font-weight: 900;
@@ -146,12 +163,13 @@ body {
 #p1Bottom{
   background-color: #2B2F37;
   display: inline-block;
+  width: 1445px;
   border: 0px solid $lightColor;
   //flex: 1 1 45%;
   padding: 20px;
   margin: 20px 0px 0px 0px;
   vertical-align: top;
-  text-align:left;
+  text-align:center;
 }
 
 .chartDescription {
@@ -163,8 +181,12 @@ body {
 .category {
   display: block;
   .categoryTitle {
+
     font-weight: 700;
     font-size: 1.5em;
+
+    left:0px;
+    text-align:left;
   }
   .individualCharts {
     //background-color:#c0c0c0;
