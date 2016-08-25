@@ -26,8 +26,8 @@ $medium: "only screen and (min-width: 600px)";
 $large: "only screen and (min-width: 900px)";
 $x-large: "only screen and (min-width: 1350px)";
 
-* {
-  font-family: 'Raleway', sans-serif;
+*{
+  font-family: 'Rajdhani', sans-serif;
   text-align:center;
   letter-spacing: 1px;
 }
@@ -35,6 +35,7 @@ $x-large: "only screen and (min-width: 1350px)";
 body {
   color: $lightColor;
   background-color: $bgColor;
+  font-family: 'Rajdhani', sans-serif;
   // background-image: url(../img/rockywall.png);
   text-align: center;
 /*   display:flex;
@@ -106,7 +107,7 @@ body {
   text-align: center;
   font-size: 3em;
   margin: 0px;
-  font-family: 'Bungee Shade', cursive;
+  font-weight: lighter;
 }
 
 #p1PrimaryDiv{
@@ -300,8 +301,7 @@ body {
 }
 
 #headshotContainer{
-  border: 2px solid $bgColor;
-  height: 596px;
+  height: 600px;
   width: 12%;
   box-sizing: border-box;
   flex-direction: column;
@@ -309,7 +309,7 @@ body {
 
 .individualImgDiv{
   border: 2px dashed yellow;
-  height: 149px;
+  height: 150px;
   width: 100%;
   box-sizing: border-box;
 
@@ -320,11 +320,11 @@ body {
 
 #personalInfoContainer{
   display: flex;
-  background-color: $dashboardColor; //not workinggggggggg
-  border: 2px solid $bgColor;
-  height: 596px;
+  background-color: $dashboardColor;
+  height: 600px;
   width: 88%;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   flex-flow: row wrap;
   transition: 0.25s;
@@ -337,14 +337,12 @@ body {
 
 #aboutMeSummary{
   background-color: $bgColor;
-  border: 2px solid pink;
   display: flex;
   height: 290px;
   width: 70%;
   margin-right: 2.5%;
   box-sizing: border-box;
   flex-direction: column;
-  transform: 2s;
   &:hover{
     .personalInfoHeader{
       letter-spacing: 2px;
@@ -354,7 +352,6 @@ body {
 
 #favoriteTech{
   background-color: $bgColor;
-  border: 2px solid $light-gray;
   display: flex;
   height: 290px;
   width: 25%;
@@ -369,7 +366,6 @@ body {
 
 #preBootcampQs{
   background-color: $bgColor;
-  border: 2px solid cyan;
   display: flex;
   height: 244px;
   width: 40%;
@@ -385,7 +381,6 @@ body {
 
 #recommendations{
   background-color: $bgColor;
-  border: 2px solid lime;
   display: flex;
   height: 244px;
   width: 30%;
@@ -401,7 +396,6 @@ body {
 
 #favResources{
   background-color: $bgColor;
-  border: 2px solid yellow;
   display: flex;
   height: 244px;
   width: 23%;
@@ -415,7 +409,7 @@ body {
 }
 
 .personalInfoHeader{
-  border: 2px solid yellow;
+  border: 2px solid white;
   display: flex;
   height: 15%;
   width: 100%;
@@ -429,7 +423,6 @@ body {
 
 
 .personalInfoContent{
-  border: 2px solid red;
   display: flex;
   height: 85%;
   width: 100%;
