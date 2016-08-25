@@ -3,12 +3,11 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const { graphql } = require('graphql');
 const db = require('./models');
-// const Sequelize = require('sequelize');
-const populations = require('./public/chartData/populationNumbers');
+const Sequelize = require('sequelize');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const SurveyData = db.surveydata;
-const Projections = db.Projections;
+const Projections = db.projections;
 const pool = db.sequelize.connectionManager.pool;
 const mySchema = require('./schema');
 
@@ -40,53 +39,42 @@ app.use('/chartQuery/:id', (req, res) => {
   var querySelector = req.params.id;
   var query = `{ surveyRecords { ${querySelector} } }`;
   graphql(mySchema, query).then(result => {
-    let allb = result
-    let tallies = []
+    let allb = result;
+    let tallies = [];
     allb.data.surveyRecords.forEach(function (elem) {
-        let x = findIndex(elem, tallies, querySelector)
-        if (typeof x === 'number') {
-          tallies[x][1] = tallies[x][1] + 1
+        let x = findIndex(elem, tallies, querySelector);
+        if (typeof x === 'number' && notNull(tallies[x][0])) {
+          tallies[x][1] = tallies[x][1] + 1;
         } else {
-          tallies.push([elem[querySelector], 1])
+          if(notNull([elem[querySelector]][0])) tallies.push([elem[querySelector], 1]);
         }
-      })
-    res.send(tallies)
+      });
+    res.send(tallies);
   });
 });
 
 function findIndex (elem, tallies, querySelector) {
   for (var i = 0; i < tallies.length; i++) {
     if (elem[querySelector] === tallies[i][0]) {
-      return i
+      return i;
     }
   }
   return 'the fail frog';
 }
 
 app.use('/blsProjections/:state', (req, res) => {
-  Projections.findAll().then(function(Projections) {
-    let convertToc3 = Projections;
+  let stateToFind = req.params.state;
+  Projections.findAll({ where: { areaname: stateToFind }}).then(function(data) {
+    let convertToc3 = data[0].dataValues;
+    console.log('convertToc3: ', convertToc3);
     let convertedChart = [];
-    convertToc3.forEach((elem) => {
-      if (elem.areaname === req.params.state) {
-        let statePop = getStatePop(req.params.state);
-        convertedChart.push(elem.areaname, ((elem.base/statePop) * 1000), ((elem.proj/statePop) * 1000), ((elem.change/statePop) * 10000), (elem.percentchange), ((elem.avgannualopenings/statePop) * 10000));
-      }
-    })
+    let statePop = convertToc3.population;
+    convertedChart.push(convertToc3.areaname, ((convertToc3.base/statePop) * 1000), ((convertToc3.proj/statePop) * 1000), ((convertToc3.change/statePop) * 10000), (convertToc3.percentchange), ((convertToc3.avgannualopenings/statePop) * 10000));
     res.send(convertedChart);
-  })
-})
-
+  });
+});
 
 app.use(express.static('public'));
-
-function getStatePop(stateName) {
-  for (var i = 0; i < populations.length; i++) {
-    if (stateName === populations[i][0]) {
-      return populations[i][1]
-    }
-  }
-}
 
 app.listen(PORT, () => {
   db.sequelize.sync(); // Sync all models that aren't already in the database
