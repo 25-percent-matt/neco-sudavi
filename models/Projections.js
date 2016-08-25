@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Projections = sequelize.define('projections', {
   stfips: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     primaryKey: true
   },
   areaname: {
@@ -14,25 +14,28 @@ module.exports = function(sequelize, DataTypes) {
     type: DataTypes.STRING
   },
   baseyear: {
-    type: DataTypes.STRING
+    type: DataTypes.INTEGER
   },
   base: {
-    type: DataTypes.STRING
+    type: DataTypes.INTEGER
   },
   projyear: {
-    type: DataTypes.STRING
+    type: DataTypes.INTEGER
   },
   proj: {
-    type: DataTypes.STRING
+    type: DataTypes.INTEGER
   },
   change: {
-    type: DataTypes.STRING
+    type: DataTypes.INTEGER
   },
   percentchange: {
-    type: DataTypes.STRING
+    type: DataTypes.DECIMAL
   },
   avgannualopenings: {
-    type: DataTypes.STRING
+    type: DataTypes.INTEGER
+  },
+  population: {
+    type: DataTypes.INTEGER
   }
 },
   {

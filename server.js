@@ -65,15 +65,15 @@ function findIndex (elem, tallies, querySelector) {
 
 app.use('/blsProjections/:state', (req, res) => {
   Projections.findAll().then(function(Projections) {
-    let convertToc3 = Projections
+    let convertToc3 = Projections;
     let convertedChart = [];
     convertToc3.forEach((elem) => {
       if (elem.areaname === req.params.state) {
         let statePop = getStatePop(req.params.state);
-        convertedChart.push(elem.areaname, ((elem.base/statePop) * 1000), ((elem.proj/statePop) * 1000), ((elem.change/statePop) * 10000), (elem.percentchange), ((elem.avgannualopenings/statePop) * 10000))
+        convertedChart.push(elem.areaname, ((elem.base/statePop) * 1000), ((elem.proj/statePop) * 1000), ((elem.change/statePop) * 10000), (elem.percentchange), ((elem.avgannualopenings/statePop) * 10000));
       }
     })
-    res.send(convertedChart)
+    res.send(convertedChart);
   })
 })
 
