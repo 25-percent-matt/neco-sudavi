@@ -3,11 +3,11 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 
  var degreeChart = function(){
    var width = 300,
-       height = 300,
+       height = 307,
        radius = Math.min(width, height) / 2;
 
        var color = d3.scale.ordinal()
-           .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
+           .range(["#7F889A", "#6A7180", "#8A93A7", "#BECCE6", "#4A505A"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -63,11 +63,11 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 
  var majorChart = function(){
    var width = 300,
-       height = 300,
+       height = 307,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
+       .range(["#036564", "#024B4B", "#037271", "#05B1B0", "#07F1EF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -123,11 +123,11 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 
  var hasStudentDebtChart = function(){
    var width = 300,
-       height = 300,
+       height = 307,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
+       .range(["#CDB380", "#B39D70", "#DABE88", "#4D4430", "#8D7B58"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -187,7 +187,7 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
+       .range(["#E8DDCB", "#CEC5B5", "#F5E9D6", "#68645B", "#A8A093"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -247,7 +247,7 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
+       .range(["#7F889A", "#6A7180", "#8A93A7", "#BECCE6", "#4A505A"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -307,7 +307,7 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
+       .range(["#036564", "#024B4B", "#037271", "#05B1B0", "#07F1EF"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)
@@ -367,7 +367,7 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
-       .range(["#2CA02C", "#1F77B4", "#BCBD22", "#D62728", "#FF7F0E", "#7F7F7F", "#9467BD", "#E377C2", "#8C564B", "#1F77B4", "#17BECF"]);
+       .range(["#CDB380", "#B39D70", "#DABE88", "#4D4430", "#8D7B58"]);
 
    var arc = d3.svg.arc()
        .outerRadius(radius - 10)

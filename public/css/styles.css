@@ -66,14 +66,10 @@ table {
   letter-spacing: 1px; }
 
 body {
-  color: #E8DDCB;
-  background-color: #2b2f37;
   font-family: 'Rajdhani', sans-serif;
-  text-align: center;
-  /*   display:flex;
-  flex-flow: row wrap; */
-  align-items: center;
-  margin: 0px; }
+  color: #E8DDCB;
+  background-color: #3A3F48;
+  text-align: center; }
   @media only screen and (min-width: 600px) {
     body .leftArrow {
       position: absolute;
@@ -95,36 +91,44 @@ body {
   body a:hover {
     color: #444444; }
   body a:active {
-    color: #2b2f37; }
+    color: #3A3F48; }
 
 .headerZero {
-  flex: 1 1 auto;
-  display: flex;
-  flex-flow: row wrap;
+  /*   display:flex;
+  flex-flow: row wrap; */
+  /*   display: block;
+  text-align:center;
   vertical-align: center;
   padding: 10px;
-  margin: 0px; }
+  margin: 0px;
+  width: 1445px; */
+  display: inline-block;
+  width: 1445px;
+  border: 0px solid #E8DDCB;
+  padding: 0px 0px 20px 0px;
+  margin: 20px 0px 0px 0px;
+  vertical-align: top;
+  text-align: left; }
 
 .headerOne {
   display: inline-block;
   vertical-align: center;
-  flex: 1 1 45%;
-  margin: 0px; }
+  margin: auto;
+  text-align: left; }
 
 .headerTwo {
   display: inline-block;
   vertical-align: bottom;
-  flex: 1 1 45%;
   margin: auto; }
 
 #headerText {
-  text-align: center;
+  color: #CDB380;
   font-size: 3em;
+  font-weight: 900;
   margin: 0px;
   font-weight: lighter; }
 
 #p1PrimaryDiv {
-  background-color: #8b8b8b;
   flex: 1 1 auto;
   display: flex;
   flex-flow: row wrap;
@@ -133,36 +137,47 @@ body {
   margin: 0px; }
 
 #p1TopLeft {
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid #E8DDCB;
+  border: 0px solid #E8DDCB;
   flex: 1 1 30%;
   padding: 20px;
   margin: 0px 10px 0px 0px;
-  vertical-align: top; }
+  vertical-align: top;
+  text-align: left; }
 
 #p1TopRight {
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid #E8DDCB;
+  border: 0px solid #E8DDCB;
   flex: 1 1 30%;
   padding: 20px;
   margin: 0px 0px 0px 10px;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  text-align: left; }
 
 #p1Bottom {
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid #E8DDCB;
+  width: 1445px;
+  border: 0px solid #E8DDCB;
   padding: 20px;
   margin: 20px 0px 0px 0px;
-  vertical-align: top; }
+  vertical-align: top;
+  text-align: center; }
 
 .chartDescription {
-  font-style: italic; }
+  font-style: italic;
+  font-weight: 700;
+  text-align: center; }
 
 .category {
   display: block; }
   .category .categoryTitle {
     font-weight: 700;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    left: 0px;
+    text-align: left; }
   .category .individualCharts {
     vertical-align: top;
     display: inline-block;
@@ -220,6 +235,9 @@ body {
   font-size: 5em;
   vertical-align: top; }
 
+.boldify {
+  font-weight: 700; }
+
 .arc text {
   font: 10px sans-serif;
   text-anchor: middle; }
@@ -261,7 +279,7 @@ body {
 } */
 #godContainer {
   display: flex;
-  border: 2px solid #2b2f37;
+  border: 2px solid #3A3F48;
   height: 600px;
   width: 100%;
   align-items: center;
@@ -270,7 +288,7 @@ body {
 
 #pageThreeContentDiv {
   display: flex;
-  border: 2px solid #2b2f37;
+  border: 2px solid #3A3F48;
   width: 90%;
   height: 600px;
   box-sizing: border-box;
@@ -283,17 +301,16 @@ body {
   flex-direction: column; }
 
 .individualImgDiv {
-  border: 2px dashed yellow;
+  border: 2px dashed white;
   height: 150px;
   width: 100%;
   box-sizing: border-box; }
-
-.individualImgDiv:hover {
-  border: 2px solid yellow; }
+  .individualImgDiv:hover {
+    border: 2px solid white; }
 
 #personalInfoContainer {
   display: flex;
-  background-color: #3b3f47;
+  background-color: #2b2f37;
   height: 600px;
   width: 88%;
   align-items: center;
@@ -306,7 +323,7 @@ body {
     width: 0%; }
 
 #aboutMeSummary {
-  background-color: #2b2f37;
+  background-color: #3A3F48;
   display: flex;
   height: 290px;
   width: 70%;
@@ -317,7 +334,7 @@ body {
     letter-spacing: 2px; }
 
 #favoriteTech {
-  background-color: #2b2f37;
+  background-color: #3A3F48;
   display: flex;
   height: 290px;
   width: 25%;
@@ -327,7 +344,7 @@ body {
     letter-spacing: 2px; }
 
 #preBootcampQs {
-  background-color: #2b2f37;
+  background-color: #3A3F48;
   display: flex;
   height: 244px;
   width: 40%;
@@ -338,7 +355,7 @@ body {
     letter-spacing: 2px; }
 
 #recommendations {
-  background-color: #2b2f37;
+  background-color: #3A3F48;
   display: flex;
   height: 244px;
   width: 30%;
@@ -349,7 +366,7 @@ body {
     letter-spacing: 2px; }
 
 #favResources {
-  background-color: #2b2f37;
+  background-color: #3A3F48;
   display: flex;
   height: 244px;
   width: 23%;
@@ -359,7 +376,6 @@ body {
     letter-spacing: 2px; }
 
 .personalInfoHeader {
-  border: 2px solid white;
   display: flex;
   height: 15%;
   width: 100%;
@@ -378,12 +394,16 @@ body {
   justify-content: center; }
 
 .personalInfoBody {
-  border: 2px solid white;
   display: flex;
   height: 90%;
   width: 90%;
+  justify-content: left;
   box-sizing: border-box;
   overflow: scroll; }
+  .personalInfoBody p {
+    text-align: left; }
+  .personalInfoBody li {
+    text-align: left; }
 
 #exitButton {
   align-self: flex-start;
