@@ -119,8 +119,8 @@ body {
 
 .headerTwo {
   display: inline-block;
-  vertical-align: bottom;
-  margin: auto; }
+  vertical-align: center;
+  margin-left: 10px; }
 
 #headerText {
   color: #CDB380;
@@ -164,6 +164,9 @@ body {
   padding: 20px;
   margin: 20px 0px 0px 0px;
   vertical-align: top;
+  text-align: left; }
+
+#employmentFrontCharts {
   text-align: center; }
 
 .chartDescription {
@@ -175,9 +178,7 @@ body {
   display: block; }
   .category .categoryTitle {
     font-weight: 700;
-    font-size: 1.5em;
-    left: 0px;
-    text-align: left; }
+    font-size: 1.5em; }
   .category .individualCharts {
     vertical-align: top;
     display: inline-block;
