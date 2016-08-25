@@ -3,7 +3,8 @@
 @import 'partials/clearfix';
 
 // Variables
-$bgColor: #031634;
+$bgColor: rgb(43,47,55);
+$dashboardColor: rgb(59,63,71);
 $darkColor: #031634;
 $lightColor: #E8DDCB;
 
@@ -281,7 +282,7 @@ body {
 
 #godContainer{
   display: flex;
-  border: 2px solid white;
+  border: 2px solid $bgColor;
   height: 600px;
   width: 100%;
   align-items: center;
@@ -291,7 +292,7 @@ body {
 
 #pageThreeContentDiv{
   display: flex;
-  border: 2px solid lime;
+  border: 2px solid $bgColor;
   width: 90%;
   height: 600px;
   box-sizing: border-box;
@@ -299,7 +300,7 @@ body {
 }
 
 #headshotContainer{
-  border: 2px solid red;
+  border: 2px solid $bgColor;
   height: 596px;
   width: 12%;
   box-sizing: border-box;
@@ -319,12 +320,14 @@ body {
 
 #personalInfoContainer{
   display: flex;
-  border: 2px solid magenta;
+  background-color: $dashboardColor; //not workinggggggggg
+  border: 2px solid $bgColor;
   height: 596px;
   width: 88%;
+  align-items: center;
   box-sizing: border-box;
   flex-flow: row wrap;
-  transition: 0.5s;
+  transition: 0.25s;
   transition-timing-function: ease-out;
   &.ng-hide{
     width: 0%;
@@ -333,10 +336,12 @@ body {
 
 
 #aboutMeSummary{
+  background-color: $bgColor;
   border: 2px solid pink;
   display: flex;
-  height: 320px;
+  height: 290px;
   width: 70%;
+  margin-right: 2.5%;
   box-sizing: border-box;
   flex-direction: column;
   transform: 2s;
@@ -348,10 +353,11 @@ body {
 }
 
 #favoriteTech{
+  background-color: $bgColor;
   border: 2px solid $light-gray;
   display: flex;
-  height: 320px;
-  width: 30%;
+  height: 290px;
+  width: 25%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -362,10 +368,12 @@ body {
 }
 
 #preBootcampQs{
+  background-color: $bgColor;
   border: 2px solid cyan;
   display: flex;
-  height: 274px;
+  height: 244px;
   width: 40%;
+  margin-right: 2%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -376,10 +384,12 @@ body {
 }
 
 #recommendations{
+  background-color: $bgColor;
   border: 2px solid lime;
   display: flex;
-  height: 274px;
-  width: 35%;
+  height: 244px;
+  width: 30%;
+  margin-right: 2%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -390,10 +400,11 @@ body {
 }
 
 #favResources{
+  background-color: $bgColor;
   border: 2px solid yellow;
   display: flex;
-  height: 274px;
-  width: 25%;
+  height: 244px;
+  width: 23%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
