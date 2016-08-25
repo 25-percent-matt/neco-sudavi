@@ -298,7 +298,8 @@ body {
   width: 88%;
   box-sizing: border-box;
   flex-flow: row wrap;
-  transition: ease-out 0.5s; }
+  transition: 0.5s;
+  transition-timing-function: ease-out; }
   #personalInfoContainer.ng-hide {
     width: 0%; }
 
@@ -382,4 +383,7 @@ body {
   overflow: scroll; }
 
 #exitButton {
-  align-self: flex-start; }
+  align-self: flex-start;
+  cursor: pointer; }
+  #exitButton:hover {
+    text-shadow: 0.5px 0.5px #999999; }
