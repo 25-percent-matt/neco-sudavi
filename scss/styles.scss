@@ -3,7 +3,7 @@
 @import 'partials/clearfix';
 
 // Variables
-$bgColor: #031634;
+$bgColor: #3A3F48;
 $darkColor: #031634;
 $lightColor: #E8DDCB;
 
@@ -26,12 +26,12 @@ $large: "only screen and (min-width: 900px)";
 $x-large: "only screen and (min-width: 1350px)";
 
 * {
-  font-family: 'Raleway', sans-serif;
   text-align:center;
   letter-spacing: 1px;
 }
 
 body {
+  font-family: 'Rajdhani', sans-serif;
   color: $lightColor;
   background-color: $bgColor;
   // background-image: url(../img/rockywall.png);
@@ -102,14 +102,15 @@ body {
 }
 
 #headerText {
+  //font-family: 'Bungee Shade', cursive;
   text-align: center;
+  color: #CDB380;
   font-size: 3em;
+  font-weight: 900;
   margin: 0px;
-  font-family: 'Bungee Shade', cursive;
 }
 
 #p1PrimaryDiv{
-  background-color:#8b8b8b;
   flex: 1 1 auto;
   display:flex;
   flex-flow: row wrap;
@@ -119,36 +120,43 @@ body {
 }
 
 #p1TopLeft{
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid $lightColor;
+  border: 0px solid $lightColor;
   flex: 1 1 30%;
   padding: 20px;
   margin: 0px 10px 0px 0px;
   vertical-align: top;
+  text-align:left;
 }
 
 #p1TopRight{
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid $lightColor;
+  border: 0px solid $lightColor;
   flex: 1 1 30%;
   padding: 20px;
   margin: 0px 0px 0px 10px;
   vertical-align: bottom;
+  text-align:left;
 }
 
 #p1Bottom{
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid $lightColor;
+  border: 0px solid $lightColor;
   //flex: 1 1 45%;
   padding: 20px;
   margin: 20px 0px 0px 0px;
   vertical-align: top;
+  text-align:left;
 }
 
 .chartDescription {
   font-style: italic;
+  font-weight: 700;
+  text-align: center;
 }
-
 
 .category {
   display: block;
@@ -231,7 +239,9 @@ body {
   vertical-align: top;
 }
 
-
+.boldify {
+  font-weight: 700;
+}
 
 .arc text {
   font: 10px sans-serif;

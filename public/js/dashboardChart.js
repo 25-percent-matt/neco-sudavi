@@ -3,7 +3,7 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 
  var degreeChart = function(){
    var width = 300,
-       height = 300,
+       height = 307,
        radius = Math.min(width, height) / 2;
 
        var color = d3.scale.ordinal()
@@ -63,7 +63,7 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 
  var majorChart = function(){
    var width = 300,
-       height = 300,
+       height = 307,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
@@ -123,7 +123,7 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 
  var hasStudentDebtChart = function(){
    var width = 300,
-       height = 300,
+       height = 307,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()

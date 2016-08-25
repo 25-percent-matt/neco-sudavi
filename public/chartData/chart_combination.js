@@ -14,9 +14,9 @@ var chartCombo = c3.generate({
 
         type: 'bar',
         colors: {
-            M: '#458CCC',
-            F: '#F59AC3',
-            Other: '#D6BBDF'
+            M: '#036564',
+            F: '#CDB380',
+            Other: '#7F889A'
         },
         types: {
             data3: 'spline',

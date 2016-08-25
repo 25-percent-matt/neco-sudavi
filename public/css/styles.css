@@ -61,13 +61,13 @@ table {
 
 /* IE7 */
 * {
-  font-family: 'Raleway', sans-serif;
   text-align: center;
   letter-spacing: 1px; }
 
 body {
+  font-family: 'Rajdhani', sans-serif;
   color: #E8DDCB;
-  background-color: #031634;
+  background-color: #3A3F48;
   text-align: center;
   /*   display:flex;
   flex-flow: row wrap; */
@@ -94,7 +94,7 @@ body {
   body a:hover {
     color: #444444; }
   body a:active {
-    color: #031634; }
+    color: #3A3F48; }
 
 .headerZero {
   flex: 1 1 auto;
@@ -118,12 +118,12 @@ body {
 
 #headerText {
   text-align: center;
+  color: #CDB380;
   font-size: 3em;
-  margin: 0px;
-  font-family: 'Bungee Shade', cursive; }
+  font-weight: 900;
+  margin: 0px; }
 
 #p1PrimaryDiv {
-  background-color: #8b8b8b;
   flex: 1 1 auto;
   display: flex;
   flex-flow: row wrap;
@@ -132,30 +132,38 @@ body {
   margin: 0px; }
 
 #p1TopLeft {
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid #E8DDCB;
+  border: 0px solid #E8DDCB;
   flex: 1 1 30%;
   padding: 20px;
   margin: 0px 10px 0px 0px;
-  vertical-align: top; }
+  vertical-align: top;
+  text-align: left; }
 
 #p1TopRight {
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid #E8DDCB;
+  border: 0px solid #E8DDCB;
   flex: 1 1 30%;
   padding: 20px;
   margin: 0px 0px 0px 10px;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  text-align: left; }
 
 #p1Bottom {
+  background-color: #2B2F37;
   display: inline-block;
-  border: 1px solid #E8DDCB;
+  border: 0px solid #E8DDCB;
   padding: 20px;
   margin: 20px 0px 0px 0px;
-  vertical-align: top; }
+  vertical-align: top;
+  text-align: left; }
 
 .chartDescription {
-  font-style: italic; }
+  font-style: italic;
+  font-weight: 700;
+  text-align: center; }
 
 .category {
   display: block; }
@@ -218,6 +226,9 @@ body {
 #FTworkPercent {
   font-size: 5em;
   vertical-align: top; }
+
+.boldify {
+  font-weight: 700; }
 
 .arc text {
   font: 10px sans-serif;
