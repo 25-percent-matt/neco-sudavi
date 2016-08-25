@@ -34,8 +34,8 @@ var chartCombo = c3.generate({
         }
     },
     size: {
-      width: 1200,
-      height: 200
+      width: 400,
+      height: 373
     }
 });
 

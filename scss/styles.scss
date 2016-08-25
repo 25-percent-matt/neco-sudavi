@@ -82,17 +82,21 @@ body {
   flex: 1 1 auto;
   display:flex;
   flex-flow: row wrap;
-  padding: 25px 25px 25px 25px;
+  vertical-align: center;
+  padding: 10px;
+  margin: 0px;
 }
 
 .headerOne{
   display: inline-block;
+  vertical-align: center;
   flex: 1 1 45%;
-  margin: auto;
+  margin: 0px;
 }
 
 .headerTwo{
   display: inline-block;
+  vertical-align: bottom;
   flex: 1 1 45%;
   margin: auto;
 }
@@ -104,6 +108,48 @@ body {
   font-family: 'Bungee Shade', cursive;
 }
 
+#p1PrimaryDiv{
+  background-color:#8b8b8b;
+  flex: 1 1 auto;
+  display:flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  vertical-align: top;
+  margin: 0px;
+}
+
+#p1TopLeft{
+  display: inline-block;
+  border: 1px solid $lightColor;
+  flex: 1 1 30%;
+  padding: 20px;
+  margin: 0px 10px 0px 0px;
+  vertical-align: top;
+}
+
+#p1TopRight{
+  display: inline-block;
+  border: 1px solid $lightColor;
+  flex: 1 1 30%;
+  padding: 20px;
+  margin: 0px 0px 0px 10px;
+  vertical-align: bottom;
+}
+
+#p1Bottom{
+  display: inline-block;
+  border: 1px solid $lightColor;
+  //flex: 1 1 45%;
+  padding: 20px;
+  margin: 20px 0px 0px 0px;
+  vertical-align: top;
+}
+
+.chartDescription {
+  font-style: italic;
+}
+
+
 .category {
   display: block;
   .categoryTitle {
@@ -114,7 +160,7 @@ body {
     //background-color:#c0c0c0;
     vertical-align: top;
     display: inline-block;
-    margin: 0px;
+    margin: 10px 10px 10px 10px;
     h4 {
       font-weight: 500;
       margin: 5px;

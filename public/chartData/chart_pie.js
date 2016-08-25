@@ -17,6 +17,7 @@ function makeGraphPrimary(searchParam, chartBindTo) {
   }
 
   function makeDegreeObj(queryData, chartBindTo) {
+    console.log(chartBindTo)
     return {
       bindto: chartBindTo,
       data : {

@@ -85,7 +85,7 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
     $scope.showHide = false;
     $scope.pageNumber = 1;
     $scope.gotoNextPage = function() {
-      $scope.pageNumber++;
+      ++$scope.pageNumber;
       console.log($scope.pageNumber);
     };
     $scope.gotoPrevPage = function() {
