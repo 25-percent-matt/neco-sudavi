@@ -4,6 +4,8 @@
 
 // Variables
 $bgColor: #3A3F48;
+//$bgColor2: rgb(43,47,55);
+$dashboardColor: rgb(59,63,71);
 $darkColor: #031634;
 $lightColor: #E8DDCB;
 
@@ -291,7 +293,7 @@ body {
 
 #godContainer{
   display: flex;
-  border: 2px solid white;
+  border: 2px solid $bgColor;
   height: 600px;
   width: 100%;
   align-items: center;
@@ -301,7 +303,7 @@ body {
 
 #pageThreeContentDiv{
   display: flex;
-  border: 2px dashed lime;
+  border: 2px solid $bgColor;
   width: 90%;
   height: 600px;
   box-sizing: border-box;
@@ -309,7 +311,7 @@ body {
 }
 
 #headshotContainer{
-  border: 2px dashed red;
+  border: 2px solid $bgColor;
   height: 596px;
   width: 12%;
   box-sizing: border-box;
@@ -321,85 +323,148 @@ body {
   height: 149px;
   width: 100%;
   box-sizing: border-box;
+
+}
+.individualImgDiv:hover{
+  border: 2px solid yellow;
 }
 
 #personalInfoContainer{
   display: flex;
-  border: 2px dashed magenta;
+  background-color: $dashboardColor; //not workinggggggggg
+  border: 2px solid $bgColor;
   height: 596px;
   width: 88%;
+  align-items: center;
   box-sizing: border-box;
   flex-flow: row wrap;
+  transition: 0.25s;
+  transition-timing-function: ease-out;
+  &.ng-hide{
+    width: 0%;
+  } //RIGHT HERE NOT WORKING YET
 }
 
+
 #aboutMeSummary{
-  border: 2px dashed pink;
+  background-color: $bgColor;
+  border: 2px solid pink;
   display: flex;
-  height: 320px;
+  height: 290px;
   width: 70%;
+  margin-right: 2.5%;
   box-sizing: border-box;
+  flex-direction: column;
+  transform: 2s;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 #favoriteTech{
-  border: 2px dashed $light-gray;
+  background-color: $bgColor;
+  border: 2px solid $light-gray;
   display: flex;
-  height: 320px;
-  width: 30%;
+  height: 290px;
+  width: 25%;
   box-sizing: border-box;
+  flex-direction: column;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 #preBootcampQs{
-  border: 2px dashed cyan;
+  background-color: $bgColor;
+  border: 2px solid cyan;
   display: flex;
-  height: 274px;
+  height: 244px;
   width: 40%;
+  margin-right: 2%;
   box-sizing: border-box;
+  flex-direction: column;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 #recommendations{
-  border: 2px dashed cyan;
+  background-color: $bgColor;
+  border: 2px solid lime;
   display: flex;
-  height: 274px;
-  width: 35%;
+  height: 244px;
+  width: 30%;
+  margin-right: 2%;
   box-sizing: border-box;
+  flex-direction: column;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
 }
 
 #favResources{
-  border: 2px dashed cyan;
+  background-color: $bgColor;
+  border: 2px solid yellow;
   display: flex;
-  height: 274px;
-  width: 25%;
+  height: 244px;
+  width: 23%;
   box-sizing: border-box;
+  flex-direction: column;
+  &:hover{
+    .personalInfoHeader{
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.personalInfoHeader{
+  border: 2px solid yellow;
+  display: flex;
+  height: 15%;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5em;
+  transition: width 1s;
 }
 
 
 
+.personalInfoContent{
+  border: 2px solid red;
+  display: flex;
+  height: 85%;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
 
+.personalInfoBody{
+  border: 2px solid white;
+  display: flex;
+  height: 90%;
+  width: 90%;
+  box-sizing: border-box;
+  overflow: scroll;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#exitButton{
+  align-self: flex-start;
+  cursor: pointer;
+  &:hover{
+    text-shadow:  0.5px 0.5px #999999;
+  }
+}
 
 
 // #megaContainer{

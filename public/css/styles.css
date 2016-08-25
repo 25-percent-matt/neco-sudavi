@@ -67,7 +67,6 @@ table {
 body {
   font-family: 'Rajdhani', sans-serif;
   color: #E8DDCB;
-  background-color: #3A3F48;
   text-align: center;
   /*   display:flex;
   flex-flow: row wrap; */
@@ -94,7 +93,6 @@ body {
   body a:hover {
     color: #444444; }
   body a:active {
-    color: #3A3F48; }
 
 .headerZero {
   flex: 1 1 auto;
@@ -271,7 +269,7 @@ body {
 } */
 #godContainer {
   display: flex;
-  border: 2px solid white;
+  border: 2px solid #2b2f37;
   height: 600px;
   width: 100%;
   align-items: center;
@@ -280,14 +278,14 @@ body {
 
 #pageThreeContentDiv {
   display: flex;
-  border: 2px dashed lime;
+  border: 2px solid #2b2f37;
   width: 90%;
   height: 600px;
   box-sizing: border-box;
   flex-flow: row wrap; }
 
 #headshotContainer {
-  border: 2px dashed red;
+  border: 2px solid #2b2f37;
   height: 596px;
   width: 12%;
   box-sizing: border-box;
@@ -299,45 +297,112 @@ body {
   width: 100%;
   box-sizing: border-box; }
 
+.individualImgDiv:hover {
+  border: 2px solid yellow; }
+
 #personalInfoContainer {
   display: flex;
-  border: 2px dashed magenta;
+  background-color: #3b3f47;
+  border: 2px solid #2b2f37;
   height: 596px;
   width: 88%;
+  align-items: center;
   box-sizing: border-box;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  transition: 0.25s;
+  transition-timing-function: ease-out; }
+  #personalInfoContainer.ng-hide {
+    width: 0%; }
 
 #aboutMeSummary {
-  border: 2px dashed pink;
+  background-color: #2b2f37;
+  border: 2px solid pink;
   display: flex;
-  height: 320px;
+  height: 290px;
   width: 70%;
-  box-sizing: border-box; }
+  margin-right: 2.5%;
+  box-sizing: border-box;
+  flex-direction: column;
+  transform: 2s; }
+  #aboutMeSummary:hover .personalInfoHeader {
+    letter-spacing: 2px; }
 
 #favoriteTech {
-  border: 2px dashed #dfdfdf;
+  background-color: #2b2f37;
+  border: 2px solid #dfdfdf;
   display: flex;
-  height: 320px;
-  width: 30%;
-  box-sizing: border-box; }
+  height: 290px;
+  width: 25%;
+  box-sizing: border-box;
+  flex-direction: column; }
+  #favoriteTech:hover .personalInfoHeader {
+    letter-spacing: 2px; }
 
 #preBootcampQs {
-  border: 2px dashed cyan;
+  background-color: #2b2f37;
+  border: 2px solid cyan;
   display: flex;
-  height: 274px;
+  height: 244px;
   width: 40%;
-  box-sizing: border-box; }
+  margin-right: 2%;
+  box-sizing: border-box;
+  flex-direction: column; }
+  #preBootcampQs:hover .personalInfoHeader {
+    letter-spacing: 2px; }
 
 #recommendations {
-  border: 2px dashed cyan;
+  background-color: #2b2f37;
+  border: 2px solid lime;
   display: flex;
-  height: 274px;
-  width: 35%;
-  box-sizing: border-box; }
+  height: 244px;
+  width: 30%;
+  margin-right: 2%;
+  box-sizing: border-box;
+  flex-direction: column; }
+  #recommendations:hover .personalInfoHeader {
+    letter-spacing: 2px; }
 
 #favResources {
-  border: 2px dashed cyan;
+  background-color: #2b2f37;
+  border: 2px solid yellow;
   display: flex;
-  height: 274px;
-  width: 25%;
-  box-sizing: border-box; }
+  height: 244px;
+  width: 23%;
+  box-sizing: border-box;
+  flex-direction: column; }
+  #favResources:hover .personalInfoHeader {
+    letter-spacing: 2px; }
+
+.personalInfoHeader {
+  border: 2px solid yellow;
+  display: flex;
+  height: 15%;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5em;
+  transition: width 1s; }
+
+.personalInfoContent {
+  border: 2px solid red;
+  display: flex;
+  height: 85%;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center; }
+
+.personalInfoBody {
+  border: 2px solid white;
+  display: flex;
+  height: 90%;
+  width: 90%;
+  box-sizing: border-box;
+  overflow: scroll; }
+
+#exitButton {
+  align-self: flex-start;
+  cursor: pointer; }
+  #exitButton:hover {
+    text-shadow: 0.5px 0.5px #999999; }
