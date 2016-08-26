@@ -359,8 +359,6 @@ body {
   padding-top: 10px;
   box-sizing: border-box;
   flex-direction: column; }
-  #favoriteTech:hover .personalInfoHeader {
-    letter-spacing: 2px; }
 
 #preBootcampQs {
   display: flex;
