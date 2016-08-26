@@ -71,14 +71,14 @@ body {
   }
 
   a:link {
-    color: $darkColor;
+    color: $lightColor;
     text-decoration: none;
   }
   a:visited {
-    color: $darkColor;
+    color: $lightColor;
   }
   a:hover {
-    color: #444444;
+    color: #ffffff;
   }
   a:active {
     color: $bgColor;
@@ -125,7 +125,7 @@ body {
   color: #CDB380;
   font-size: 3em;
   font-weight: 900;
-  font-weight: lighter;
+  //font-weight: lighter;
   cursor: pointer;
 }
 
@@ -169,7 +169,7 @@ body {
 #p1Bottom{
   background-color: #2B2F37;
   display: inline-block;
-  width: 78%;
+  width: 76.5%;
   border: 0px solid $lightColor;
   //flex: 1 1 45%;
   padding: 20px;
