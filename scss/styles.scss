@@ -4,8 +4,9 @@
 
 // Variables
 $bgColor: #3A3F48;
-//$bgColor2: rgb(43,47,55);
-$dashboardColor: rgb(59,63,71);
+$bgHover: #434953;
+// $bgColor2: rgb(43,47,55);
+$dashboardColor: rgb(43,47,55);
 $darkColor: #031634;
 $lightColor: #E8DDCB;
 
@@ -27,7 +28,8 @@ $medium: "only screen and (min-width: 600px)";
 $large: "only screen and (min-width: 900px)";
 $x-large: "only screen and (min-width: 1350px)";
 
-* {
+*{
+  font-family: 'Rajdhani', sans-serif;
   text-align:center;
   letter-spacing: 1px;
 }
@@ -36,13 +38,13 @@ body {
   font-family: 'Rajdhani', sans-serif;
   color: $lightColor;
   background-color: $bgColor;
-  // background-image: url(../img/rockywall.png);
   text-align: center;
   vertical-align:center;
 /*   display:flex;
   flex-flow: row wrap; */
   //align-items: center;
   //margin: 0px;
+  overflow: auto;
 
   @media #{$medium}{
     .leftArrow {
@@ -86,25 +88,18 @@ body {
 
 
 .headerZero{
-
-  //flex: 1 1 auto;
-/*   display:flex;
-  flex-flow: row wrap; */
-/*   display: block;
-  text-align:center;
-  vertical-align: center;
-  padding: 10px;
-  margin: 0px;
-  width: 1445px; */
-
   display: inline-block;
-  width: 1445px;
+  width: 1275px;
   border: 0px solid $lightColor;
-  //flex: 1 1 45%;
-  padding: 0px 0px 20px 0px;
-  margin: 30px 0px 0px 0px;
+
+  //padding: 0px 0px 20px 0px;
+  //margin: 30px 0px 0px 0px;
+
+  padding: 1% 0px 1% 0px;
+  margin-left: 5%;
+  margin-right: 5%;
   vertical-align: top;
-  text-align:left;
+  text-align: left;
 }
 
 .headerOne{
@@ -112,6 +107,7 @@ body {
   display: inline-block;
   vertical-align: center;
   //flex: 1 1 45%;
+  margin-left: 5%;
   margin: auto;
   text-align:left;
 }
@@ -119,7 +115,7 @@ body {
 .headerTwo{
   display: inline-block;
   vertical-align: center;
-  //flex: 1 1 45%;
+  align-self: right;
   margin-left: 10px;
 }
 
@@ -129,7 +125,8 @@ body {
   color: #CDB380;
   font-size: 3em;
   font-weight: 900;
-  margin: 0px;
+  font-weight: lighter;
+  cursor: pointer;
 }
 
 #p1PrimaryDiv{
@@ -246,6 +243,7 @@ body {
 
 .leftArrow:hover {
   opacity:0.7;
+  cursor: pointer;
 }
 
 #leftArrowPic {
@@ -257,6 +255,7 @@ body {
   position: absolute;
   top: 45%;
   right: 1%;
+  cursor: pointer;
 }
 
 .rightArrow:hover {
@@ -295,6 +294,9 @@ body {
 
 .boldify {
   font-weight: 700;
+  a{
+    text-decoration: none;
+  }
 }
 
 .arc text {
@@ -355,7 +357,7 @@ body {
 
 #pageThreeContentDiv{
   display: flex;
-  border: 2px solid $bgColor;
+  // border: 2px solid $bgColor;
   width: 90%;
   height: 600px;
   box-sizing: border-box;
@@ -363,52 +365,52 @@ body {
 }
 
 #headshotContainer{
-  border: 2px solid $bgColor;
-  height: 596px;
+  height: 600px;
   width: 12%;
   box-sizing: border-box;
   flex-direction: column;
 }
 
 .individualImgDiv{
-  border: 2px dashed yellow;
-  height: 149px;
+  border: 2px dashed white;
+  height: 150px;
   width: 100%;
+  cursor: pointer;
   box-sizing: border-box;
-
-}
-.individualImgDiv:hover{
-  border: 2px solid yellow;
+  &:hover{
+    border: 2px solid white;
+  }
 }
 
 #personalInfoContainer{
   display: flex;
-  background-color: $dashboardColor; //not workinggggggggg
-  border: 2px solid $bgColor;
-  height: 596px;
+  background-color: $dashboardColor;
+  height: 600px;
   width: 88%;
   align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
   flex-flow: row wrap;
   transition: 0.25s;
   transition-timing-function: ease-out;
   &.ng-hide{
     width: 0%;
-  } //RIGHT HERE NOT WORKING YET
+  }
 }
 
 
 #aboutMeSummary{
   background-color: $bgColor;
-  border: 2px solid pink;
   display: flex;
-  height: 290px;
+  height: 48%;
+  // height: 290px;
   width: 70%;
-  margin-right: 2.5%;
+  margin-top: 0.25%;
+  margin-left: 1%;
   box-sizing: border-box;
   flex-direction: column;
-  transform: 2s;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -417,13 +419,15 @@ body {
 
 #favoriteTech{
   background-color: $bgColor;
-  border: 2px solid $light-gray;
   display: flex;
-  height: 290px;
-  width: 25%;
+  height: 48%;
+  width: 27%;
+  margin-right: 1%;
+  margin-top: 0.25%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -432,14 +436,15 @@ body {
 
 #preBootcampQs{
   background-color: $bgColor;
-  border: 2px solid cyan;
   display: flex;
-  height: 244px;
-  width: 40%;
-  margin-right: 2%;
+  height: 48%;
+  width: 42%;
+  margin-left: 1%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -448,14 +453,15 @@ body {
 
 #recommendations{
   background-color: $bgColor;
-  border: 2px solid lime;
   display: flex;
-  height: 244px;
-  width: 30%;
-  margin-right: 2%;
+  height: 48%;
+  width: 32%;
+  margin-bottom: 0.5%;
+  // margin-right: 2%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -464,13 +470,15 @@ body {
 
 #favResources{
   background-color: $bgColor;
-  border: 2px solid yellow;
   display: flex;
-  height: 244px;
-  width: 23%;
+  height: 48%;
+  width: 22%;
+  margin-right: 1%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -478,7 +486,7 @@ body {
 }
 
 .personalInfoHeader{
-  border: 2px solid yellow;
+  // border: 2px solid white;
   display: flex;
   height: 15%;
   width: 100%;
@@ -492,7 +500,6 @@ body {
 
 
 .personalInfoContent{
-  border: 2px solid red;
   display: flex;
   height: 85%;
   width: 100%;
@@ -502,12 +509,63 @@ body {
 }
 
 .personalInfoBody{
-  border: 2px solid white;
+  // border: 2px solid white;
   display: flex;
   height: 90%;
   width: 90%;
+  justify-content: left;
   box-sizing: border-box;
-  overflow: scroll;
+  overflow-y: auto;
+  p{
+    text-align: left;
+  }
+  li{
+    text-align: left;
+  }
+}
+
+
+
+#textBubble{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7%;
+  margin-left: 1%;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  color: #E8DDCD;
+  background-color: $dashboardColor;
+  border: 8px solid #E8DDCD;
+  font-size: 18px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+  &:before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 100px;
+    border: 25px solid;
+    border-color: #E8DDCD transparent transparent #E8DDCD;
+  }
+  &:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    top: 100px;
+    border: 15px solid;
+    border-color: $dashboardColor transparent transparent $dashboardColor;
+  }
 }
 
 #exitButton{
@@ -517,201 +575,3 @@ body {
     text-shadow:  0.5px 0.5px #999999;
   }
 }
-
-
-// #megaContainer{
-// /*  border-width: 2px;
-//   border-style: solid;
-//   border-color: yellow;*/
-//   display: flex;
-//   flex-direction: row;
-//   margin-left: 10%;
-//   margin-right: 10%;
-//   margin-bottom: 10%;
-// }
-
-// #pageThreeContainer{
-// /*  border-width: 2px;
-//   border-style: solid;*/
-//   /*border-color: blue;*/
-//   width: 280px;
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// /*.pageThreePersonArea {
-//   display: flex;
-//   margin-top: 5%;
-//   margin-left: 5%;
-// }*/
-
-// .pageThreePicContainer {
-//   display: flex;
-// /*  border-width: 2px;
-//   border-style: solid;*/
-//   /*border-color: blue;*/
-//   border-radius: 5px 0px 0px 5px;
-//   height: 274px;
-//   width: 270px;
-//   justify-content: center;
-// }
-
-// .pageThreePic {
-//   border-width: 2px;
-//   border-style: solid;
-//   border-color: $orange-colour;
-//   border-radius: 5px;
-//   margin-top: 3%;
-//   height: 250px;
-//   width: 250px;
-// }
-
-// #aboutMeDiv{
-// /*  border-width: 2px;
-//   border-style: solid;*/
-//   /*border-color: purple;*/
-//   width: 100%;
-//   height: 1103px;
-// }
-
-// .pageThreeAboutMe{
-// /*  border-width: 2px;
-//   border-style: solid;*/
-//   /*border-color: green;*/
-//   border-radius: 0px 5px 5px 0px;
-//   width: 99.5%;
-//   height: 548px;
-//   display: flex;
-//   flex-flow: row wrap;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-
-// .innerDivStyle{
-//   background-color: $medium-gray;
-//   color: $light-gray;
-//   padding: 1%;
-// }
-
-// .innerDivStyle h4{
-//   color: $daBlue;
-//   margin-bottom: -1px;
-// }
-
-// .innerDivStyle ul{
-//   margin-left: -20px;
-// }
-
-// .ourSummary{
-//   display: flex;
-// /*  border-width: 2px;
-//   border-style: solid;
-//   border-color: magenta;*/
-//   border-radius: 5px;
-//   height: 250px;
-//   width: 60%;
-//   margin-left: auto;
-//   justify-content: flex-start;
-//   align-items: center;
-//   flex-direction: column;
-// }
-
-// .favoriteTech{
-//   display: flex;
-// /*  border-width: 2px;
-//   border-style: solid;
-//   border-color: orange;*/
-//   border-radius: 5px;
-//   height: 250px;
-//   width: 33%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   justify-content: flex-start;
-//   align-items: center;
-//   flex-direction: column;
-// }
-
-// .preBootcampQuestions{
-//   display: flex;
-// /*  border-width: 2px;
-//   border-style: solid;
-//   border-color: lime;*/
-//   border-radius: 5px;
-//   font-size: 10px;
-//   overflow: scroll;
-//   height: 250px;
-//   width: 30%;
-//   margin-left: auto;
-//   margin-bottom: auto;
-//   justify-content: flex-start;
-//   align-items: center;
-//   flex-direction: column;
-// }
-
-// .myRecommendations{
-//   display: flex;
-// /*  border-width: 2px;
-//   border-style: solid;
-//   border-color: cyan;*/
-//   border-radius: 5px;
-//   height: 250px;
-//   width: 30%;
-//   margin-bottom: auto;
-//   justify-content: flex-start;
-//   align-items: center;
-//   flex-direction: column;
-// }
-
-// .favResources{
-//   display: flex;
-// /*  border-width: 2px;
-//   border-style: solid;
-//   border-color: pink;*/
-//   border-radius: 5px;
-//   font-size: 14px;
-//   height: 250px;
-//   width: 30%;
-//   margin-right: auto;
-//   margin-bottom: auto;
-//   justify-content: flex-start;
-//   align-items: center;
-//   flex-direction: column;
-// }
-
-// .aboutMeList{
-//   display: flex;
-//   margin-right: auto;
-//   font-size: 12px;
-//   overflow: scroll;
-// }
-
-// .myFavTechList{
-//   display: flex;
-//   margin-right: auto;
-// }
-
-// .preBootcampQuestions{
-//   display: flex;
-//   margin-right: auto;
-// }
-
-// .myRecommendations{
-//   display: flex;
-//   margin-right: auto;
-//   font-size: 14px;
-//   overflow: scroll;
-// }
-
-// .favResources{
-//   display: flex;
-//   margin-right: auto;
-// }
-
-// .selectedSummaryStyle{
-//   background-color: rgb(54,54,54);
-// }
-
-// #mattsPic{
-//   background-image: url(http://www.vectorportal.com/img_novi/surfer-silhouette.jpg);
-// }

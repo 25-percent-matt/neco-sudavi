@@ -15,6 +15,7 @@ const {
 const {resolver} = require('graphql-sequelize');
 const surveydata = require('./models').surveydata;
 const surveymetadata = require('./models').surveymetadata;
+const queries = require('./queries');
 
 
 const SurveyType = new GraphQLObjectType({
@@ -134,7 +135,7 @@ const SurveyType = new GraphQLObjectType({
     ResourceYouTube : { type : GraphQLBoolean},
     SchoolDegree : { type: GraphQLString },
     SchoolMajor : { type: GraphQLString },
-    StudentDebtOwe : { type: GraphQLInt }
+    StudentDebtOwe : { type: GraphQLInt },
   }
 });
 
@@ -176,12 +177,131 @@ const queryType = new GraphQLObjectType({
       type: SurveyType, // the graphql object type we defined above
       args: { //list what how you can search through records
         id: {
-          type: new GraphQLNonNull(GraphQLInt) // GraphQLNonNull means that this field is required when making queries
+          type: GraphQLInt // GraphQLNonNull means that this field is required when making queries
         },
       },
-      resolve: resolver(surveydata, { //A helper for resolving graphql queries targeted at Sequelize models or associations.
-        include: false // disable auto including of associations based on AST - default: true
-      }),
+      // resolve: resolver(surveydata, { //A helper for resolving graphql queries targeted at Sequelize models or associations.
+      //   include: false // disable auto including of associations based on AST - default: true
+      // }),
+    },
+    EmploymentField : {
+      type: new GraphQLList(
+        new GraphQLObjectType({
+          name: 'EmploymentField',
+          fields: {
+            Count: {
+              type: GraphQLInt
+            },
+            Response: {
+              type: GraphQLString
+            }
+          },
+        })),
+        resolve : () => {
+          return queries.EmploymentField;
+        }
+    },
+    SchoolMajor : {
+      type: new GraphQLList(
+        new GraphQLObjectType({
+          name: 'SchoolMajor',
+          fields: {
+            Count: {
+              type: GraphQLInt
+            },
+            Response: {
+              type: GraphQLString
+            }
+          },
+        })),
+        resolve : () => {
+          return queries.SchoolMajor;
+        }
+    },
+    Income : {
+      type: new GraphQLList(
+        new GraphQLObjectType({
+          name: 'Income',
+          fields: {
+            Count: {
+              type: GraphQLInt
+            },
+            Response: {
+              type: GraphQLString
+            }
+          },
+        })),
+        resolve : () => {
+          return queries.Income;
+        }
+    },
+    ChildrenNumber : {
+      type: new GraphQLList(
+        new GraphQLObjectType({
+          name: 'ChildrenNumber',
+          fields: {
+            Count: {
+              type: GraphQLInt
+            },
+            Response: {
+              type: GraphQLString
+            }
+          },
+        })),
+        resolve : () => {
+          return queries.ChildrenNumber;
+        }
+    },
+    JobPref : {
+      type: new GraphQLList(
+        new GraphQLObjectType({
+          name: 'JobPref',
+          fields: {
+            Count: {
+              type: GraphQLInt
+            },
+            Response: {
+              type: GraphQLString
+            }
+          },
+        })),
+        resolve : () => {
+          return queries.JobPref;
+        }
+    },
+    HasDebt : {
+      type: new GraphQLList(
+        new GraphQLObjectType({
+          name: 'HasDebt',
+          fields: {
+            Count: {
+              type: GraphQLInt
+            },
+            Response: {
+              type: GraphQLString
+            }
+          },
+        })),
+        resolve : () => {
+          return queries.HasDebt;
+        }
+    },
+    SchoolDegree : {
+      type: new GraphQLList(
+        new GraphQLObjectType({
+          name: 'SchoolDegree',
+          fields: {
+            Count: {
+              type: GraphQLInt
+            },
+            Response: {
+              type: GraphQLString
+            }
+          },
+        })),
+        resolve : () => {
+          return queries.SchoolDegree;
+        }
     },
     surveyRecords: {
       type: new GraphQLList(SurveyType), // this returns a list defined by its args
