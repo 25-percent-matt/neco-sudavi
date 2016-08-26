@@ -82,6 +82,7 @@ function makeObjectDynamic(requestReceivedData){
         columns: dynamicChartSave,
         //put a function here to add , to compared cities
         type: 'bar',
+
       },
       axis: {
         x: {

@@ -76,6 +76,10 @@ app.use('/blsProjections/:state', (req, res) => {
 
 app.use(express.static('public'));
 
+function notNull(theVal) {
+  return (['null',null,'NULL',[null], [ null ], ['null']].indexOf(theVal) < 0);
+}
+
 app.listen(PORT, () => {
   db.sequelize.sync(); // Sync all models that aren't already in the database
   console.log(`Server running on http://localhost:${PORT}`);
