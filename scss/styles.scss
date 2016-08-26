@@ -115,6 +115,7 @@ body {
   vertical-align: center;
   align-self: right;
   margin-left: 10px;
+  text-align: left;
 }
 
 #headerText {
@@ -551,7 +552,7 @@ body {
 
 .userDirection{
   display: flex;
-  margin-left: 20%;
+  margin-left: 30%;
   margin-bottom: 17%;
 }
 
@@ -562,6 +563,7 @@ body {
   height: 581.48px;
   margin-left: auto;
   margin-bottom: 18.52px;
+  margin-right: 2px;
   flex-flow: row wrap;
   transition: 0.25s;
   transition-timing-function: ease-out;
