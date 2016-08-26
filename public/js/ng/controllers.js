@@ -7,6 +7,10 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope[chartSelected] = !$scope[chartSelected];
     };
 
+    $scope.home = function(){
+      $scope.pageNumber = 1;
+    };
+
     $scope.returnHome = function () {
       $scope.showHide = !$scope.showHide;
       $scope.chartDegreeBigShow = false;

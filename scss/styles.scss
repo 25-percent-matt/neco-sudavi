@@ -91,13 +91,13 @@ body {
   width: 1445px; */
 
   display: inline-block;
-  width: 1445px;
+  width: 100%;
   border: 0px solid $lightColor;
   //flex: 1 1 45%;
   padding: 0px 0px 20px 0px;
   margin: 20px 0px 0px 0px;
   vertical-align: top;
-  text-align:left;
+  text-align: left;
 }
 
 .headerOne{
@@ -124,6 +124,7 @@ body {
   font-weight: 900;
   margin: 0px;
   font-weight: lighter;
+  cursor: pointer;
 }
 
 #p1PrimaryDiv{
@@ -224,6 +225,7 @@ body {
 
 .leftArrow:hover {
   opacity:0.7;
+  cursor: pointer;
 }
 
 #leftArrowPic {
@@ -235,6 +237,7 @@ body {
   position: absolute;
   top: 45%;
   right: 1%;
+  cursor: pointer;
 }
 
 .rightArrow:hover {
@@ -340,6 +343,7 @@ body {
   border: 2px dashed white;
   height: 150px;
   width: 100%;
+  cursor: pointer;
   box-sizing: border-box;
   &:hover{
     border: 2px solid white;
@@ -352,7 +356,7 @@ body {
   height: 600px;
   width: 88%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   box-sizing: border-box;
   flex-flow: row wrap;
   transition: 0.25s;
@@ -366,9 +370,11 @@ body {
 #aboutMeSummary{
   background-color: $bgColor;
   display: flex;
-  height: 290px;
+  height: 48%;
+  // height: 290px;
   width: 70%;
-  margin-right: 2.5%;
+  margin-top: 0.25%;
+  margin-left: 1%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -381,8 +387,10 @@ body {
 #favoriteTech{
   background-color: $bgColor;
   display: flex;
-  height: 290px;
-  width: 25%;
+  height: 48%;
+  width: 27%;
+  margin-right: 1%;
+  margin-top: 0.25%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -395,9 +403,10 @@ body {
 #preBootcampQs{
   background-color: $bgColor;
   display: flex;
-  height: 244px;
-  width: 40%;
-  margin-right: 2%;
+  height: 48%;
+  width: 42%;
+  margin-left: 1%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -410,9 +419,10 @@ body {
 #recommendations{
   background-color: $bgColor;
   display: flex;
-  height: 244px;
-  width: 30%;
-  margin-right: 2%;
+  height: 48%;
+  width: 32%;
+  margin-bottom: 0.5%;
+  // margin-right: 2%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -425,8 +435,10 @@ body {
 #favResources{
   background-color: $bgColor;
   display: flex;
-  height: 244px;
-  width: 23%;
+  height: 48%;
+  width: 22%;
+  margin-right: 1%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -466,7 +478,7 @@ body {
   width: 90%;
   justify-content: left;
   box-sizing: border-box;
-  overflow: scroll;
+  overflow-y: auto;
   p{
     text-align: left;
   }

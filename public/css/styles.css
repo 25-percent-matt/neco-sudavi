@@ -103,7 +103,7 @@ body {
   margin: 0px;
   width: 1445px; */
   display: inline-block;
-  width: 1445px;
+  width: 100%;
   border: 0px solid #E8DDCB;
   padding: 0px 0px 20px 0px;
   margin: 20px 0px 0px 0px;
@@ -126,7 +126,8 @@ body {
   font-size: 3em;
   font-weight: 900;
   margin: 0px;
-  font-weight: lighter; }
+  font-weight: lighter;
+  cursor: pointer; }
 
 #p1PrimaryDiv {
   flex: 1 1 auto;
@@ -206,7 +207,8 @@ body {
   left: 1%; }
 
 .leftArrow:hover {
-  opacity: 0.7; }
+  opacity: 0.7;
+  cursor: pointer; }
 
 #leftArrowPic {
   height: 100px;
@@ -215,7 +217,8 @@ body {
 .rightArrow {
   position: absolute;
   top: 45%;
-  right: 1%; }
+  right: 1%;
+  cursor: pointer; }
 
 .rightArrow:hover {
   opacity: 0.7; }
@@ -304,6 +307,7 @@ body {
   border: 2px dashed white;
   height: 150px;
   width: 100%;
+  cursor: pointer;
   box-sizing: border-box; }
   .individualImgDiv:hover {
     border: 2px solid white; }
@@ -314,7 +318,7 @@ body {
   height: 600px;
   width: 88%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   box-sizing: border-box;
   flex-flow: row wrap;
   transition: 0.25s;
@@ -325,9 +329,10 @@ body {
 #aboutMeSummary {
   background-color: #3A3F48;
   display: flex;
-  height: 290px;
+  height: 48%;
   width: 70%;
-  margin-right: 2.5%;
+  margin-top: 0.25%;
+  margin-left: 1%;
   box-sizing: border-box;
   flex-direction: column; }
   #aboutMeSummary:hover .personalInfoHeader {
@@ -336,8 +341,10 @@ body {
 #favoriteTech {
   background-color: #3A3F48;
   display: flex;
-  height: 290px;
-  width: 25%;
+  height: 48%;
+  width: 27%;
+  margin-right: 1%;
+  margin-top: 0.25%;
   box-sizing: border-box;
   flex-direction: column; }
   #favoriteTech:hover .personalInfoHeader {
@@ -346,9 +353,10 @@ body {
 #preBootcampQs {
   background-color: #3A3F48;
   display: flex;
-  height: 244px;
-  width: 40%;
-  margin-right: 2%;
+  height: 48%;
+  width: 42%;
+  margin-left: 1%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column; }
   #preBootcampQs:hover .personalInfoHeader {
@@ -357,9 +365,9 @@ body {
 #recommendations {
   background-color: #3A3F48;
   display: flex;
-  height: 244px;
-  width: 30%;
-  margin-right: 2%;
+  height: 48%;
+  width: 32%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column; }
   #recommendations:hover .personalInfoHeader {
@@ -368,8 +376,10 @@ body {
 #favResources {
   background-color: #3A3F48;
   display: flex;
-  height: 244px;
-  width: 23%;
+  height: 48%;
+  width: 22%;
+  margin-right: 1%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column; }
   #favResources:hover .personalInfoHeader {
@@ -399,7 +409,7 @@ body {
   width: 90%;
   justify-content: left;
   box-sizing: border-box;
-  overflow: scroll; }
+  overflow-y: auto; }
   .personalInfoBody p {
     text-align: left; }
   .personalInfoBody li {

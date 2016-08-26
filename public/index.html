@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Neco Sudavi</title>
+  <title>New Coders</title>
   <link href="/css/styles.css" rel="stylesheet" type="text/css">
   <link href="/chartData/c3-0.4.11/c3.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
@@ -22,7 +22,7 @@
 
         <div class="headerZero">
           <div class="headerOne">
-            <h1 id="headerText" ng-click="loadBigFunction()">NEW CODERS</h1>
+            <h1 id="headerText" ng-click="home()">NEW CODERS</h1>
           </div>
 
           <div class="headerTwo">
@@ -31,7 +31,7 @@
         </div>
 
         <div class="leftArrow">
-          <img id="leftArrowPic" ng-click="gotoPrevPage()" ng-show="pageNumber > 1" src="/img/arrow-left.png">
+          <img id="leftArrowPic" ng-click="gotoPrevPage()" ng-show="pageNumber === 2" src="/img/arrow-left.png">
         </div>
         <div class="rightArrow">
           <img id="rightArrowPic" ng-click="gotoNextPage()" ng-show="pageNumber < 3" src="/img/arrow-right.png">
