@@ -11,6 +11,7 @@ const Projections = db.projections;
 const pool = db.sequelize.connectionManager.pool;
 const mySchema = require('./schema');
 
+
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
     next();
