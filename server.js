@@ -10,7 +10,7 @@ const SurveyData = db.surveydata;
 const Projections = db.projections;
 const pool = db.sequelize.connectionManager.pool;
 const mySchema = require('./schema');
-
+const queries = require('./queries');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
@@ -37,30 +37,14 @@ app.use('/graphql', (req, res) => {
 
 app.use('/chartQuery/:id', (req, res) => {
   var querySelector = req.params.id;
-  var query = `{ surveyRecords { ${querySelector} } }`;
-  graphql(mySchema, query).then(result => {
-    let allb = result;
-    let tallies = [];
-    allb.data.surveyRecords.forEach(function (elem) {
-        let x = findIndex(elem, tallies, querySelector);
-        if (typeof x === 'number' && notNull(tallies[x][0])) {
-          tallies[x][1] = tallies[x][1] + 1;
-        } else {
-          if(notNull([elem[querySelector]][0])) tallies.push([elem[querySelector], 1]);
-        }
-      });
-    res.send(tallies);
+  var query = `{ ${querySelector} { Response }, ${querySelector} { Count } }`;
+  graphql(mySchema, query)
+    .then((result) => {
+      let resultArr = queries.objsToArrays(result.data[querySelector]);
+      console.log('resultArr: ', resultArr);
+      res.send(resultArr);
+    });
   });
-});
-
-function findIndex (elem, tallies, querySelector) {
-  for (var i = 0; i < tallies.length; i++) {
-    if (elem[querySelector] === tallies[i][0]) {
-      return i;
-    }
-  }
-  return 'the fail frog';
-}
 
 app.use('/blsProjections/:state', (req, res) => {
   let stateToFind = req.params.state;
@@ -75,10 +59,6 @@ app.use('/blsProjections/:state', (req, res) => {
 });
 
 app.use(express.static('public'));
-
-function notNull(theVal) {
-  return (['null',null,'NULL',[null], [ null ], ['null']].indexOf(theVal) < 0);
-}
 
 app.listen(PORT, () => {
   db.sequelize.sync(); // Sync all models that aren't already in the database
