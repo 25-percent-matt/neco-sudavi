@@ -2,14 +2,10 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Neco Sudavi</title>
+  <title>New Coders</title>
   <link href="/css/styles.css" rel="stylesheet" type="text/css">
   <link href="/chartData/c3-0.4.11/c3.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
-
-
   <script src="/chartData/d3-3.5.17/d3.min.js"></script>
   <script src="/chartData/c3-0.4.11/c3.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -22,26 +18,21 @@
 
 <body>
   <div ng-app="counterApp" id="appContainer">
-
-
     <div class="category" ng-controller="divHideController">
-
 
         <div class="headerZero">
           <div class="headerOne">
-            <h1 id="headerText" ng-click="loadBigFunction()">NEW CODERS</h1>
+            <h1 id="headerText" ng-click="home()">NEW CODERS</h1>
           </div>
 
           <div class="headerTwo">
             <span class="boldify">A look at new coders</span><br>
-            data via freeCodeCamp
+            data creds: <a href="https://github.com/FreeCodeCamp/2016-new-coder-survey">freeCodeCamp</a>
           </div>
         </div>
 
-
-
         <div class="leftArrow">
-          <img id="leftArrowPic" ng-click="gotoPrevPage()" ng-show="pageNumber > 1" src="/img/arrow-left.png">
+          <img id="leftArrowPic" ng-click="gotoPrevPage()" ng-show="pageNumber === 2" src="/img/arrow-left.png">
         </div>
         <div class="rightArrow">
           <img id="rightArrowPic" ng-click="gotoNextPage()" ng-show="pageNumber < 3" src="/img/arrow-right.png">
@@ -102,8 +93,8 @@
 
 
 
-             <div id="salaryChart" class="individualCharts" ng-show="pageNumber === 2"><br></div>
-             <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chartSalary"></div><br>
+             <div id="salaryChart" class="individualCharts" ng-show="pageNumber === 2"><br></div>
+             <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chartSalary"></div><br>
           <span class="chartDescription">More than a third of new coders come from a field other than IT</span>
       </div>
       <div ng-show="chartEmploymentFieldBigShow" ng-click="returnHome()" id="chartEmploymentFieldBig"></div>
@@ -124,9 +115,11 @@
      </div>
 </div> -->
               <div class="category">
-                <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">SALARY</span><br>
+                <div>
+                  <span class="categoryTitle" ng-show="pageNumber === 2" ng-click="loadBigFunction()">SALARY</span>
+                </div>
                  <div id="salaryChart" class="individualCharts" ng-show="pageNumber === 2"><br></div>
-                 <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chart"></div>
+         <!--         <div ng-show="pageNumber === 2" ng-click="loadBigFunction()" id="chart"></div> -->
               </div>
               <div ng-controller="Ctrl1" ng-show="pageNumber === 2">
                     <input ng-model="searchDynamic" ng-change="updateChart(searchDynamic, searchDynamic2)"></input>
@@ -195,6 +188,7 @@
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of favResources -->
           </div> <!-- end of personalInfoContainer -->
+          <div id="textBubble" ng-hide="toggleShow"><p>Click on our pictures to learn about our experiences as new coders!</p></div>
         </div> <!-- end of pageThreeContentDiv -->
         <div id="exitButton" ng-hide="!toggleShow" ng-click="exit()">X</div> <!-- end of exitButton -->
       </div> <!-- end of mega - ultra - god container -->

@@ -7,6 +7,10 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope[chartSelected] = !$scope[chartSelected];
     };
 
+    $scope.home = function(){
+      $scope.pageNumber = 1;
+    };
+
     $scope.returnHome = function () {
       $scope.showHide = !$scope.showHide;
       $scope.chartDegreeBigShow = false;
@@ -26,11 +30,6 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope.favResources = ["Codecademy", "FreeCodeCamp", "FrontEnd Masters", "w3 Schools", "YouTube", "MDN", "Google"];
       $scope.toggleShow = false;
       $scope.toggleShow = true;
-      $scope.myVar = "selectedSummaryStyle";
-      $scope.mattsVar = "selectedSummaryStyle";
-      $scope.andysVar = " ";
-      $scope.drewsVar = " ";
-      $scope.andrewsVar = " ";
     };
 
     $scope.andysInfo = function(){
@@ -41,11 +40,6 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope.favResources = ["Codecademy", "w3 Schools", "YouTube", "A Smarter Way to Learn JavaScript", "MDN", "Google", "YouTube", "Code School"];
       $scope.toggleShow = false;
       $scope.toggleShow = true;
-      $scope.myVar = "selectedSummaryStyle";
-      $scope.andysVar = "selectedSummaryStyle";
-      $scope.mattsVar = " ";
-      $scope.drewsVar = " ";
-      $scope.andrewsVar = " ";
     };
 
     $scope.drewsInfo = function(){
@@ -57,12 +51,6 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope.toggleShow = false;
       $scope.toggleShow = false;
       $scope.toggleShow = true;
-      $scope.myVar = " ";
-      $scope.myVar = "selectedSummaryStyle";
-      $scope.drewsVar = "selectedSummaryStyle";
-      $scope.mattsVar = " ";
-      $scope.andysVar = " ";
-      $scope.andrewsVar = " ";
     };
 
     $scope.andrewsInfo = function(){
@@ -74,12 +62,6 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope.toggleShow = false;
       $scope.toggleShow = false;
       $scope.toggleShow = true;
-      $scope.myVar = " ";
-      $scope.myVar = "selectedSummaryStyle";
-      $scope.andrewsVar = "selectedSummaryStyle";
-      $scope.mattsVar = " ";
-      $scope.andysVar = " ";
-      $scope.drewsVar = " ";
     };
 
     $scope.exit = function(){
