@@ -332,20 +332,35 @@ body {
 }
 
 #headshotContainer{
+  background-color: black;
   height: 600px;
-  width: 12%;
+  width: 13%;
   box-sizing: border-box;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .individualImgDiv{
-  border: 2px dashed white;
-  height: 150px;
-  width: 100%;
+  border: 2px solid white;
+  color: white;
+  height: 131.41px;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18.59px;
+  margin-left: 12.5%;
+  bottom: 3%;
   cursor: pointer;
   box-sizing: border-box;
-  &:hover{
+  .polaroidImg{
     border: 2px solid white;
+    height: 70%;
+    width: 80%;
+    margin: 8%;
+  }
+  &:hover{
+    border: 2px dashed white;
   }
 }
 
@@ -353,7 +368,7 @@ body {
   display: flex;
   background-color: $dashboardColor;
   height: 600px;
-  width: 88%;
+  width: 85%;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
