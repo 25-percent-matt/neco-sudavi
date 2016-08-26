@@ -366,7 +366,7 @@ body {
     background-color: rgb(115,125,144);
     height: 70%;
     width: 85%;
-    margin: 8%;
+    margin: 7%;
   }
   &:hover{
     border: 1px solid white;
@@ -541,8 +541,9 @@ body {
 
 #exitButton{
   // align-self: flex-start;
+  display: inline-block;
   cursor: pointer;
-  margin-left: auto;
+  margin-left: 51%;
   width: 5%;
   &:hover{
     text-shadow:  0.5px 0.5px #999999;

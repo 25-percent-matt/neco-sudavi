@@ -320,7 +320,7 @@ body {
     background-color: #737d90;
     height: 70%;
     width: 85%;
-    margin: 8%; }
+    margin: 7%; }
   .individualImgDiv:hover {
     border: 1px solid white; }
 
@@ -447,8 +447,9 @@ body {
     width: 0%; }
 
 #exitButton {
+  display: inline-block;
   cursor: pointer;
-  margin-left: auto;
+  margin-left: 51%;
   width: 5%; }
   #exitButton:hover {
     text-shadow: 0.5px 0.5px #999999; }
