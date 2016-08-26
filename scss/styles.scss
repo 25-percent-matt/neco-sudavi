@@ -5,7 +5,7 @@
 // Variables
 $bgColor: #3A3F48;
 $bgHover: #434953;
-// $bgColor2: rgb(43,47,55);
+$bgColor2: rgb(43,47,55);
 $dashboardColor: rgb(43,47,55);
 $darkColor: #031634;
 $lightColor: #E8DDCB;
@@ -37,7 +37,7 @@ $x-large: "only screen and (min-width: 1350px)";
 body {
   font-family: 'Rajdhani', sans-serif;
   color: $lightColor;
-  background-color: $bgColor;
+  background-color: $dashboardColor;
   text-align: center;
   vertical-align:center;
 /*   display:flex;
@@ -89,15 +89,13 @@ body {
 
 .headerZero{
   display: inline-block;
-  width: 1275px;
-  border: 0px solid $lightColor;
-
-  //padding: 0px 0px 20px 0px;
-  //margin: 30px 0px 0px 0px;
-
+  width: 1147px;
+  // border: 0px solid $lightColor;
+  background-color: $bgColor;
+  //flex: 1 1 45%;
   padding: 1% 0px 1% 0px;
-  margin-left: 5%;
-  margin-right: 5%;
+  // margin-left: 4.6%;
+  // margin-right: 0.7%;
   vertical-align: top;
   text-align: left;
 }
@@ -117,6 +115,7 @@ body {
   vertical-align: center;
   align-self: right;
   margin-left: 10px;
+  text-align: left;
 }
 
 #headerText {
@@ -127,6 +126,8 @@ body {
   font-weight: 900;
   //font-weight: lighter;
   cursor: pointer;
+  margin-left: 18.52px;
+
 }
 
 #p1PrimaryDiv{
@@ -347,7 +348,7 @@ body {
 
 #godContainer{
   display: flex;
-  border: 2px solid $bgColor;
+  // border: 2px solid $bgColor;
   height: 600px;
   width: 100%;
   align-items: center;
@@ -356,38 +357,107 @@ body {
 }
 
 #pageThreeContentDiv{
+  // border: 2px solid white;
   display: flex;
+  background-color: $bgColor;
   // border: 2px solid $bgColor;
   width: 90%;
   height: 600px;
+      // margin-left: 9px;
+  align-items: center;
   box-sizing: border-box;
   flex-flow: row wrap;
 }
 
 #headshotContainer{
-  height: 600px;
-  width: 12%;
+  background-color: $bgColor;
+  height: 581.48px;
+  width: 13%;
+  margin-bottom: 18.52px;
   box-sizing: border-box;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .individualImgDiv{
-  border: 2px dashed white;
-  height: 150px;
-  width: 100%;
+  color: white;
+  height: 131.41px;
+  width: 75%;
+  background-color: $bgColor2;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18.59px;
+  margin-left: 12.5%;
+  padding-top: 1%;
   cursor: pointer;
   box-sizing: border-box;
+  .polaroidImg{
+    // border: 2px solid white;
+    background-color: rgb(115,125,144);
+    height: 70%;
+    width: 85%;
+    margin: 7%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
   &:hover{
-    border: 2px solid white;
+    border: 1px solid white;
   }
 }
 
+.headshot {
+    animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+    -o-animation: fadein 4s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 #personalInfoContainer{
+  // border: 2px solid white;
   display: flex;
   background-color: $dashboardColor;
-  height: 600px;
-  width: 88%;
+  height: 581.48px;
+  width: 65%;
   align-items: center;
+  // margin-bottom: 35.52px;
+  margin-bottom: 18.52px;
   justify-content: space-between;
   box-sizing: border-box;
   flex-flow: row wrap;
@@ -400,17 +470,16 @@ body {
 
 
 #aboutMeSummary{
-  background-color: $bgColor;
+  // background-color: $bgColor;
   display: flex;
   height: 48%;
   // height: 290px;
-  width: 70%;
-  margin-top: 0.25%;
-  margin-left: 1%;
+  width: 95%;
+  margin-top: 18.52px;
+  margin-left: 18.52px;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -418,33 +487,31 @@ body {
 }
 
 #favoriteTech{
-  background-color: $bgColor;
+  // border: 2px solid white;
+  background-color: $bgColor2;
   display: flex;
-  height: 48%;
-  width: 27%;
-  margin-right: 1%;
-  margin-top: 0.25%;
+  height: 50%;
+  width: 100%;
+  margin: 0px 18.52px 0px 18.52px;
+  padding-top: 10px;
   box-sizing: border-box;
   flex-direction: column;
-  &:hover{
-    background-color: $bgHover;
-    .personalInfoHeader{
-      letter-spacing: 2px;
-    }
-  }
+  // &:hover{
+  //   .personalInfoHeader{
+  //     letter-spacing: 2px;
+  //   }
+  // }
 }
 
 #preBootcampQs{
-  background-color: $bgColor;
+  // background-color: $bgColor;
   display: flex;
-  height: 48%;
-  width: 42%;
-  margin-left: 1%;
-  margin-bottom: 0.5%;
+  height: 43%;
+  width: 45%;
+  margin: 18.52px 0px 18.52px 18.52px;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -452,16 +519,14 @@ body {
 }
 
 #recommendations{
-  background-color: $bgColor;
+  // background-color: $bgColor;
   display: flex;
-  height: 48%;
-  width: 32%;
-  margin-bottom: 0.5%;
-  // margin-right: 2%;
+  height: 43%;
+  width: 45%;
+  margin: 18.52px 18.52px 18.52px 0px;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -469,19 +534,20 @@ body {
 }
 
 #favResources{
-  background-color: $bgColor;
+  background-color: $bgColor2;
   display: flex;
-  height: 48%;
-  width: 22%;
-  margin-right: 1%;
-  margin-bottom: 0.5%;
+  height: 50%;
+  width: 100%;
+  margin: 0px 18.52px 18.52px 18.52px;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
+  }
+  .personalInfoHeader{
+    letter-spacing: 2px;
   }
 }
 
@@ -493,8 +559,10 @@ body {
   box-sizing: border-box;
   align-items: center;
   justify-content: left;
+  margin-left: 18.52px;
   font-size: 1.5em;
   transition: width 1s;
+  text-align: left;
 }
 
 
@@ -512,7 +580,9 @@ body {
   // border: 2px solid white;
   display: flex;
   height: 90%;
-  width: 90%;
+  width: 100%;
+  margin: 18.52px;
+  color: rgb(115,125,144);
   justify-content: left;
   box-sizing: border-box;
   overflow-y: auto;
@@ -524,53 +594,34 @@ body {
   }
 }
 
-
-
-#textBubble{
+.userDirection{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 7%;
-  margin-left: 1%;
-  position: relative;
-  width: 200px;
-  height: 100px;
-  text-align: center;
-  color: #E8DDCD;
-  background-color: $dashboardColor;
-  border: 8px solid #E8DDCD;
-  font-size: 18px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -webkit-box-shadow: 2px 2px 4px #888;
-  -moz-box-shadow: 2px 2px 4px #888;
-  box-shadow: 2px 2px 4px #888;
-  &:before{
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 30px;
-    top: 100px;
-    border: 25px solid;
-    border-color: #E8DDCD transparent transparent #E8DDCD;
-  }
-  &:after{
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 38px;
-    top: 100px;
-    border: 15px solid;
-    border-color: $dashboardColor transparent transparent $dashboardColor;
+  margin-left: 30%;
+  margin-bottom: 17%;
+}
+
+#rightColumnContainer{
+  display: flex;
+  // border: 2px solid white;
+  width: 21.65%;
+  height: 581.48px;
+  margin-left: auto;
+  margin-bottom: 18.52px;
+  margin-right: 2px;
+  flex-flow: row wrap;
+  transition: 0.25s;
+  transition-timing-function: ease-out;
+  &.ng-hide{
+    width: 0%;
   }
 }
 
 #exitButton{
-  align-self: flex-start;
+  // align-self: flex-start;
+  display: inline-block;
   cursor: pointer;
+  margin-left: 33%;
+  width: 5%;
   &:hover{
     text-shadow:  0.5px 0.5px #999999;
   }

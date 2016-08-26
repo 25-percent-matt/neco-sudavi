@@ -30,6 +30,7 @@
             <span class="boldify">A look at new coders</span><br>
             data creds: <a href="https://github.com/FreeCodeCamp/2016-new-coder-survey">freeCodeCamp</a>, <a href="http://www.bls.gov/">Bureau of Labor Statistics</a>
           </div>
+          <div id="exitButton" ng-hide="!toggleShow" ng-click="exit()">X</div> <!-- end of exitButton -->
         </div>
 
         <div class="leftArrow">
@@ -135,10 +136,22 @@
       <div id="godContainer" ng-show="pageNumber === 3">
         <div id="pageThreeContentDiv">
           <div id="headshotContainer">
-            <div class="individualImgDiv" ng-click="mattsInfo()"></div> <!-- end of a individualImgDiv -->
-            <div class="individualImgDiv" ng-click="andysInfo()"></div> <!-- end of a individualImgDiv -->
-            <div class="individualImgDiv" ng-click="drewsInfo()"></div> <!-- end of a individualImgDiv -->
-            <div class="individualImgDiv" ng-click="andrewsInfo()"></div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv" ng-click="mattsInfo()">
+              <div class="polaroidImg"> <img class="headshot" src="./img/Headshots/Matt.jpg" alt=""> </div> <!-- end of a polaroidImgDiv -->
+              Matt
+            </div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv" ng-click="andysInfo()">
+              <div class="polaroidImg"> <img class="headshot" src="./img/Headshots/Andy.jpg" alt=""> </div> <!-- end of a polaroidImgDiv -->
+              Andy
+            </div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv" ng-click="drewsInfo()">
+              <div class="polaroidImg"> <img class="headshot" src="./img/Headshots/Drew.jpg" alt=""> </div> <!-- end of a polaroidImgDiv -->
+              Drew
+            </div> <!-- end of a individualImgDiv -->
+            <div class="individualImgDiv" ng-click="andrewsInfo()">
+              <div class="polaroidImg"> <img class="headshot" src="./img/Headshots/Andrew.jpg" alt=""> </div> <!-- end of a polaroidImgDiv -->
+              Andrew
+            </div> <!-- end of a individualImgDiv -->
           </div> <!-- end of headshotContainer -->
 
           <div id="personalInfoContainer" ng-hide="!toggleShow">
@@ -150,16 +163,7 @@
                 </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of aboutMeSummary -->
-            <div id="favoriteTech">
-              <div class="personalInfoHeader">Favorite Tech</div> <!-- end of personalInfoHeader -->
-              <div class="personalInfoContent">
-                <div class="personalInfoBody">
-                  <ul>
-                    <li ng-repeat="n in favTech">{{n}}</li>
-                  </ul> <!-- end of ul tag -->
-                </div><!-- end of personalInfoBody -->
-              </div> <!-- end of personalInfoContent -->
-            </div> <!-- end of favoriteTech -->
+
             <div id="preBootcampQs">
               <div class="personalInfoHeader">Pre-Bootcamp Questions</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
@@ -180,7 +184,22 @@
                 </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of recommendations -->
-            <div id="favResources">
+
+          </div> <!-- end of personalInfoContainer -->
+          <div class="userDirection" ng-hide="toggleShow">< Click on a Developer</div> <!-- end of userDirection -->
+          <div id="rightColumnContainer" ng-hide="!toggleShow">
+
+            <div id="favoriteTech" ng-hide="!toggleShow">
+              <div class="personalInfoHeader">Favorite Tech</div> <!-- end of personalInfoHeader -->
+              <div class="personalInfoContent">
+                <div class="personalInfoBody">
+                  <ul>
+                    <li ng-repeat="n in favTech">{{n}}</li>
+                  </ul> <!-- end of ul tag -->
+                </div><!-- end of personalInfoBody -->
+              </div> <!-- end of personalInfoContent -->
+            </div> <!-- end of favoriteTech -->
+            <div id="favResources" ng-hide="!toggleShow">
               <div class="personalInfoHeader">Favorite Resources</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
                 <div class="personalInfoBody">
@@ -190,10 +209,9 @@
                 </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of favResources -->
-          </div> <!-- end of personalInfoContainer -->
-          <div id="textBubble" ng-hide="toggleShow"><p>Click on our pictures to learn about our experiences as new coders!</p></div>
+          </div> <!-- end of rightColumnContainer -->
         </div> <!-- end of pageThreeContentDiv -->
-        <div id="exitButton" ng-hide="!toggleShow" ng-click="exit()">X</div> <!-- end of exitButton -->
+
       </div> <!-- end of mega - ultra - god container -->
 
   <script type="text/javascript" src="/js/dashboardChart.js"></script>

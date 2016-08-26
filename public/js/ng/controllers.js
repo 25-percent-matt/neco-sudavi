@@ -43,11 +43,11 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
     };
 
     $scope.drewsInfo = function(){
-      $scope.aboutMe = ["Drewwwwwwwwwwwww"];
-      $scope.favTech = ["Angular","D3"];
-      $scope.questions = [];
-      $scope.recommendations = [];
-      $scope.favResources = [];
+      $scope.aboutMe = "Most of my life has been lived in Connecticut.  I went to 2 colleges and got my associates but never found work in that field.  Working in hardware, network administration and tech support was interesting but not very challenging.  These jobs restricted as much as possible.  I didn’t matter to the companies I worked at.  Trying to figure out what I wanted to do, I ended up studying JavaScript for a few weeks.  Eventually finding Dev League, very thankful to not be pursuing a career in medical coding.";
+      $scope.favTech = ["Windows is my favorite OS.", "The internet is my favorite technology.", "JavaScript Angular is really growing on me."];
+      $scope.questions = ["My main question before starting a bootcamp was, What do I need to know to apply?.  Everyone knows you need the basic fundamentals of JavaScript, but there are a few more things.  Good experience creating and changing a basic webpage with JavaScript, practice asking questions in person, learning how to iterate over and used objects.  Also I would say look into the job market and try coding one day for a long time.  This will help motivate you before joining."];
+      $scope.recommendations = ["My best recommendation is to ask questions after simplifying your problem.  It is tough to help someone with 100 lines of code, but 1 commented line can be much easier to debug."];
+      $scope.favResources = ["Code Academy and w3school were the only resources I used to prepare for Dev League.  Mostly Google searches found me the rest of the information I needed.  This helped me weed out the more advanced resources and resources."];
       $scope.toggleShow = false;
       $scope.toggleShow = false;
       $scope.toggleShow = true;
