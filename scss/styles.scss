@@ -82,13 +82,13 @@ body {
 
 .headerZero{
   display: inline-block;
-  width: 1275px;
-  border: 0px solid $lightColor;
+  width: 1147px;
+  // border: 0px solid $lightColor;
   background-color: $bgColor;
   //flex: 1 1 45%;
   padding: 1% 0px 1% 0px;
-  margin-left: 5%;
-  margin-right: 5%;
+  // margin-left: 4.6%;
+  // margin-right: 0.7%;
   vertical-align: top;
   text-align: left;
 }
@@ -329,6 +329,7 @@ body {
   // border: 2px solid $bgColor;
   width: 90%;
   height: 600px;
+      // margin-left: 9px;
   align-items: center;
   box-sizing: border-box;
   flex-flow: row wrap;
@@ -360,7 +361,7 @@ body {
   box-sizing: border-box;
   .polaroidImg{
     // border: 2px solid white;
-    background-color: white;
+    background-color: rgb(115,125,144);
     height: 70%;
     width: 85%;
     margin: 8%;
@@ -401,7 +402,6 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -418,7 +418,6 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -434,7 +433,6 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -450,7 +448,6 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -466,10 +463,12 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
-    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
+  }
+  .personalInfoHeader{
+    letter-spacing: 2px;
   }
 }
 
@@ -484,6 +483,7 @@ body {
   margin-left: 18.52px;
   font-size: 1.5em;
   transition: width 1s;
+  text-align: left;
 }
 
 
@@ -503,6 +503,7 @@ body {
   height: 90%;
   width: 100%;
   margin: 18.52px;
+  color: rgb(115,125,144);
   justify-content: left;
   box-sizing: border-box;
   overflow-y: auto;
@@ -531,8 +532,10 @@ body {
 }
 
 #exitButton{
-  align-self: flex-start;
+  // align-self: flex-start;
   cursor: pointer;
+  margin-left: auto;
+  width: 5%;
   &:hover{
     text-shadow:  0.5px 0.5px #999999;
   }

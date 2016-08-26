@@ -29,6 +29,7 @@
             <span class="boldify">A look at new coders</span><br>
             data creds: <a href="https://github.com/FreeCodeCamp/2016-new-coder-survey">freeCodeCamp</a>
           </div>
+          <div id="exitButton" ng-hide="!toggleShow" ng-click="exit()">X</div> <!-- end of exitButton -->
         </div>
 
         <div class="leftArrow">
@@ -185,7 +186,7 @@
           <div class="userDirection" ng-hide="toggleShow">< Click on a Developer</div> <!-- end of userDirection -->
           <div id="rightColumnContainer">
 
-            <div id="favoriteTech">
+            <div id="favoriteTech" ng-hide="!toggleShow">
               <div class="personalInfoHeader">Favorite Tech</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
                 <div class="personalInfoBody">
@@ -195,7 +196,7 @@
                 </div><!-- end of personalInfoBody -->
               </div> <!-- end of personalInfoContent -->
             </div> <!-- end of favoriteTech -->
-            <div id="favResources">
+            <div id="favResources" ng-hide="!toggleShow">
               <div class="personalInfoHeader">Favorite Resources</div> <!-- end of personalInfoHeader -->
               <div class="personalInfoContent">
                 <div class="personalInfoBody">
@@ -207,7 +208,7 @@
             </div> <!-- end of favResources -->
           </div> <!-- end of rightColumnContainer -->
         </div> <!-- end of pageThreeContentDiv -->
-        <div id="exitButton" ng-hide="!toggleShow" ng-click="exit()">X</div> <!-- end of exitButton -->
+
       </div> <!-- end of mega - ultra - god container -->
 
   <script type="text/javascript" src="/js/dashboardChart.js"></script>

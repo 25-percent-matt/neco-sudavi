@@ -96,12 +96,9 @@ body {
 
 .headerZero {
   display: inline-block;
-  width: 1275px;
-  border: 0px solid #E8DDCB;
+  width: 1147px;
   background-color: #3A3F48;
   padding: 1% 0px 1% 0px;
-  margin-left: 5%;
-  margin-right: 5%;
   vertical-align: top;
   text-align: left; }
 
@@ -319,7 +316,7 @@ body {
   cursor: pointer;
   box-sizing: border-box; }
   .individualImgDiv .polaroidImg {
-    background-color: white;
+    background-color: #737d90;
     height: 70%;
     width: 85%;
     margin: 8%; }
@@ -349,10 +346,8 @@ body {
   margin-left: 18.52px;
   box-sizing: border-box;
   flex-direction: column; }
-  #aboutMeSummary:hover {
-    background-color: #434953; }
-    #aboutMeSummary:hover .personalInfoHeader {
-      letter-spacing: 2px; }
+  #aboutMeSummary:hover .personalInfoHeader {
+    letter-spacing: 2px; }
 
 #favoriteTech {
   background-color: #2b2f37;
@@ -362,10 +357,8 @@ body {
   margin: 0px 18.52px 0px 18.52px;
   box-sizing: border-box;
   flex-direction: column; }
-  #favoriteTech:hover {
-    background-color: #434953; }
-    #favoriteTech:hover .personalInfoHeader {
-      letter-spacing: 2px; }
+  #favoriteTech:hover .personalInfoHeader {
+    letter-spacing: 2px; }
 
 #preBootcampQs {
   display: flex;
@@ -374,10 +367,8 @@ body {
   margin: 18.52px 0px 18.52px 18.52px;
   box-sizing: border-box;
   flex-direction: column; }
-  #preBootcampQs:hover {
-    background-color: #434953; }
-    #preBootcampQs:hover .personalInfoHeader {
-      letter-spacing: 2px; }
+  #preBootcampQs:hover .personalInfoHeader {
+    letter-spacing: 2px; }
 
 #recommendations {
   display: flex;
@@ -386,10 +377,8 @@ body {
   margin: 18.52px 18.52px 18.52px 0px;
   box-sizing: border-box;
   flex-direction: column; }
-  #recommendations:hover {
-    background-color: #434953; }
-    #recommendations:hover .personalInfoHeader {
-      letter-spacing: 2px; }
+  #recommendations:hover .personalInfoHeader {
+    letter-spacing: 2px; }
 
 #favResources {
   background-color: #2b2f37;
@@ -399,10 +388,10 @@ body {
   margin: 0px 18.52px 18.52px 18.52px;
   box-sizing: border-box;
   flex-direction: column; }
-  #favResources:hover {
-    background-color: #434953; }
-    #favResources:hover .personalInfoHeader {
-      letter-spacing: 2px; }
+  #favResources:hover .personalInfoHeader {
+    letter-spacing: 2px; }
+  #favResources .personalInfoHeader {
+    letter-spacing: 2px; }
 
 .personalInfoHeader {
   display: flex;
@@ -413,7 +402,8 @@ body {
   justify-content: left;
   margin-left: 18.52px;
   font-size: 1.5em;
-  transition: width 1s; }
+  transition: width 1s;
+  text-align: left; }
 
 .personalInfoContent {
   display: flex;
@@ -428,6 +418,7 @@ body {
   height: 90%;
   width: 100%;
   margin: 18.52px;
+  color: #737d90;
   justify-content: left;
   box-sizing: border-box;
   overflow-y: auto; }
@@ -450,7 +441,8 @@ body {
   flex-flow: row wrap; }
 
 #exitButton {
-  align-self: flex-start;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-left: auto;
+  width: 5%; }
   #exitButton:hover {
     text-shadow: 0.5px 0.5px #999999; }
