@@ -38,6 +38,7 @@ body {
   background-color: $bgColor;
   // background-image: url(../img/rockywall.png);
   text-align: center;
+  vertical-align:center;
 /*   display:flex;
   flex-flow: row wrap; */
   //align-items: center;
@@ -46,6 +47,7 @@ body {
   @media #{$medium}{
     .leftArrow {
       position: absolute;
+      z-index: 9000;
       top: 45%;
       left: 3%;
     }
@@ -56,6 +58,7 @@ body {
 
     .rightArrow {
       position: absolute;
+      z-index: 9000;
       top: 45%;
       right: 3%;
     }
@@ -99,7 +102,7 @@ body {
   border: 0px solid $lightColor;
   //flex: 1 1 45%;
   padding: 0px 0px 20px 0px;
-  margin: 20px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
   vertical-align: top;
   text-align:left;
 }
@@ -141,6 +144,7 @@ body {
 #p1TopLeft{
   background-color: #2B2F37;
   display: inline-block;
+  width: 23%;
   border: 0px solid $lightColor;
   flex: 1 1 30%;
   padding: 20px;
@@ -152,6 +156,7 @@ body {
 #p1TopRight{
   background-color: #2B2F37;
   display: inline-block;
+  width: 50%;
   border: 0px solid $lightColor;
   flex: 1 1 30%;
   padding: 20px;
@@ -160,10 +165,14 @@ body {
   text-align:left;
 }
 
+#educationFrontCharts {
+  text-align: center;
+}
+
 #p1Bottom{
   background-color: #2B2F37;
   display: inline-block;
-  width: 1445px;
+  width: 78%;
   border: 0px solid $lightColor;
   //flex: 1 1 45%;
   padding: 20px;
@@ -176,6 +185,10 @@ body {
   text-align: center;
 }
 
+
+
+
+
 .chartDescription {
   font-style: italic;
   font-weight: 700;
@@ -183,6 +196,7 @@ body {
 }
 
 .category {
+
   display: block;
   .categoryTitle {
     font-weight: 700;
@@ -216,6 +230,8 @@ body {
     transition: all 0.1s ease-out;
   }
 }
+
+
 
 .individualCharts path{
   stroke: $darkColor;
@@ -259,6 +275,17 @@ body {
 
 .page2Divs {
   flex: 1 1 auto;
+}
+
+#pageTwoContainer {
+  text-align:center;
+}
+
+.page2MainDiv {
+  background-color: #2B2F37;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
 }
 
 #FTworkPercent {

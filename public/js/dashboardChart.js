@@ -2,8 +2,8 @@
 export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");*/
 
  var degreeChart = function(){
-   var width = 300,
-       height = 307,
+   var width = 250,
+       height = 250,
        radius = Math.min(width, height) / 2;
 
        var color = d3.scale.ordinal()
@@ -62,8 +62,8 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 };
 
  var majorChart = function(){
-   var width = 300,
-       height = 307,
+   var width = 250,
+       height = 250,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
@@ -122,8 +122,8 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 };
 
  var hasStudentDebtChart = function(){
-   var width = 300,
-       height = 307,
+   var width = 250,
+       height = 250,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
@@ -182,8 +182,8 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 };
 
  var employmentFieldChart = function(){
-   var width = 250,
-       height = 250,
+   var width = 210,
+       height = 210,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
@@ -242,8 +242,8 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 };
 
  var currentIncomeChart = function(){
-   var width = 250,
-       height = 250,
+   var width = 210,
+       height = 210,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
@@ -302,8 +302,8 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 };
 
  var numOfChildrenChart = function(){
-   var width = 250,
-       height = 250,
+   var width = 210,
+       height = 210,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()
@@ -362,8 +362,8 @@ export default colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b
 };
 
  var jobPreferenceChart = function(){
-   var width = 250,
-       height = 250,
+   var width = 210,
+       height = 210,
        radius = Math.min(width, height) / 2;
 
    var color = d3.scale.ordinal()

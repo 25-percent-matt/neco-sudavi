@@ -69,17 +69,20 @@ body {
   color: #E8DDCB;
   background-color: #3A3F48;
   text-align: center;
+  vertical-align: center;
   /*   display:flex;
   flex-flow: row wrap; */ }
   @media only screen and (min-width: 600px) {
     body .leftArrow {
       position: absolute;
+      z-index: 9000;
       top: 45%;
       left: 3%; }
     body .leftArrow:hover {
       opacity: 0.7; }
     body .rightArrow {
       position: absolute;
+      z-index: 9000;
       top: 45%;
       right: 3%; }
     body .rightArrow:hover {
@@ -107,7 +110,7 @@ body {
   width: 1445px;
   border: 0px solid #E8DDCB;
   padding: 0px 0px 20px 0px;
-  margin: 20px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
   vertical-align: top;
   text-align: left; }
 
@@ -139,6 +142,7 @@ body {
 #p1TopLeft {
   background-color: #2B2F37;
   display: inline-block;
+  width: 23%;
   border: 0px solid #E8DDCB;
   flex: 1 1 30%;
   padding: 20px;
@@ -149,6 +153,7 @@ body {
 #p1TopRight {
   background-color: #2B2F37;
   display: inline-block;
+  width: 50%;
   border: 0px solid #E8DDCB;
   flex: 1 1 30%;
   padding: 20px;
@@ -156,10 +161,13 @@ body {
   vertical-align: bottom;
   text-align: left; }
 
+#educationFrontCharts {
+  text-align: center; }
+
 #p1Bottom {
   background-color: #2B2F37;
   display: inline-block;
-  width: 1445px;
+  width: 78%;
   border: 0px solid #E8DDCB;
   padding: 20px;
   margin: 20px 0px 0px 0px;
@@ -231,6 +239,15 @@ body {
 
 .page2Divs {
   flex: 1 1 auto; }
+
+#pageTwoContainer {
+  text-align: center; }
+
+.page2MainDiv {
+  background-color: #2B2F37;
+  width: 80%;
+  margin: auto;
+  padding: 20px; }
 
 #FTworkPercent {
   font-size: 5em;
