@@ -4,6 +4,7 @@
 
 // Variables
 $bgColor: #3A3F48;
+$bgHover: #434953;
 // $bgColor2: rgb(43,47,55);
 $dashboardColor: rgb(43,47,55);
 $darkColor: #031634;
@@ -81,11 +82,12 @@ body {
 
 .headerZero{
   display: inline-block;
-  width: 100%;
+  width: 1275px;
   border: 0px solid $lightColor;
   //flex: 1 1 45%;
   padding: 1% 0px 1% 0px;
   margin-left: 5%;
+  margin-right: 5%;
   vertical-align: top;
   text-align: left;
 }
@@ -259,6 +261,9 @@ body {
 
 .boldify {
   font-weight: 700;
+  a{
+    text-decoration: none;
+  }
 }
 
 .arc text {
@@ -372,6 +377,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -388,6 +394,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -404,6 +411,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -420,6 +428,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }
@@ -436,6 +445,7 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
+    background-color: $bgHover;
     .personalInfoHeader{
       letter-spacing: 2px;
     }

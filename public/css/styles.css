@@ -96,10 +96,11 @@ body {
 
 .headerZero {
   display: inline-block;
-  width: 100%;
+  width: 1275px;
   border: 0px solid #E8DDCB;
   padding: 1% 0px 1% 0px;
   margin-left: 5%;
+  margin-right: 5%;
   vertical-align: top;
   text-align: left; }
 
@@ -235,6 +236,8 @@ body {
 
 .boldify {
   font-weight: 700; }
+  .boldify a {
+    text-decoration: none; }
 
 .arc text {
   font: 10px sans-serif;
@@ -329,8 +332,10 @@ body {
   margin-left: 1%;
   box-sizing: border-box;
   flex-direction: column; }
-  #aboutMeSummary:hover .personalInfoHeader {
-    letter-spacing: 2px; }
+  #aboutMeSummary:hover {
+    background-color: #434953; }
+    #aboutMeSummary:hover .personalInfoHeader {
+      letter-spacing: 2px; }
 
 #favoriteTech {
   background-color: #3A3F48;
@@ -341,8 +346,10 @@ body {
   margin-top: 0.25%;
   box-sizing: border-box;
   flex-direction: column; }
-  #favoriteTech:hover .personalInfoHeader {
-    letter-spacing: 2px; }
+  #favoriteTech:hover {
+    background-color: #434953; }
+    #favoriteTech:hover .personalInfoHeader {
+      letter-spacing: 2px; }
 
 #preBootcampQs {
   background-color: #3A3F48;
@@ -353,8 +360,10 @@ body {
   margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column; }
-  #preBootcampQs:hover .personalInfoHeader {
-    letter-spacing: 2px; }
+  #preBootcampQs:hover {
+    background-color: #434953; }
+    #preBootcampQs:hover .personalInfoHeader {
+      letter-spacing: 2px; }
 
 #recommendations {
   background-color: #3A3F48;
@@ -364,8 +373,10 @@ body {
   margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column; }
-  #recommendations:hover .personalInfoHeader {
-    letter-spacing: 2px; }
+  #recommendations:hover {
+    background-color: #434953; }
+    #recommendations:hover .personalInfoHeader {
+      letter-spacing: 2px; }
 
 #favResources {
   background-color: #3A3F48;
@@ -376,8 +387,10 @@ body {
   margin-bottom: 0.5%;
   box-sizing: border-box;
   flex-direction: column; }
-  #favResources:hover .personalInfoHeader {
-    letter-spacing: 2px; }
+  #favResources:hover {
+    background-color: #434953; }
+    #favResources:hover .personalInfoHeader {
+      letter-spacing: 2px; }
 
 .personalInfoHeader {
   display: flex;
