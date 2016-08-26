@@ -294,7 +294,7 @@ const queryType = new GraphQLObjectType({
             Count: {
               type: GraphQLInt
             },
-            Respons: {
+            Response: {
               type: GraphQLString
             }
           },
