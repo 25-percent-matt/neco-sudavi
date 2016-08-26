@@ -6,47 +6,36 @@ const Projections = db.projections;
 
 
 //employmentfield
-db.sequelize.query(`SELECT "EmploymentField" AS "Employment Field", COUNT("EmploymentField") AS "Count" FROM "surveydata" WHERE "EmploymentField" IS NOT NULL GROUP BY "EmploymentField" ORDER BY "EmploymentField"`, { type: db.sequelize.QueryTypes.SELECT})
-  .then(function(queryResult) {
-    console.log(objsToArrays(queryResult));
-  });
+module.exports.EmploymentField = db.sequelize.query(`SELECT "EmploymentField" AS "Response", COUNT("EmploymentField") AS "Count" FROM "surveydata" WHERE "EmploymentField" IS NOT NULL GROUP BY "EmploymentField" ORDER BY "EmploymentField"`, { type: db.sequelize.QueryTypes.SELECT})
 
 // SchoolMajor
-db.sequelize.query(`WITH school_majors AS (SELECT COUNT("SchoolMajor") AS "SchoolMajorCount", CASE
+module.exports.SchoolMajor = db.sequelize.query(`WITH school_majors AS (SELECT COUNT("SchoolMajor") AS "SchoolMajorCount", CASE
   WHEN "SchoolMajor" IN ('Computer Science', 'Information Technology', 'Information Systems', 'Computer Programming', 'Computer and Information Studies', 'Computer Software Engineering', 'Management Information Systems', 'Computer Networking') THEN 'Computer Science'
   WHEN "SchoolMajor" IN ('Electrical Engineering', 'Electrical and Electronics Engineering', 'Mechanical Engineering', 'Engineering', 'Civil Engineering') THEN 'Engineering'
   WHEN "SchoolMajor" IN ('Advertising and Marketing', 'Marketing', 'Advertising') THEN 'Advertising/Marketing'
   WHEN "SchoolMajor" LIKE '%Business Administration%' THEN 'Business Administration'
+  WHEN "SchoolMajor" NOT IN ('Economics', 'English', 'Psychology', 'Software Engineering', 'Liberal Arts', 'Physics', 'Political Science', 'Graphic Design', 'History', 'Biology', 'Finance', 'Mathematics', 'Communications', 'Math', 'Accounting', 'Philosophy') THEN 'Other'
   ELSE "SchoolMajor" END
   AS "SchoolMajor"
   FROM "surveydata" WHERE "SchoolMajor" IS NOT NULL
-  GROUP BY "SchoolMajor" HAVING COUNT("SchoolMajor") > 20 ORDER BY "SchoolMajor")
-SELECT "SchoolMajor" AS "Major", SUM("SchoolMajorCount") AS "Count" FROM school_majors
-GROUP BY "SchoolMajor" ORDER BY "Count" DESC LIMIT 20`)
-  .then(function(queryResult) {
-    console.log(objsToArrays(queryResult));
-  });
+  GROUP BY "SchoolMajor" ORDER BY "SchoolMajor")
+SELECT "SchoolMajor" AS "Response", SUM("SchoolMajorCount") AS "Count" FROM school_majors
+GROUP BY "SchoolMajor" ORDER BY "Count" DESC LIMIT 21`, { type: db.sequelize.QueryTypes.SELECT})
 
   //ChildrenNumber
-  db.sequelize.query(`SELECT CASE
+module.exports.ChildrenNumber = db.sequelize.query(`SELECT CASE
   WHEN ("ChildrenNumber" < 5) THEN CAST("ChildrenNumber" AS VARCHAR(3))
   WHEN ("ChildrenNumber" >= 4) THEN '5+'
   ELSE NULL
   END
-  AS "Number of Children", COUNT("ChildrenNumber") AS "Count" FROM "surveydata" WHERE "ChildrenNumber" IS NOT NULL GROUP BY "Number of Children" ORDER BY "Number of Children"`)
-  .then(function(queryResult) {
-    console.log(objsToArrays(queryResult));
-  });
+  AS "Response", COUNT("ChildrenNumber") AS "Count" FROM "surveydata" WHERE "ChildrenNumber" IS NOT NULL GROUP BY "Response" ORDER BY "Response"`, { type: db.sequelize.QueryTypes.SELECT})
 
   // Job preference
 
-db.sequelize.query(`SELECT "JobPref" AS "Job Preference", COUNT("JobPref") AS "Count" FROM "surveydata" WHERE "JobPref" IS NOT NULL GROUP BY "JobPref" ORDER BY "JobPref"`)
-  .then(function(queryResult) {
-    console.log(objsToArrays(queryResult));
-  });
+module.exports.JobPref = db.sequelize.query(`SELECT "JobPref" AS "Response", COUNT("JobPref") AS "Count" FROM "surveydata" WHERE "JobPref" IS NOT NULL GROUP BY "JobPref" ORDER BY "JobPref"`, { type: db.sequelize.QueryTypes.SELECT})
 
   //Income
-db.sequelize.query(`WITH income_ranges AS (SELECT FLOOR(("Income"-1)/20000) AS "sortorder", CASE
+module.exports.Income = db.sequelize.query(`WITH income_ranges AS (SELECT FLOOR(("Income"-1)/20000) AS "sortorder", CASE
   WHEN ("Income" BETWEEN 1 AND 20000) THEN '0-20K'
   WHEN ("Income" BETWEEN 20001 AND 40000) THEN '20-40K'
   WHEN ("Income" BETWEEN 40001 AND 60000) THEN '40-60K'
@@ -62,16 +51,12 @@ db.sequelize.query(`WITH income_ranges AS (SELECT FLOOR(("Income"-1)/20000) AS "
   END
   AS "IncomeBracket"
 FROM "surveydata" WHERE "Income" IS NOT NULL),
-sorted_income AS (SELECT "sortorder", "IncomeBracket", COUNT("IncomeBracket") AS "Count" FROM income_ranges GROUP BY "IncomeBracket","sortorder"  ORDER BY "sortorder") SELECT "IncomeBracket" AS "Current Income", "Count" from sorted_income`)
-  .then(function(queryResult) {
-    console.log(objsToArrays(queryResult));
-  });
+sorted_income AS (SELECT "sortorder", "IncomeBracket", COUNT("IncomeBracket") AS "Count" FROM income_ranges GROUP BY "IncomeBracket","sortorder"  ORDER BY "sortorder") SELECT "IncomeBracket" AS "Response", "Count" from sorted_income`, { type: db.sequelize.QueryTypes.SELECT})
+
 
 //School degree
-db.sequelize.query(`SELECT "SchoolDegree" AS "Degree", COUNT("SchoolDegree") AS "Count" FROM "surveydata" WHERE "SchoolDegree" IS NOT NULL GROUP BY "SchoolDegree" ORDER BY "Count" DESC`)
-  .then(function(queryResult) {
-    console.log(objsToArrays(queryResult));
-  });
+module.exports.SchoolDegree = db.sequelize.query(`SELECT "SchoolDegree" AS "Response", COUNT("SchoolDegree") AS "Count" FROM "surveydata" WHERE "SchoolDegree" IS NOT NULL GROUP BY "SchoolDegree" ORDER BY "Count" DESC`, { type: db.sequelize.QueryTypes.SELECT})
+
 
 // age/gender
 db.sequelize.query(`WITH age_ranges AS (SELECT "Gender", CASE
@@ -84,25 +69,19 @@ db.sequelize.query(`WITH age_ranges AS (SELECT "Gender", CASE
   END
   AS "AgeRange"
 FROM "surveydata" WHERE "Age" > 1 AND "Gender" IN ('male', 'female'))
-SELECT "AgeRange" AS "Age Range", "Gender", COUNT("AgeRange") AS "Count" FROM age_ranges GROUP BY "AgeRange", "Gender" ORDER BY "AgeRange" ASC, "Gender" DESC`)
-  .then(function(queryResult) {
-    console.log(objsToArrays(queryResult));
-  });
+SELECT "AgeRange" AS "Age Range", "Gender", COUNT("AgeRange") AS "Count" FROM age_ranges GROUP BY "AgeRange", "Gender" ORDER BY "AgeRange" ASC, "Gender" DESC`, { type: db.sequelize.QueryTypes.SELECT})
 
 // Student debt
-db.sequelize.query(`SELECT CASE
+module.exports.HasDebt = db.sequelize.query(`SELECT CASE
   WHEN ("HasStudentDebt" = true) THEN CAST('Yes' AS VARCHAR(3))
   WHEN ("HasStudentDebt" = false) THEN CAST('No' AS VARCHAR(3))
   ELSE NULL
   END
-  AS "Has Student Debt", COUNT("HasStudentDebt") AS "Count"
+  AS "Response", COUNT("HasStudentDebt") AS "Count"
 FROM "surveydata" WHERE "HasStudentDebt" IS NOT NULL
-GROUP BY "HasStudentDebt" ORDER BY "HasStudentDebt" DESC;`)
-  .then(function(queryResult) {
-    console.log(objsToArrays(queryResult));
-  });
+GROUP BY "HasStudentDebt" ORDER BY "HasStudentDebt" DESC`, { type: db.sequelize.QueryTypes.SELECT})
 
-function objsToArrays(arrOfObjs) {
+module.exports.objsToArrays  = function (arrOfObjs) {
   let newArray = [];
   for (var i = 0 ; i< arrOfObjs.length; i++) {
     let currentObject = arrOfObjs[i];
@@ -114,4 +93,4 @@ function objsToArrays(arrOfObjs) {
     newArray.push(currentObjArr);
   }
   return newArray;
-}
+};
