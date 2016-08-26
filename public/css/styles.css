@@ -69,7 +69,8 @@ body {
   font-family: 'Rajdhani', sans-serif;
   color: #E8DDCB;
   background-color: #3A3F48;
-  text-align: center; }
+  text-align: center;
+  overflow: auto; }
   @media only screen and (min-width: 600px) {
     body .leftArrow {
       position: absolute;
@@ -94,38 +95,31 @@ body {
     color: #3A3F48; }
 
 .headerZero {
-  /*   display:flex;
-  flex-flow: row wrap; */
-  /*   display: block;
-  text-align:center;
-  vertical-align: center;
-  padding: 10px;
-  margin: 0px;
-  width: 1445px; */
   display: inline-block;
   width: 100%;
   border: 0px solid #E8DDCB;
-  padding: 0px 0px 20px 0px;
-  margin: 20px 0px 0px 0px;
+  padding: 1% 0px 1% 0px;
+  margin-left: 5%;
   vertical-align: top;
   text-align: left; }
 
 .headerOne {
   display: inline-block;
   vertical-align: center;
+  margin-left: 5%;
   margin: auto;
   text-align: left; }
 
 .headerTwo {
   display: inline-block;
   vertical-align: center;
+  align-self: right;
   margin-left: 10px; }
 
 #headerText {
   color: #CDB380;
   font-size: 3em;
   font-weight: 900;
-  margin: 0px;
   font-weight: lighter;
   cursor: pointer; }
 
