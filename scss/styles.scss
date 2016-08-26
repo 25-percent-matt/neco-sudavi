@@ -118,6 +118,8 @@ body {
   font-weight: 900;
   font-weight: lighter;
   cursor: pointer;
+  margin-left: 18.52px;
+
 }
 
 #p1PrimaryDiv{
@@ -415,6 +417,7 @@ body {
   height: 50%;
   width: 100%;
   margin: 0px 18.52px 0px 18.52px;
+  padding-top: 10px;
   box-sizing: border-box;
   flex-direction: column;
   &:hover{
@@ -529,6 +532,11 @@ body {
   margin-left: auto;
   margin-bottom: 18.52px;
   flex-flow: row wrap;
+  transition: 0.25s;
+  transition-timing-function: ease-out;
+  &.ng-hide{
+    width: 0%;
+  }
 }
 
 #exitButton{

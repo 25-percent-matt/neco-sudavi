@@ -120,7 +120,8 @@ body {
   font-size: 3em;
   font-weight: 900;
   font-weight: lighter;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-left: 18.52px; }
 
 #p1PrimaryDiv {
   flex: 1 1 auto;
@@ -355,6 +356,7 @@ body {
   height: 50%;
   width: 100%;
   margin: 0px 18.52px 0px 18.52px;
+  padding-top: 10px;
   box-sizing: border-box;
   flex-direction: column; }
   #favoriteTech:hover .personalInfoHeader {
@@ -438,7 +440,11 @@ body {
   height: 581.48px;
   margin-left: auto;
   margin-bottom: 18.52px;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  transition: 0.25s;
+  transition-timing-function: ease-out; }
+  #rightColumnContainer.ng-hide {
+    width: 0%; }
 
 #exitButton {
   cursor: pointer;
