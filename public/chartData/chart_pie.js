@@ -11,7 +11,7 @@ function makeGraphPrimary(searchParam, chartBindTo) {
       if (oReq.readyState === 4) {
         if (oReq.status === 200) {
           var dataReduced = dataReducer(data.target.response);
-          chartDegreeBig = c3.generate(makeDegreeObj(dataReduced, chartBindTo));
+          chartDegreeBig = c3.generate(makeDegreeObj(dataReduced, chartBindTo, changeBigColor(chartBindTo)));
           return chartDegreeBig;
       }
     }
@@ -19,7 +19,39 @@ function makeGraphPrimary(searchParam, chartBindTo) {
     oReq.send();
   }
 
-  function makeDegreeObj(queryData, chartBindTo) {
+  function changeBigColor (chartBindTo){
+    var bigChartColor;
+
+    switch (chartBindTo) {
+      case "#chartDegreeBig":
+      case "#chartCurrentIncomeBig":
+        bigChartColor = {
+          pattern: ["#7F889A", "#6A7180", "#8A93A7", "#BECCE6", "#4A505A"]
+        };
+        break;
+      case "#chartMajorBig":
+      case "#chartNumChildrenBig":
+        bigChartColor = {
+          pattern: ["#036564", "#024B4B", "#037271", "#05B1B0", "#07F1EF"]
+        };
+        break;
+      case "#chartHasDebtBig":
+      case "#chartJobPrefBig":
+        bigChartColor = {
+          pattern: ["#CDB380", "#B39D70", "#DABE88", "#4D4430", "#8D7B58"]
+        };
+        break;
+      case "#chartEmploymentFieldBig":
+        bigChartColor = {
+          pattern: ["#E8DDCB", "#CEC5B5", "#F5E9D6", "#68645B", "#A8A093"]
+        };
+        break;
+    }
+    return bigChartColor;
+  }
+
+  function makeDegreeObj(queryData, chartBindTo, bigChartColor) {
+    console.log(bigChartColor);
     return {
       bindto: chartBindTo,
       data : {
@@ -28,6 +60,7 @@ function makeGraphPrimary(searchParam, chartBindTo) {
           onmouseover: function (d, i) {  },
           onmouseout: function (d, i) { }
       },
+      color: bigChartColor,
       legend: {
         position: 'right'
       },
@@ -62,6 +95,7 @@ function fillChartDynamic(a) {
       if (oReq.readyState === 4) {
         if (oReq.status === 200) {
           var requestReceivedData = JSON.parse(data.target.response);
+
           c3.generate(makeObjectDynamic(requestReceivedData));
         }
       }
@@ -69,12 +103,14 @@ function fillChartDynamic(a) {
     oReq.send();
   }
 }
+
 //  add a clear button and check if item enetered = stateName, combat flicker
 function makeObjectDynamic(requestReceivedData){
   if(requestReceivedData[0] !== undefined){
     dynamicChartSave.push(requestReceivedData);
     testDynamicBind = dynamicChartSave;
     console.log(dynamicChartSave);
+
     return {
       bindto: "#testDynamicBind",
       data: {
@@ -82,7 +118,6 @@ function makeObjectDynamic(requestReceivedData){
         columns: dynamicChartSave,
         //put a function here to add , to compared cities
         type: 'bar',
-
       },
       axis: {
         x: {

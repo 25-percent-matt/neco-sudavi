@@ -70,27 +70,32 @@ body {
   color: #E8DDCB;
   background-color: #2b2f37;
   text-align: center;
+  vertical-align: center;
+  /*   display:flex;
+  flex-flow: row wrap; */
   overflow: auto; }
   @media only screen and (min-width: 600px) {
     body .leftArrow {
       position: absolute;
+      z-index: 9000;
       top: 45%;
       left: 3%; }
     body .leftArrow:hover {
       opacity: 0.7; }
     body .rightArrow {
       position: absolute;
+      z-index: 9000;
       top: 45%;
       right: 3%; }
     body .rightArrow:hover {
       opacity: 0.7; } }
   body a:link {
-    color: #031634;
+    color: #E8DDCB;
     text-decoration: none; }
   body a:visited {
-    color: #031634; }
+    color: #E8DDCB; }
   body a:hover {
-    color: #444444; }
+    color: #ffffff; }
   body a:active {
     color: #3A3F48; }
 
@@ -119,7 +124,6 @@ body {
   color: #CDB380;
   font-size: 3em;
   font-weight: 900;
-  font-weight: lighter;
   cursor: pointer;
   margin-left: 18.52px; }
 
@@ -134,6 +138,7 @@ body {
 #p1TopLeft {
   background-color: #2B2F37;
   display: inline-block;
+  width: 23%;
   border: 0px solid #E8DDCB;
   flex: 1 1 30%;
   padding: 20px;
@@ -144,6 +149,7 @@ body {
 #p1TopRight {
   background-color: #2B2F37;
   display: inline-block;
+  width: 50%;
   border: 0px solid #E8DDCB;
   flex: 1 1 30%;
   padding: 20px;
@@ -151,10 +157,13 @@ body {
   vertical-align: bottom;
   text-align: left; }
 
+#educationFrontCharts {
+  text-align: center; }
+
 #p1Bottom {
   background-color: #2B2F37;
   display: inline-block;
-  width: 1445px;
+  width: 76.5%;
   border: 0px solid #E8DDCB;
   padding: 20px;
   margin: 20px 0px 0px 0px;
@@ -228,6 +237,15 @@ body {
 
 .page2Divs {
   flex: 1 1 auto; }
+
+#pageTwoContainer {
+  text-align: center; }
+
+.page2MainDiv {
+  background-color: #2B2F37;
+  width: 80%;
+  margin: auto;
+  padding: 20px; }
 
 #FTworkPercent {
   font-size: 5em;
@@ -447,7 +465,7 @@ body {
 #exitButton {
   display: inline-block;
   cursor: pointer;
-  margin-left: 51%;
+  margin-left: 33%;
   width: 5%; }
   #exitButton:hover {
     text-shadow: 0.5px 0.5px #999999; }
