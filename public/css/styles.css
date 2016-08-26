@@ -68,7 +68,7 @@ table {
 body {
   font-family: 'Rajdhani', sans-serif;
   color: #E8DDCB;
-  background-color: #3A3F48;
+  background-color: #2b2f37;
   text-align: center;
   overflow: auto; }
   @media only screen and (min-width: 600px) {
@@ -98,6 +98,7 @@ body {
   display: inline-block;
   width: 1275px;
   border: 0px solid #E8DDCB;
+  background-color: #3A3F48;
   padding: 1% 0px 1% 0px;
   margin-left: 5%;
   margin-right: 5%;
@@ -280,7 +281,6 @@ body {
 } */
 #godContainer {
   display: flex;
-  border: 2px solid #3A3F48;
   height: 600px;
   width: 100%;
   align-items: center;
@@ -289,46 +289,50 @@ body {
 
 #pageThreeContentDiv {
   display: flex;
+  background-color: #3A3F48;
   width: 90%;
   height: 600px;
+  align-items: center;
   box-sizing: border-box;
   flex-flow: row wrap; }
 
 #headshotContainer {
-  background-color: black;
-  height: 600px;
+  background-color: #3A3F48;
+  height: 581.48px;
   width: 13%;
+  margin-bottom: 18.52px;
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
 .individualImgDiv {
-  border: 2px solid white;
   color: white;
   height: 131.41px;
   width: 75%;
+  background-color: #2b2f37;
   justify-content: center;
   align-items: center;
   margin-bottom: 18.59px;
   margin-left: 12.5%;
-  bottom: 3%;
+  padding-top: 1%;
   cursor: pointer;
   box-sizing: border-box; }
   .individualImgDiv .polaroidImg {
-    border: 2px solid white;
+    background-color: white;
     height: 70%;
-    width: 80%;
+    width: 85%;
     margin: 8%; }
   .individualImgDiv:hover {
-    border: 2px dashed white; }
+    border: 1px solid white; }
 
 #personalInfoContainer {
   display: flex;
   background-color: #2b2f37;
-  height: 600px;
-  width: 85%;
+  height: 581.48px;
+  width: 65%;
   align-items: center;
+  margin-bottom: 18.52px;
   justify-content: space-between;
   box-sizing: border-box;
   flex-flow: row wrap;
@@ -338,12 +342,11 @@ body {
     width: 0%; }
 
 #aboutMeSummary {
-  background-color: #3A3F48;
   display: flex;
   height: 48%;
-  width: 70%;
-  margin-top: 0.25%;
-  margin-left: 1%;
+  width: 95%;
+  margin-top: 18.52px;
+  margin-left: 18.52px;
   box-sizing: border-box;
   flex-direction: column; }
   #aboutMeSummary:hover {
@@ -352,12 +355,11 @@ body {
       letter-spacing: 2px; }
 
 #favoriteTech {
-  background-color: #3A3F48;
+  background-color: #2b2f37;
   display: flex;
-  height: 48%;
-  width: 27%;
-  margin-right: 1%;
-  margin-top: 0.25%;
+  height: 50%;
+  width: 100%;
+  margin: 0px 18.52px 0px 18.52px;
   box-sizing: border-box;
   flex-direction: column; }
   #favoriteTech:hover {
@@ -366,12 +368,10 @@ body {
       letter-spacing: 2px; }
 
 #preBootcampQs {
-  background-color: #3A3F48;
   display: flex;
-  height: 48%;
-  width: 42%;
-  margin-left: 1%;
-  margin-bottom: 0.5%;
+  height: 43%;
+  width: 45%;
+  margin: 18.52px 0px 18.52px 18.52px;
   box-sizing: border-box;
   flex-direction: column; }
   #preBootcampQs:hover {
@@ -380,11 +380,10 @@ body {
       letter-spacing: 2px; }
 
 #recommendations {
-  background-color: #3A3F48;
   display: flex;
-  height: 48%;
-  width: 32%;
-  margin-bottom: 0.5%;
+  height: 43%;
+  width: 45%;
+  margin: 18.52px 18.52px 18.52px 0px;
   box-sizing: border-box;
   flex-direction: column; }
   #recommendations:hover {
@@ -393,12 +392,11 @@ body {
       letter-spacing: 2px; }
 
 #favResources {
-  background-color: #3A3F48;
+  background-color: #2b2f37;
   display: flex;
-  height: 48%;
-  width: 22%;
-  margin-right: 1%;
-  margin-bottom: 0.5%;
+  height: 50%;
+  width: 100%;
+  margin: 0px 18.52px 18.52px 18.52px;
   box-sizing: border-box;
   flex-direction: column; }
   #favResources:hover {
@@ -413,6 +411,7 @@ body {
   box-sizing: border-box;
   align-items: center;
   justify-content: left;
+  margin-left: 18.52px;
   font-size: 1.5em;
   transition: width 1s; }
 
@@ -427,7 +426,8 @@ body {
 .personalInfoBody {
   display: flex;
   height: 90%;
-  width: 90%;
+  width: 100%;
+  margin: 18.52px;
   justify-content: left;
   box-sizing: border-box;
   overflow-y: auto; }
@@ -436,44 +436,18 @@ body {
   .personalInfoBody li {
     text-align: left; }
 
-#textBubble {
+.userDirection {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 7%;
-  margin-left: 1%;
-  position: relative;
-  width: 200px;
-  height: 100px;
-  text-align: center;
-  color: #E8DDCD;
-  background-color: #2b2f37;
-  border: 8px solid #E8DDCD;
-  font-size: 18px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -webkit-box-shadow: 2px 2px 4px #888;
-  -moz-box-shadow: 2px 2px 4px #888;
-  box-shadow: 2px 2px 4px #888; }
-  #textBubble:before {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 30px;
-    top: 100px;
-    border: 25px solid;
-    border-color: #E8DDCD transparent transparent #E8DDCD; }
-  #textBubble:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 38px;
-    top: 100px;
-    border: 15px solid;
-    border-color: #2b2f37 transparent transparent #2b2f37; }
+  margin-left: 20%;
+  margin-bottom: 17%; }
+
+#rightColumnContainer {
+  display: flex;
+  width: 21.65%;
+  height: 581.48px;
+  margin-left: auto;
+  margin-bottom: 18.52px;
+  flex-flow: row wrap; }
 
 #exitButton {
   align-self: flex-start;
