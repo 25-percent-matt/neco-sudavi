@@ -85,11 +85,14 @@ body {
   }
 }
 
-
+#headerZeroDiv{
+  width: 100%;
+  justify-content: center;
+}
 
 .headerZero{
   display: inline-block;
-  width: 1147px;
+  width: 90%;
   // border: 0px solid $lightColor;
   background-color: $bgColor;
   //flex: 1 1 45%;
@@ -577,10 +580,11 @@ body {
 }
 
 #exitButton{
-  // align-self: flex-start;
+  align-self: baseline;
   display: inline-block;
   cursor: pointer;
-  margin-left: 33%;
+  margin-top: 2.5%;
+  float: right;
   width: 5%;
   &:hover{
     text-shadow:  0.5px 0.5px #999999;

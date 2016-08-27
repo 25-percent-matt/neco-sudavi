@@ -26,7 +26,7 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope.aboutMe = "I am a Honolulu based Full-Stack JavaScript Developer. My hobbies include surfing and building things. Before DevLeague, I was always interested in coding but never had a mentor or the right entry point. Learning to code takes a remarkable amount of dedication, but anyone is capable of doing it! I thought that only Computer Science degrees could get you a job in this field but bootcamps are really starting to change that. If you have a burning desire to make it happen, going through a bootcamp will be your best decision yet. Do your homework and commit 110%!!";
       $scope.favTech = ["Angular","GraphQL"];
       $scope.questions = ["Am I too inexperienced? No, but learning how to code is a commitment and you have to be driven.", "Are there really as many jobs out there as they say? Yes, I walked into my first project by just talking with a local business owner. There is a solid amount of work out there for devs, you just need to get creative in your search. “When everybody is zigging you gotta zag!” - Russel Cheng, DevLeague Co-Founder.", "Is that really how much it costs? Is it worth that amount of money? Yes, it’s a lot of money and you probably do not have that amount of money. But if you want something bad enough, you find out a way to make it happen. I already had school loans from college but decided to take a risk and take on more student loans."];
-      $scope.recommendations = ["Don’t get overwhelmed with things, know when to take a break or ask for help."];
+      $scope.recommendations = ["Don’t get overwhelmed with things, know when to take a break or ask for help.","Be patient. You will not become a master at a certain technology or library without dedicating a solid amount of time learning it."];
       $scope.favResources = ["Codecademy", "FreeCodeCamp", "FrontEnd Masters", "w3 Schools", "YouTube", "MDN", "Google"];
       $scope.toggleShow = false;
       $scope.toggleShow = true;
@@ -54,11 +54,11 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
     };
 
     $scope.andrewsInfo = function(){
-      $scope.aboutMe = ["ANDrewwwwwwwwwwwww"];
-      $scope.favTech = ["postgres","sql"];
-      $scope.questions = [];
-      $scope.recommendations = [];
-      $scope.favResources = [];
+      $scope.aboutMe = "I'm from Hawaii, an experienced SysOps guy recently returned after a long stint in NYC. I have a lot of experience building and maintaining technical infrastructure, but not much in development. As more infrastructure is becoming virtualized or software-based, that was something I wanted to look into - and I've always wanted to go to a coding bootcamp.";
+      $scope.favTech = ["My new favorite technologies are Node, Express, Firebase, SASS, and NoSQL. Though I haven't used it yet, AWS Lambda seems like magic to me, and I *really* want to check it out."];
+      $scope.questions = ["I'm older than average for bootcamp attendees; how will that affect things? What new skills will I emerge with? The answer to the first question is, I had a lot of existing context for the curriculum. Also, I was used to a more deliberative process; rapid iteration was a good thing to learn. While I'm emerging with a boatload of fresh technical skills - the month we built 7 or 8 web servers from scratch was a real eye-opener - the most important skills I picked up were breaking down large problems and learning how to learn."];
+      $scope.recommendations = ["The best advice anyone ever gave me about coding is, get it working first. I\'d advise doing the simplest, easiest, minimal implementation, then flesh out the parts later. Break your problem down, review your assumptions. Give your variables meaningful names, because eventually someone - probably you! - will look at your code and wonder what it\'s doing."];
+      $scope.favResources = ["W3 Schools, Frontend Masters, Codeacademy and Mozilla Developer Network have all been great learning resources, but reaching out to peers has been invaluable."];
       $scope.toggleShow = false;
       $scope.toggleShow = false;
       $scope.toggleShow = true;
