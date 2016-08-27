@@ -99,6 +99,10 @@ body {
   body a:active {
     color: #3A3F48; }
 
+#headerZeroDiv {
+  width: 100%;
+  justify-content: center; }
+
 .headerZero {
   display: inline-block;
   width: 90%;
@@ -504,9 +508,11 @@ body {
     width: 0%; }
 
 #exitButton {
+  align-self: baseline;
   display: inline-block;
   cursor: pointer;
-  margin-left: 33%;
+  margin-top: 2.5%;
+  float: right;
   width: 5%; }
   #exitButton:hover {
     text-shadow: 0.5px 0.5px #999999; }

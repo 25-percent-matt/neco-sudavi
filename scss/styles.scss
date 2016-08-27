@@ -85,7 +85,10 @@ body {
   }
 }
 
-
+#headerZeroDiv{
+  width: 100%;
+  justify-content: center;
+}
 
 .headerZero{
   display: inline-block;
@@ -616,10 +619,11 @@ body {
 }
 
 #exitButton{
-  // align-self: flex-start;
+  align-self: baseline;
   display: inline-block;
   cursor: pointer;
-  margin-left: 33%;
+  margin-top: 2.5%;
+  float: right;
   width: 5%;
   &:hover{
     text-shadow:  0.5px 0.5px #999999;
