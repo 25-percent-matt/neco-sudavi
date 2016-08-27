@@ -335,7 +335,13 @@ body {
 
 .c3-legend-item text { stroke: $lightColor; }
 
-.c3-tooltip-item text { color: #000000; }
+.c3-tooltip td {
+font-size:13px;
+padding: 3px 6px;
+background-color:#fff;
+border-left:1px dotted #999;
+color: #000;
+}
 
 /* #chartDegreeBig path{
   stroke: $darkColor;
