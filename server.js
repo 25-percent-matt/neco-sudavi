@@ -41,7 +41,6 @@ app.use('/chartQuery/:id', (req, res) => {
   graphql(mySchema, query)
     .then((result) => {
       let resultArr = queries.objsToArrays(result.data[querySelector]);
-      console.log('resultArr: ', resultArr);
       res.send(resultArr);
     });
   });
@@ -50,7 +49,6 @@ app.use('/blsProjections/:state', (req, res) => {
   let stateToFind = req.params.state;
   Projections.findAll({ where: { areaname: stateToFind }}).then(function(data) {
     let convertToc3 = data[0].dataValues;
-    console.log('convertToc3: ', convertToc3);
     let convertedChart = [];
     let statePop = convertToc3.population;
     convertedChart.push(convertToc3.areaname, ((convertToc3.base/statePop) * 1000), ((convertToc3.proj/statePop) * 1000), ((convertToc3.change/statePop) * 10000), (convertToc3.percentchange), ((convertToc3.avgannualopenings/statePop) * 10000));

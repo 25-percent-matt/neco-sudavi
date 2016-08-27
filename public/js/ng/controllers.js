@@ -1,11 +1,11 @@
 var counterApp = angular.module('counterApp', ['ngAnimate']);
 
 counterApp.controller('divHideController', ['$scope', function($scope) {
-    $scope.count = 0;
-    $scope.loadBigFunction = function (chartSelected) {
-      $scope.showHide = !$scope.showHide;
+    $scope.count = 0;
+    $scope.loadBigFunction = function (chartSelected) {
+      $scope.showHide = !$scope.showHide;
       $scope[chartSelected] = !$scope[chartSelected];
-    };
+    };
 
     $scope.home = function(){
       $scope.pageNumber = 1;
@@ -58,7 +58,7 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope.favTech = ["My new favorite technologies are Node, Express, Firebase, SASS, and NoSQL. Though I haven't used it yet, AWS Lambda seems like magic to me, and I *really* want to check it out."];
       $scope.questions = ["I'm older than average for bootcamp attendees; how will that affect things? What new skills will I emerge with? The answer to the first question is, I had a lot of existing context for the curriculum. Also, I was used to a more deliberative process; rapid iteration was a good thing to learn. While I'm emerging with a boatload of fresh technical skills - the month we built 7 or 8 web servers from scratch was a real eye-opener - the most important skills I picked up were breaking down large problems and learning how to learn."];
       $scope.recommendations = ["The best advice anyone ever gave me about coding is, get it working first. I\'d advise doing the simplest, easiest, minimal implementation, then flesh out the parts later. Break your problem down, review your assumptions. Give your variables meaningful names, because eventually someone - probably you! - will look at your code and wonder what it\'s doing."];
-      $scope.favResources = ["W3 Schools, Frontend Masters, Codeacademy and Mozilla Developer Network have all been great learning resources, but reaching out to peers has been invaluable."];
+      $scope.favResources = ["W3 Schools, Frontend Masters, Codeacademy, Stack Overflow and Mozilla Developer Network have all been great learning resources, but reaching out to peers has been invaluable."];
       $scope.toggleShow = false;
       $scope.toggleShow = false;
       $scope.toggleShow = true;
@@ -68,7 +68,7 @@ counterApp.controller('divHideController', ['$scope', function($scope) {
       $scope.toggleShow = false;
     };
 
-    $scope.showHide = false;
+    $scope.showHide = false;
     $scope.pageNumber = 1;
     $scope.gotoNextPage = function() {
       $scope.pageNumber++;
