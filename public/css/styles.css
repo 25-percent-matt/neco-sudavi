@@ -105,8 +105,7 @@ body {
 
 .headerZero {
   display: inline-block;
-  width: 90%;
-  background-color: #3A3F48;
+  width: 75%;
   padding: 1% 0px 1% 0px;
   vertical-align: top;
   text-align: left; }
@@ -407,7 +406,7 @@ body {
 
 #aboutMeSummary {
   display: flex;
-  height: 48%;
+  height: 32%;
   width: 95%;
   margin-top: 18.52px;
   margin-left: 18.52px;
@@ -428,7 +427,7 @@ body {
 
 #preBootcampQs {
   display: flex;
-  height: 43%;
+  height: 51%;
   width: 45%;
   margin: 18.52px 0px 18.52px 18.52px;
   box-sizing: border-box;
@@ -438,7 +437,7 @@ body {
 
 #recommendations {
   display: flex;
-  height: 43%;
+  height: 51%;
   width: 45%;
   margin: 18.52px 18.52px 18.52px 0px;
   box-sizing: border-box;
