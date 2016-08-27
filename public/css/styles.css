@@ -68,7 +68,7 @@ table {
 body {
   font-family: 'Rajdhani', sans-serif;
   color: #E8DDCB;
-  background-color: #2b2f37;
+  background-color: #3A3F48;
   text-align: center;
   vertical-align: center;
   /*   display:flex;
@@ -101,7 +101,7 @@ body {
 
 .headerZero {
   display: inline-block;
-  width: 1147px;
+  width: 90%;
   background-color: #3A3F48;
   padding: 1% 0px 1% 0px;
   vertical-align: top;

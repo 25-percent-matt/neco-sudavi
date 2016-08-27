@@ -37,7 +37,7 @@ $x-large: "only screen and (min-width: 1350px)";
 body {
   font-family: 'Rajdhani', sans-serif;
   color: $lightColor;
-  background-color: $dashboardColor;
+  background-color: #3A3F48;
   text-align: center;
   vertical-align:center;
 /*   display:flex;
@@ -89,7 +89,7 @@ body {
 
 .headerZero{
   display: inline-block;
-  width: 1147px;
+  width: 90%;
   // border: 0px solid $lightColor;
   background-color: $bgColor;
   //flex: 1 1 45%;
@@ -101,7 +101,6 @@ body {
 }
 
 .headerOne{
-
   display: inline-block;
   vertical-align: center;
   //flex: 1 1 45%;
